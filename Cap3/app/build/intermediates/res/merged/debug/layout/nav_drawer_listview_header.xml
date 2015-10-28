@@ -71,4 +71,4 @@
             android:textSize="@dimen/userEmail_textSize" />
 
     </LinearLayout>
-</RelativeLayout><!-- From: file:/R:/git/AndroidUtils/app/src/main/res/layout/nav_drawer_listview_header.xml --><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/1.0.0/res/layout/nav_drawer_listview_header.xml -->
+</RelativeLayout><!-- From: file:/R:/git/AndroidUtils/app/src/main/res/layout/nav_drawer_listview_header.xml --><!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/1.0.0/res/layout/nav_drawer_listview_header.xml -->

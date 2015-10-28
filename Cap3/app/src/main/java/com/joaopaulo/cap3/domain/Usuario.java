@@ -11,8 +11,8 @@ public class Usuario {
     private int imgCode;
 
     public Usuario(String login, String senha, String email, int imgCode) {
-        this.senha = senha;
         this.login = login;
+        this.senha = senha;
         this.email = email;
         this.imgCode = imgCode;
     }

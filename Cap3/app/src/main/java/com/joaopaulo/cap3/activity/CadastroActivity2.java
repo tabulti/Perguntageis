@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +16,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.joaopaulo.cap3.R;
 import com.joaopaulo.cap3.adapters.ImageAdaptor;
 import com.joaopaulo.cap3.domain.Usuario;
@@ -24,7 +26,6 @@ public class CadastroActivity2 extends AppCompatActivity{
     String userLogin, userSenha, userEmail;
     int avatarImgCode;
     Toolbar cadastro2Toolbar;
-    ImageView imgSelecionada;
     GridView grid;
 
     @Override
@@ -53,12 +54,11 @@ public class CadastroActivity2 extends AppCompatActivity{
             public void onClick(View v) {
                 if(v.getId() == R.id.btConfirmaCadastro) {
                     Usuario usuario = new Usuario(userLogin, userSenha, userEmail, avatarImgCode);
-                    /**
-                     * TODO: inserir usuario no arquivo json de cadastro
-                     */
+                    //Parser java object para json
+                    Gson gson = new Gson();
+                    String usuarioGson = gson.toJson(usuario);
 
-                    Toast.makeText(CadastroActivity2.this, "teste", Toast.LENGTH_SHORT).show();
-
+                    Log.i("gson", usuarioGson);
                     //Alert Cadastro bem-sucedido
                     AlertDialog.Builder builder = new AlertDialog.Builder(CadastroActivity2.this);
                     builder.setTitle("Tudo Certo!");
@@ -85,25 +85,30 @@ public class CadastroActivity2 extends AppCompatActivity{
     private AdapterView.OnItemClickListener onGridViewItemClick() {
         return new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> parent, View v, int posicao, long id) {
-                imgSelecionada = (ImageView) v.findViewById(R.id.img);
                 switch(posicao){
                     case 0:
                         showToast("Capitão América selecionado");
+                        avatarImgCode = 0;
                         break;
                     case 1:
                         showToast("Homem de Ferro selecionado");
+                        avatarImgCode = 1;
                         break;
                     case 2:
                         showToast("Feiticeira Escalarte selecionada");
+                        avatarImgCode = 2;
                         break;
                     case 3:
                         showToast("Thor selecionado");
+                        avatarImgCode = 3;
                         break;
                     case 4:
                         showToast("Nick Fury selecionado");
+                        avatarImgCode = 4;
                         break;
                     case 5:
                         showToast("Gavião Arqueiro selecionado");
+                        avatarImgCode = 5;
                         break;
                 }
             }
