@@ -57,16 +57,14 @@ public class Roleta extends AppCompatActivity {
                 @Override
                 public void onAnimationStart(Animation animation) {
                     mp.start();
-                    mp.setLooping(true);
+
                 }
 
                 @Override
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_amarelo);
                     roleta_background.startAnimation(animFinal);
-                    mp.setLooping(false);
-                    Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
-                    startActivity(intent);
+                    finalAnimacao(animFinal,0);
                 }
 
                 @Override
@@ -83,7 +81,7 @@ public class Roleta extends AppCompatActivity {
                 @Override
                 public void onAnimationStart(Animation animation) {
                     mp.start();
-                    mp.setLooping(true);
+
 
                 }
 
@@ -91,10 +89,7 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_azul);
                     roleta_background.startAnimation(animFinal);
-                    mp.setLooping(false);
-                    Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
-                    startActivity(intent);
-
+                    finalAnimacao(animFinal,1);
                 }
 
                 @Override
@@ -112,7 +107,7 @@ public class Roleta extends AppCompatActivity {
                 @Override
                 public void onAnimationStart(Animation animation) {
                     mp.start();
-                    mp.setLooping(true);
+
 
                 }
 
@@ -120,9 +115,8 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_vermelho);
                     roleta_background.startAnimation(animFinal);
-                    mp.setLooping(false);
-                    Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
-                    startActivity(intent);
+                    finalAnimacao(animFinal,2);
+
 
                 }
 
@@ -141,7 +135,7 @@ public class Roleta extends AppCompatActivity {
                 @Override
                 public void onAnimationStart(Animation animation) {
                     mp.start();
-                    mp.setLooping(true);
+
 
                 }
 
@@ -149,9 +143,7 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_verde);
                     roleta_background.startAnimation(animFinal);
-                    mp.setLooping(false);
-                    Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
-                    startActivity(intent);
+                    finalAnimacao(animFinal,3);
 
                 }
 
@@ -164,6 +156,29 @@ public class Roleta extends AppCompatActivity {
             Toast.makeText(Roleta.this,"3 - Verde ",Toast.LENGTH_SHORT).show();
 
         }
+
+    }
+
+
+    public void finalAnimacao(Animation anim, int codigoTema){
+
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
 
     }
 
