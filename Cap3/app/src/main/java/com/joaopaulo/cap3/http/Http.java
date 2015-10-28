@@ -37,6 +37,7 @@ public class Http {
         return (info != null && info.isConnected());
     }
 
+
 /*    public static List<Usuario> carregarUsuariosJson(){
         try{
             HttpURLConnection conexao = conectar(USERS_URL_JSON);

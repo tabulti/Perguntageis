@@ -8,6 +8,8 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="23" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo1"
@@ -35,10 +37,6 @@
         <activity android:name="com.joaopaulo.cap3.activity.Roleta" />
         <activity android:name="com.joaopaulo.cap3.activity.PerguntaActivity" >
         </activity>
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

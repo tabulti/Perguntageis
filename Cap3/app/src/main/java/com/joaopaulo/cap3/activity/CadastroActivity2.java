@@ -1,9 +1,11 @@
 package com.joaopaulo.cap3.activity;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -16,12 +18,20 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
+
+import com.firebase.client.FirebaseError;
 import com.google.gson.Gson;
 import com.joaopaulo.cap3.R;
 import com.joaopaulo.cap3.adapters.ImageAdaptor;
 import com.joaopaulo.cap3.domain.Usuario;
 
-public class CadastroActivity2 extends AppCompatActivity{
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Map;
+
+public class CadastroActivity2 extends AppCompatActivity {
 
     String userLogin, userSenha, userEmail;
     int avatarImgCode;
@@ -32,6 +42,10 @@ public class CadastroActivity2 extends AppCompatActivity{
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_cadastro2);
+
+        Firebase.setAndroidContext(this);
+        final Firebase perguntageisFireBase = new Firebase("https://perguntageis.firebaseio.com/");
+
 
         cadastro2Toolbar = (Toolbar) findViewById(R.id.toolbar);
         cadastro2Toolbar.setTitle("Cadastro");
@@ -52,11 +66,24 @@ public class CadastroActivity2 extends AppCompatActivity{
         btConfirmarCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(v.getId() == R.id.btConfirmaCadastro) {
+                if (v.getId() == R.id.btConfirmaCadastro) {
                     Usuario usuario = new Usuario(userLogin, userSenha, userEmail, avatarImgCode);
+
                     //Parser java object para json
                     Gson gson = new Gson();
                     String usuarioGson = gson.toJson(usuario);
+
+
+
+                    perguntageisFireBase.child("usuarios").push().setValue(usuarioGson);
+
+                    String msg = perguntageisFireBase.child("usuarios").child(userLogin).getKey();
+
+
+
+
+
+                    Log.i("teste", msg);
 
                     Log.i("gson", usuarioGson);
                     //Alert Cadastro bem-sucedido
@@ -83,9 +110,9 @@ public class CadastroActivity2 extends AppCompatActivity{
 
     //Evento de click no grid
     private AdapterView.OnItemClickListener onGridViewItemClick() {
-        return new AdapterView.OnItemClickListener(){
+        return new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int posicao, long id) {
-                switch(posicao){
+                switch (posicao) {
                     case 0:
                         showToast("Capitão América selecionado");
                         avatarImgCode = 0;
@@ -115,7 +142,8 @@ public class CadastroActivity2 extends AppCompatActivity{
         };
     }
 
-    public void showToast(String msg){
+    public void showToast(String msg) {
         Toast.makeText(CadastroActivity2.this, msg, Toast.LENGTH_SHORT).show();
     }
+
 }
