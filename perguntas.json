@@ -1,0 +1,323 @@
+{
+    "perguntadosAgil": [
+        {
+            "categoria": "Lista de perguntas",
+            "perguntasXp": [
+                {
+                    "id": "xp01",
+                    "pergunta": "//TODO",
+                    "alternativaA": "//TODO",
+                    "alternativaB": "//TODO",
+                    "anternativaC": "//TODO",
+                    "alternativaD": "//TODO",
+                    "alternativaCorreta": "A"
+                },
+                {
+                    "id": "xp02",
+                    "pergunta": "//TODO",
+                    "alternativaA": "//TODO",
+                    "alternativaB": "//TODO",
+                    "anternativaC": "//TODO",
+                    "alternativaD": "//TODO",
+                    "alternativaCorreta": "//TODO"
+                }
+            ],
+            "perguntasScrum": [
+                {
+                    "id": "Na metodologia Scrum de desenvolvimento ágil, as regras SMART significam",
+                    "pergunta": "//TODO",
+                    "alternativaA": "Specific. Measurable. Allowable. Realistic. Task- based.",
+                    "alternativaB": "Source. Milestone. Achievable. Recoverable. Turn- back",
+                    "anternativaC": "Specific. Measurable. Achievable. Realistic. Time- based. ",
+                    "alternativaD": "Specific. Maintainable. Achievable. Relevant. Time- dependent.",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "scrum02",
+                    "pergunta": "SCRUM é um framework baseado no modelo ágil. No SCRUM:",
+                    "alternativaA": "o scrum team é  dividida em papéis como analista, designere programador",
+                    "alternativaB": "as funcionalidades a serem implementadas são mantidas em uma lista chamada de scrum board.",
+                    "anternativaC": "O Scrum master é quem decide quais requisitos são mais importantes.",
+                    "alternativaD": "O product owner é responsável por conhecer e avaliar as necessidades dos clientes",
+                    "alternativaCorreta": "d"
+                },
+                {
+                    "id": "scrum03",
+                    "pergunta": "Uma das características da metodologia ágil Scrum é",
+                    "alternativaA": "Focar nas práticas de engenharia. ",
+                    "alternativaB": "Ser um método iterativo e incremental. ",
+                    "anternativaC": "Focar na documentação formal do software. ",
+                    "alternativaD": "Não exigir interação com o cliente.",
+                    "alternativaCorreta": "b"
+                },
+                {
+                    "id": "scrum04",
+                    "pergunta": "Para utilizar o processo de estimativa por Story Points em Scrum, inicialmente:",
+                    "alternativaA": "o Product Owner deve atribuir valores de negócio para os itens do Product Backlog.",
+                    "alternativaB": "o Product Backlog deve considerar os fatores de Sprint contidos no Backlog Owner. ",
+                    "anternativaC": "os Stakeholders devem atribuir os riscos do Product Owner para cada Sprint Planning.",
+                    "alternativaD": "os Stakeholders devem atribuir valores de negócio do Product Owner para cada Sprint.",
+                    "alternativaCorreta": "a"
+                },
+                {
+                    "id": "scrum05",
+                    "pergunta": "Em relação às regras do Scrum, é INCORRETO afirmar:",
+                    "alternativaA": "Se o Sprint tomar um rumo não desejado, é possível dissolvê-lo e começar um novo Sprint",
+                    "alternativaB": "As reuniões durante um Sprint devem ser diárias, sempre à mesma hora e no mesmo local",
+                    "anternativaC": "Uma das tarefas do Scrum master é a remoção de impedimentos",
+                    "alternativaD": "A reunião diária leva 1 hora",
+                    "alternativaCorreta": "d"
+                },
+                {
+                    "id": "scrum06",
+                    "pergunta": "Como se denomina a iteração em que se é feito o desenvolvimento do projeto?",
+                    "alternativaA": "Sprint",
+                    "alternativaB": "Iterator",
+                    "anternativaC": "Reunion",
+                    "alternativaD": "Encontro diário",
+                    "alternativaCorreta": "a"
+                },
+                {
+                    "id": "scrum07",
+                    "pergunta": "é INCORRETO afirmar que, no SCRUM:",
+                    "alternativaA": "as atividades são definidas com uma duração fixa.",
+                    "alternativaB": "o foco é nas tarefas e não nos objetivos e resultados. ",
+                    "anternativaC": "cada iteração foca nas necessidades mais prioritárias.",
+                    "alternativaD": "o desenvolvimento é iterativo e incremental.",
+                    "alternativaCorreta": "b"
+                },
+                {
+                    "id": "scrum08",
+                    "pergunta": "No SCRUM, que papel é responsável pela visão do produto e pelo retorno do investimento?",
+                    "alternativaA": "Scrum Master",
+                    "alternativaB": "Product Owner",
+                    "anternativaC": "Sprint Planner",
+                    "alternativaD": "Gerente do Projeto.",
+                    "alternativaCorreta": "b"
+                },
+                {
+                    "id": "scrum09",
+                    "pergunta": "As Scrum meetings ocorrem:",
+                    "alternativaA": "Sempre que necessário. ",
+                    "alternativaB": "Ocasionalmente.",
+                    "anternativaC": "Diariamente.",
+                    "alternativaD": "Uma vez por semana",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "scrum10",
+                    "pergunta": "Na fase de desenvolvimento do Scrum, o software é desenvolvido em processos iterativos denominados:",
+                    "alternativaA": "Sprint.",
+                    "alternativaB": "Product Owner. ",
+                    "anternativaC": "Product Backlog Cycle.",
+                    "alternativaD": "Product Backlog.O",
+                    "alternativaCorreta": "a"
+                },
+                {
+                    "id": "scrum11",
+                    "pergunta": "Lista de historia que virão a ser funcionalidades:",
+                    "alternativaA": "Chaos List",
+                    "alternativaB": "Scrum List",
+                    "anternativaC": "Product backlog.",
+                    "alternativaD": "sprint burndown",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "scrum12",
+                    "pergunta": "O que seria uma Sprint Retrospective?",
+                    "alternativaA": "Momento de falar de projetos passados.",
+                    "alternativaB": "Reunião entre o Scrum master e o PO",
+                    "anternativaC": "Reunião para debater o desempenho dos participantes.",
+                    "alternativaD": "Reunião da equipe discutindo sobre a sprint. ",
+                    "alternativaCorreta": "d"
+                },
+                {
+                    "id": "scrum13",
+                    "pergunta": "Quem define o product backlog?",
+                    "alternativaA": "Product Owner ",
+                    "alternativaB": "Scrum team",
+                    "anternativaC": "Product Owner e Scrum Master",
+                    "alternativaD": "D)Product Owner e o Gerente de Projetos",
+                    "alternativaCorreta": "a"
+                },
+                {
+                    "id": "scrum14",
+                    "pergunta": "Qual o papel do product owner?",
+                    "alternativaA": "Vender o projeto para possíveis clientes",
+                    "alternativaB": "Representar o cliente e formular os requisitos",
+                    "anternativaC": "Desenvolver e testar os códigos",
+                    "alternativaD": "Manter a equipe trabalhando e remover impedimentos",
+                    "alternativaCorreta": "b"
+                },
+                {
+                    "id": "scrum15",
+                    "pergunta": "Quem participa da Sprint Review Meeting?",
+                    "alternativaA": "Product Owner ",
+                    "alternativaB": "Product Owner e Scrum Master",
+                    "anternativaC": "Scrum team e Product Owner",
+                    "alternativaD": "Scrum Master e o Gerente de Projetos",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "O que é Sprint backlog?",
+                    "pergunta": "Lista do que já foi concluido na sprint.",
+                    "alternativaA": "Lista de tarefas a serem feitas na sprint",
+                    "alternativaB": "Lista de regras da sprint atual",
+                    "anternativaC": "Lista de requisitos vindo do P.O",
+                    "alternativaD": "Lista do que já foi concluido na sprint.",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "scrum17",
+                    "pergunta": "Quem são os  participantes da Sprint Planning Meeting?",
+                    "alternativaA": "Team Scrum",
+                    "alternativaB": "Scrum Master e PO",
+                    "anternativaC": "O Cliente e o team Scrum",
+                    "alternativaD": " Product Owner, o Scrum Master e o Scrum Team",
+                    "alternativaCorreta": "d"
+                },
+                {
+                    "id": "scrum18",
+                    "pergunta": "Para que serve a Sprint Retrospective?",
+                    "alternativaA": "Falar sobre projetos passados",
+                    "alternativaB": "Trocar experiências sobre linguagens a serem usadas",
+                    "anternativaC": "Identificar oquê funcionou e oquê precisa melhorar na sprint",
+                    "alternativaD": "Conversar com o PO sobre o fim do projeto",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "scrum19",
+                    "pergunta": "Quem produz o Sprint Backlog?",
+                    "alternativaA": "Team Scrum",
+                    "alternativaB": "Product Owner",
+                    "anternativaC": "Scrum Master",
+                    "alternativaD": "Scrum Master e P.O",
+                    "alternativaCorreta": "a"
+                },
+                {
+                    "id": "scrum20",
+                    "pergunta": "Está incorreto sobre o Scrum Team:",
+                    "alternativaA": "Divididos em programador, analista e designer",
+                    "alternativaB": "Contém de 6 a 10 pessoas",
+                    "anternativaC": "Fazem reuniões diárias",
+                    "alternativaD": "Trabalham em conjunto no projeto como um todo",
+                    "alternativaCorreta": "a"
+                }
+            ],
+            "perguntasLean": [
+                {
+                    "id": "lean01",
+                    "pergunta": "NÃO é princípio do lean?",
+                    "alternativaA": "Elimine Desperdícios",
+                    "alternativaB": "Crie Conhecimento",
+                    "anternativaC": "Documentação robusta",
+                    "alternativaD": "Entregue o quanto antes",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "lean02",
+                    "pergunta": "No lean oquê se entende por desperdício?",
+                    "alternativaA": "conversar paralelas no momento dos projetos",
+                    "alternativaB": "gastar tempo em outras atividades",
+                    "anternativaC": "procurar pessoas fora da equipe",
+                    "alternativaD": "produzir documentação",
+                    "alternativaCorreta": "d"
+                },
+                {
+                    "id": "lean03",
+                    "pergunta": "Fortalecer o time significa que:",
+                    "alternativaA": "O time precisa fazer cursos online.",
+                    "alternativaB": "O time precisa agir separado para adquirir habilidade.",
+                    "anternativaC": "O time precisa ser unido.",
+                    "alternativaD": "O time precisa estudar o mesmo assunto",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "lean04",
+                    "pergunta": "Construir qualidade é?",
+                    "alternativaA": "Garantir a qualidade durante o desenvolvimento",
+                    "alternativaB": "Criar soluções para todos os problemas.",
+                    "anternativaC": "Entregar o software apenas no final do projeto e esperar a resposta do cliente.",
+                    "alternativaD": "Focar nos requisitos do sistema.",
+                    "alternativaCorreta": "a"
+                },
+                {
+                    "id": "lean05",
+                    "pergunta": "Uma definição simples do Lean seria:",
+                    "alternativaA": "Método ágil para grandes empresas",
+                    "alternativaB": "Método para reduzir excessos de software.",
+                    "anternativaC": "Foca em treinamento de programadores.",
+                    "alternativaD": "Visa migrar empresas do modelo prescritivo para a metodologia ágil.",
+                    "alternativaCorreta": "b"
+                },
+                {
+                    "id": "lean06",
+                    "pergunta": "Identifique o que não é desperdícios apontados pelo estudo do Lean.",
+                    "alternativaA": "Tempo de espera",
+                    "alternativaB": "Iterações ",
+                    "anternativaC": "Funcionalidades extras",
+                    "alternativaD": "Bugs",
+                    "alternativaCorreta": "b"
+                },
+                {
+                    "id": "lean07",
+                    "pergunta": "Identifique 2 ferramentas utilizadas pelo lean",
+                    "alternativaA": "Documento de Requisitos e Quadro Canvas",
+                    "alternativaB": "Quadro canvas e Scrum Meeting",
+                    "anternativaC": "Kanban e Scrum Meeting",
+                    "alternativaD": "Scrum Meeting e Documento de Requisitos",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "lean08",
+                    "pergunta": "Qual alternativa NÃO está correta pelo Lean?",
+                    "alternativaA": "Entrega constante é essencial para entregar valor ao cliente",
+                    "alternativaB": "Evitar desperdícios sempre",
+                    "anternativaC": "A equipe deve se manter unida.",
+                    "alternativaD": "Bugs precisam entrar no escopo do projeto tratamento sobre eles.",
+                    "alternativaCorreta": "d"
+                },
+                {
+                    "id": "lean09",
+                    "pergunta": "O que são handoffs?",
+                    "alternativaA": "Métodos de desenvolvimento para a agilidade.",
+                    "alternativaB": "Reunião semanal",
+                    "anternativaC": "Revezamento entre participantes da equipe",
+                    "alternativaD": "Folga para as equipes que concluíram seus projetos",
+                    "alternativaCorreta": "c"
+                },
+                {
+                    "id": "lean10",
+                    "pergunta": "Selecione as práticas usadas para melhorar a qualidade do projeto final no Lean.",
+                    "alternativaA": "Reuniões semanais",
+                    "alternativaB": "Desenvolvedores com experiência",
+                    "anternativaC": "Estudo de novas linguagens",
+                    "alternativaD": "Integração continua",
+                    "alternativaCorreta": "d"
+                }
+            ],
+            "perguntasGeral": [
+                {
+                    "id": "geral01",
+                    "pergunta": "//TODO",
+                    "alternativaA": "//TODO",
+                    "alternativaB": "//TODO",
+                    "anternativaC": "//TODO",
+                    "alternativaD": "//TODO",
+                    "alternativaCorreta": "//TODO"
+                }
+            ],
+            "perguntasKanban": [
+                {
+                    "id": "geral01",
+                    "pergunta": "//TODO",
+                    "alternativaA": "//TODO",
+                    "alternativaB": "//TODO",
+                    "anternativaC": "//TODO",
+                    "alternativaD": "//TODO",
+                    "alternativaCorreta": "//TODO"
+                }
+            ]
+        }
+    ]
+}
