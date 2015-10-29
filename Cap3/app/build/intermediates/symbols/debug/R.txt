@@ -995,11 +995,12 @@ int string com_facebook_loginview_logged_in_using_facebook 0x7f07001f
 int string com_facebook_send_button_text 0x7f070020
 int string com_facebook_share_button_text 0x7f070021
 int string com_facebook_tooltip_default 0x7f070022
-int string login 0x7f07002a
+int string facebook_app_id 0x7f07002a
+int string login 0x7f07002b
 int string messenger_send_button_text 0x7f070023
-int string senha 0x7f07002b
+int string senha 0x7f07002c
 int string status_bar_notification_info_overflow 0x7f070024
-int string usuario 0x7f07002c
+int string usuario 0x7f07002d
 int style AlertDialog_AppCompat 0x7f0a0080
 int style AlertDialog_AppCompat_Light 0x7f0a0081
 int style Animation_AppCompat_Dialog 0x7f0a0082

@@ -2,27 +2,46 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/linear_interpolator">
 
-    <rotate android:duration="300"
+    <rotate android:duration="400"
         android:fromDegrees="0"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:repeatCount="10"
+        android:repeatCount="3"
         android:startOffset="0"
         android:toDegrees="360"
         />
-
-
 
     <rotate android:duration="500"
         android:fromDegrees="0"
         android:pivotX="50%"
         android:pivotY="50%"
+        android:repeatCount="3"
+        android:startOffset="0"
+        android:toDegrees="360"
+        />
+
+    <rotate android:duration="1000"
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
         android:repeatCount="0"
         android:startOffset="0"
-        android:toDegrees="45"
+        android:toDegrees="360"
+        />
+
+    <rotate android:duration="1500"
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="0"
+        android:startOffset="0"
+        android:toDegrees="360"
 
         />
 
+    <alpha
+        android:duration="6000"/>
+
 
 </set>
-<!-- From: file:/C:/GitHub/Perguntageis/Cap3/app/src/main/res/anim/rotate_final1.xml -->
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/anim/rotate_final1.xml -->

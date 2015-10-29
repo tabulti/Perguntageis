@@ -76,7 +76,7 @@ public class Roleta extends AppCompatActivity {
 
 
         }else if(aux == 1){
-            animFinal = AnimationUtils.loadAnimation(this, R.anim.rotate_final2);
+            animFinal = AnimationUtils.loadAnimation(this, R.anim.rotate_final1);
             animRotate.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {
@@ -102,7 +102,7 @@ public class Roleta extends AppCompatActivity {
 
 
         }else if(aux == 2){
-            animFinal = AnimationUtils.loadAnimation(this, R.anim.rotate_final3);
+            animFinal = AnimationUtils.loadAnimation(this, R.anim.rotate_final1);
             animRotate.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {
@@ -130,7 +130,7 @@ public class Roleta extends AppCompatActivity {
 
 
         }else{
-            animFinal = AnimationUtils.loadAnimation(this, R.anim.rotate_final4);
+            animFinal = AnimationUtils.loadAnimation(this, R.anim.rotate_final1);
             animRotate.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {

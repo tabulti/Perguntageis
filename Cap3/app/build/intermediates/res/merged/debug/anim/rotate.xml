@@ -6,11 +6,11 @@
         android:fromDegrees="0"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:repeatCount="10"
+        android:repeatCount="6"
         android:startOffset="0"
         android:toDegrees="360"
         />
 
 
 </set>
-<!-- From: file:/C:/GitHub/Perguntageis/Cap3/app/src/main/res/anim/rotate.xml -->
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/anim/rotate.xml -->

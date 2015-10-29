@@ -2856,11 +2856,12 @@ containing a value of this type.
         public static final int com_facebook_send_button_text=0x7f070020;
         public static final int com_facebook_share_button_text=0x7f070021;
         public static final int com_facebook_tooltip_default=0x7f070022;
-        public static final int login=0x7f07002a;
+        public static final int facebook_app_id=0x7f07002a;
+        public static final int login=0x7f07002b;
         public static final int messenger_send_button_text=0x7f070023;
-        public static final int senha=0x7f07002b;
+        public static final int senha=0x7f07002c;
         public static final int status_bar_notification_info_overflow=0x7f070024;
-        public static final int usuario=0x7f07002c;
+        public static final int usuario=0x7f07002d;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a0080;
