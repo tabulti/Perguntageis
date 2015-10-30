@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#424242"
+    tools:context="com.joaopaulo.cap3.activity.PerguntaActivity">
+
+    <include layout="@layout/include_toolbar"></include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_pergunt"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="O Scrum é uma..."
+            android:textSize="25dp"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Metodologia ágil"
+            android:background="@drawable/button_resposta_shape_correto"
+            />
+
+        <Button
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Metodologia de desenvolvimento"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_resposta_shape"
+            />
+
+        <Button
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Comportamento social"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_resposta_shape"/>
+
+        <Button
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Movimento agilista"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_resposta_shape"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_pergunta.xml -->

@@ -1,0 +1,588 @@
+{
+	"perguntadosAgil" : [
+		{
+			"categoria" : "Lista de perguntas",
+			
+			"perguntasScrum" : [
+				{
+					"id" : "Na metodologia Scrum de desenvolvimento ágil, as regras SMART significam",
+					"pergunta" : "//TODO",
+					"alternativaA" : "Specific. Measurable. Allowable. Realistic. Task- based.",
+					"alternativaB" : "Source. Milestone. Achievable. Recoverable. Turn- back",
+					"anternativaC" : "Specific. Measurable. Achievable. Realistic. Time- based. ",
+					"alternativaD" : "Specific. Maintainable. Achievable. Relevant. Time- dependent.",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "scrum02",
+					"pergunta" : "SCRUM é um framework baseado no modelo ágil. No SCRUM:",
+					"alternativaA" : "o scrum team é  dividida em papéis como analista, designere programador",
+					"alternativaB" : "as funcionalidades a serem implementadas são mantidas em uma lista chamada de scrum board.",
+					"anternativaC" : "O Scrum master é quem decide quais requisitos são mais importantes.",
+					"alternativaD" : "O product owner é responsável por conhecer e avaliar as necessidades dos clientes",
+					"alternativaCorreta" : "d"
+				},
+                {
+					"id" : "scrum03",
+					"pergunta" : "Uma das características da metodologia ágil Scrum é",
+					"alternativaA" : "Focar nas práticas de engenharia. ",
+					"alternativaB" : "Ser um método iterativo e incremental. ",
+					"anternativaC" : "Focar na documentação formal do software. ",
+					"alternativaD" : "Não exigir interação com o cliente.",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "scrum04",
+					"pergunta" : "Para utilizar o processo de estimativa por Story Points em Scrum, inicialmente:",
+					"alternativaA" : "o Product Owner deve atribuir valores de negócio para os itens do Product Backlog.",
+					"alternativaB" : "o Product Backlog deve considerar os fatores de Sprint contidos no Backlog Owner. ",
+					"anternativaC" : "os Stakeholders devem atribuir os riscos do Product Owner para cada Sprint Planning.",
+					"alternativaD" : "os Stakeholders devem atribuir valores de negócio do Product Owner para cada Sprint.",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "scrum05",
+					"pergunta" : "Em relação às regras do Scrum, é INCORRETO afirmar:",
+					"alternativaA" : "Se o Sprint tomar um rumo não desejado, é possível dissolvê-lo e começar um novo Sprint",
+					"alternativaB" : "As reuniões durante um Sprint devem ser diárias, sempre à mesma hora e no mesmo local",
+					"anternativaC" : "Uma das tarefas do Scrum master é a remoção de impedimentos",
+					"alternativaD" : "A reunião diária leva 1 hora",
+					"alternativaCorreta" : "d"
+				},
+                {
+					"id" : "scrum06",
+					"pergunta" : "Como se denomina a iteração em que se é feito o desenvolvimento do projeto?",
+					"alternativaA" : "Sprint",
+					"alternativaB" : "Iterator",
+					"anternativaC" : "Reunion",
+					"alternativaD" : "Encontro diário",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "scrum07",
+					"pergunta" : "é INCORRETO afirmar que, no SCRUM:",
+					"alternativaA" : "as atividades são definidas com uma duração fixa.",
+					"alternativaB" : "o foco é nas tarefas e não nos objetivos e resultados. ",
+					"anternativaC" : "cada iteração foca nas necessidades mais prioritárias.",
+					"alternativaD" : "o desenvolvimento é iterativo e incremental.",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "scrum08",
+					"pergunta" : "No SCRUM, que papel é responsável pela visão do produto e pelo retorno do investimento?",
+					"alternativaA" : "Scrum Master",
+					"alternativaB" : "Product Owner",
+					"anternativaC" : "Sprint Planner",
+					"alternativaD" : "Gerente do Projeto.",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "scrum09",
+					"pergunta" : "As Scrum meetings ocorrem:",
+					"alternativaA" : "Sempre que necessário. ",
+					"alternativaB" : "Ocasionalmente.",
+					"anternativaC" : "Diariamente.",
+					"alternativaD" : "Uma vez por semana",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "scrum10",
+					"pergunta" : "Na fase de desenvolvimento do Scrum, o software é desenvolvido em processos iterativos denominados:",
+					"alternativaA" : "Sprint.",
+					"alternativaB" : "Product Owner. ",
+					"anternativaC" : "Product Backlog Cycle.",
+					"alternativaD" : "Product Backlog.O",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "scrum11",
+					"pergunta" : "Lista de historia que virão a ser funcionalidades:",
+					"alternativaA" : "Chaos List",
+					"alternativaB" : "Scrum List",
+					"anternativaC" : "Product backlog.",
+					"alternativaD" : "sprint burndown",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "scrum12",
+					"pergunta" : "O que seria uma Sprint Retrospective?",
+					"alternativaA" : "Momento de falar de projetos passados.",
+					"alternativaB" : "Reunião entre o Scrum master e o PO",
+					"anternativaC" : "Reunião para debater o desempenho dos participantes.",
+					"alternativaD" : "Reunião da equipe discutindo sobre a sprint. ",
+					"alternativaCorreta" : "d"
+				},
+                {
+					"id" : "scrum13",
+					"pergunta" : "Quem define o product backlog?",
+					"alternativaA" : "Product Owner ",
+					"alternativaB" : "Scrum team",
+					"anternativaC" : "Product Owner e Scrum Master",
+					"alternativaD" : "D)Product Owner e o Gerente de Projetos",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "scrum14",
+					"pergunta" : "Qual o papel do product owner?",
+					"alternativaA" : "Vender o projeto para possíveis clientes",
+					"alternativaB" : "Representar o cliente e formular os requisitos",
+					"anternativaC" : "Desenvolver e testar os códigos",
+					"alternativaD" : "Manter a equipe trabalhando e remover impedimentos",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "scrum15",
+					"pergunta" : "Quem participa da Sprint Review Meeting?",
+					"alternativaA" : "Product Owner ",
+					"alternativaB" : "Product Owner e Scrum Master",
+					"anternativaC" : "Scrum team e Product Owner",
+					"alternativaD" : "Scrum Master e o Gerente de Projetos",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "O que é Sprint backlog?",
+					"pergunta" : "Lista do que já foi concluido na sprint.",
+					"alternativaA" : "Lista de tarefas a serem feitas na sprint",
+					"alternativaB" : "Lista de regras da sprint atual",
+					"anternativaC" : "Lista de requisitos vindo do P.O",
+					"alternativaD" : "Lista do que já foi concluido na sprint.",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "scrum17",
+					"pergunta" : "Quem são os  participantes da Sprint Planning Meeting?",
+					"alternativaA" : "Team Scrum",
+					"alternativaB" : "Scrum Master e PO",
+					"anternativaC" : "O Cliente e o team Scrum",
+					"alternativaD" : " Product Owner, o Scrum Master e o Scrum Team",
+					"alternativaCorreta" : "d"
+				},
+                {
+					"id" : "scrum18",
+					"pergunta" : "Para que serve a Sprint Retrospective?",
+					"alternativaA" : "Falar sobre projetos passados",
+					"alternativaB" : "Trocar experiências sobre linguagens a serem usadas",
+					"anternativaC" : "Identificar oquê funcionou e oquê precisa melhorar na sprint",
+					"alternativaD" : "Conversar com o PO sobre o fim do projeto",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "scrum19",
+					"pergunta" : "Quem produz o Sprint Backlog?",
+					"alternativaA" : "Team Scrum",
+					"alternativaB" : "Product Owner",
+					"anternativaC" : "Scrum Master",
+					"alternativaD" : "Scrum Master e P.O",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "scrum20",
+					"pergunta" : "Está incorreto sobre o Scrum Team:",
+					"alternativaA" : "Divididos em programador, analista e designer",
+					"alternativaB" : "Contém de 6 a 10 pessoas",
+					"anternativaC" : "Fazem reuniões diárias",
+					"alternativaD" : "Trabalham em conjunto no projeto como um todo",
+					"alternativaCorreta" : "a"
+				},
+			
+			],
+			
+			"perguntasLean" : [
+				{
+					"id" : "lean01",
+					"pergunta" : "NÃO é princípio do lean?",
+					"alternativaA" : "Elimine Desperdícios",
+					"alternativaB" : "Crie Conhecimento",
+					"anternativaC" : "Documentação robusta",
+					"alternativaD" : "Entregue o quanto antes",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "lean02",
+					"pergunta" : "No lean oquê se entende por desperdício?",
+					"alternativaA" : "conversar paralelas no momento dos projetos",
+					"alternativaB" : "gastar tempo em outras atividades",
+					"anternativaC" : "procurar pessoas fora da equipe",
+					"alternativaD" : "produzir documentação",
+					"alternativaCorreta" : "d"
+				},
+                {
+					"id" : "lean03",
+					"pergunta" : "Fortalecer o time significa que:",
+					"alternativaA" : "O time precisa fazer cursos online.",
+					"alternativaB" : "O time precisa agir separado para adquirir habilidade.",
+					"anternativaC" : "O time precisa ser unido.",
+					"alternativaD" : "O time precisa estudar o mesmo assunto",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "lean04",
+					"pergunta" : "Construir qualidade é?",
+					"alternativaA" : "Garantir a qualidade durante o desenvolvimento",
+					"alternativaB" : "Criar soluções para todos os problemas.",
+					"anternativaC" : "Entregar o software apenas no final do projeto e esperar a resposta do cliente.",
+					"alternativaD" : "Focar nos requisitos do sistema.",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "lean05",
+					"pergunta" : "Uma definição simples do Lean seria:",
+					"alternativaA" : "Método ágil para grandes empresas",
+					"alternativaB" : "Método para reduzir excessos de software.",
+					"anternativaC" : "Foca em treinamento de programadores.",
+					"alternativaD" : "Visa migrar empresas do modelo prescritivo para a metodologia ágil.",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "lean06",
+					"pergunta" : "Identifique o que não é desperdícios apontados pelo estudo do Lean.",
+					"alternativaA" : "Tempo de espera",
+					"alternativaB" : "Iterações ",
+					"anternativaC" : "Funcionalidades extras",
+					"alternativaD" : "Bugs",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "lean07",
+					"pergunta" : "Identifique 2 ferramentas utilizadas pelo lean",
+					"alternativaA" : "Documento de Requisitos e Quadro Canvas",
+					"alternativaB" : "Quadro canvas e Scrum Meeting",
+					"anternativaC" : "Kanban e Scrum Meeting",
+					"alternativaD" : "Scrum Meeting e Documento de Requisitos",
+					"alternativaCorreta" : c"
+				},
+                {
+					"id" : "lean08",
+					"pergunta" : "Qual alternativa NÃO está correta pelo Lean?",
+					"alternativaA" : "Entrega constante é essencial para entregar valor ao cliente ",
+					"alternativaB" : "Evitar desperdícios sempre",
+					"anternativaC" : "A equipe deve se manter unida.",
+					"alternativaD" : "Bugs precisam entrar no escopo do projeto tratamento sobre eles.",
+					"alternativaCorreta" : "d"
+				},{
+					"id" : "lean09",
+					"pergunta" : "O que são handoffs?",
+					"alternativaA" : "Métodos de desenvolvimento para a agilidade.",
+					"alternativaB" : "Reunião semanal",
+					"anternativaC" : "Revezamento entre participantes da equipe",
+					"alternativaD" : "Folga para as equipes que concluíram seus projetos",
+					"alternativaCorreta" : "c"
+				},{
+					"id" : "lean10",
+					"pergunta" : "Selecione as práticas usadas para melhorar a qualidade do projeto final no Lean.",
+					"alternativaA" : "Reuniões  semanais ",
+					"alternativaB" : "Desenvolve dores com experiência",
+					"anternativaC" : "Estudo de novas linguagens",
+					"alternativaD" : "Integração continua",
+					"alternativaCorreta" : "d"
+				}
+			
+			],
+			
+			"perguntasGeral" : [
+				{
+					"id" : "geral01",
+					"pergunta" : "O conceito de sprint aplica-se ao modelo ágil do processo de engenharia de software denominado ",
+					"alternativaA" : "XP",
+					"alternativaB" : "DAS",
+					"anternativaC" : "Scrum",
+					"alternativaD" : "Crystal",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "geral02",
+					"pergunta" : "Refactoring e programação em pares são características das práticas do:",
+					"alternativaA" : "XP",
+					"alternativaB" : "DAS",
+					"anternativaC" : "PMBOOK",
+					"alternativaD" : "Crystal",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "geral03",
+					"pergunta" : "Scrum e eXtreme Programming compartilham a característica de",
+					"alternativaA" : "Ênfase em processos em vez de pessoas.",
+					"alternativaB" : "Envolvimento restrito do cliente no processo de desenvolvimento.",
+					"anternativaC" : "Desenvolvimento e entrega incrementais de software.",
+					"alternativaD" : "Dificuldade de atender a contínuas mudanças nos requisitos.",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "geral04",
+					"pergunta" : "Não é um dos valores do manifesto ágil:",
+					"alternativaA" : "Indivíduos e interação entre eles mais que processos e ferramentas",
+					"alternativaB" : "Software em funcionamento mais que documentação abrangente",
+					"anternativaC" : "Colaboração com o cliente mais que negociação de contratos",
+					"alternativaD" : "Seguir o plano mais que responder as mudanças",
+					"alternativaCorreta" : "d"
+				},
+                {
+					"id" : "geral05",
+					"pergunta" : "São consideradas metodologias ágeis de desenvolvimento de software: ",
+					"alternativaA" : "XP e UP",
+					"alternativaB" : "SCRUM e DSDM",
+					"anternativaC" : "SCRUM e RUP",
+					"alternativaD" : "Cascata e PRINCE2",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "geral06",
+					"pergunta" : "Um aspecto de DIVERGÊNCIA entre SCRUM E KANBAN é? ",
+					"alternativaA" : "Processo iterativo",
+					"alternativaB" : "Processo incremental",
+					"anternativaC" : "Uso de quadro de tarefas",
+					"alternativaD" : "valorização de feedback",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "geral07",
+					"pergunta" : "A respeito dos principios do manifesto ágil escolha a alternativa correta:",
+					"alternativaA" : "Em intervalos regulares, a equipe reflete sobre como se tornar mais eficaz",
+					"alternativaB" : "Pessoas de negócio e desenvolvedores devem trabalhar separadamente por todo o projeto",
+					"anternativaC" : "Entregar software quando há poucas semanas de desenvolvimento deve ser evitado",
+					"alternativaD" : "Mudanças nos requisitos são bem-vindas, desde que não impactem o desenvolvimento",
+					"alternativaCorreta" : "a"
+				},
+                {
+					"id" : "geral08",
+					"pergunta" : "O manifesto ágil aborda:",
+					"alternativaA" : "Contratar sempre os melhores profissionais",
+					"alternativaB" : "Apenas empresas de grande podrte podem adotar metodologias ágeis",
+					"anternativaC" : "Software funcional é a medida primária de progresso.",
+					"alternativaD" : "Contínua atenção à excelência técnica e bom design,leva a uma perda de tempo",
+					"alternativaCorreta" : "c"
+				},
+                {
+					"id" : "geral09",
+					"pergunta" : "Como é feita a organização durante o desenvolvimento dos times ágeis?",
+					"alternativaA" : "O gerente deve colocar cada integrante do time em sua função",
+					"alternativaB" : "O time deve decidir por se mesmo oquê cada um deve fazer",
+					"anternativaC" : "O Scrum master deve indicar as funções de cada um",
+					"alternativaD" : "Um sorteio é feito para dividir as tarefas",
+					"alternativaCorreta" : "b"
+				},
+                {
+					"id" : "geral10",
+					"pergunta" : "São metodologias ágeis:",
+					"alternativaA" : "Scrum, XP e FDD",
+					"alternativaB" : "Waterfall, RUP e FDD",
+					"anternativaC" : "XP, FDD e RUP",
+					"alternativaD" : "Scrum, Waterfall e DSDM.",
+					"alternativaCorreta" : "a"
+				},{
+					"id" : "geral11",
+					"pergunta" : "Reunião onde os integrantes ficam em pé por 15 min e falam sobre as experiências da sprint pertence a que método ágil?",
+					"alternativaA" : "Jerkins, e que o nome dado a esta reunião é Sprint.",
+					"alternativaB" : "Kanban, e as questões efetuadas são chamadas de artefatos.",
+					"anternativaC" : "Sprint, e que as questões efetuadas são chamadas de Backlog",
+					"alternativaD" : "Scrum, e que o nome dado a esta reunião é Daily Scrum.",
+					"alternativaCorreta" : "d"
+				},{
+					"id" : "geral12",
+					"pergunta" : "A lista de requisitos da aplicação entregue pelo Product Owner é chamada de:",
+					"alternativaA" : "Product Backlog",
+					"alternativaB" : "Sprint Backlog",
+					"anternativaC" : "Daily Scrum",
+					"alternativaD" : "Par programming",
+					"alternativaCorreta" : "a"
+				},{
+					"id" : "geral13",
+					"pergunta" : "Os responsáveis pela organização de um projeto scrum são:",
+					"alternativaA" : "Product Owner, Product Backlog e Planning Meeting",
+					"alternativaB" : "Product Owner, Sprint e Planning Meeting",
+					"anternativaC" : "Product Owner, Scrum Team e Scrum Master",
+					"alternativaD" : "Sprint, Scrum Master e Planning Meeting.",
+					"alternativaCorreta" : "c"
+				},{
+					"id" : "geral14",
+					"pergunta" : "No SCRUM, que papel é responsável pela visão do produto e pelo retorno do investimento?",
+					"alternativaA" : "Sprint Planner",
+					"alternativaB" : "Scrum Master",
+					"anternativaC" : "Gerente de Projetos",
+					"alternativaD" : "Product Owner",
+					"alternativaCorreta" : "d"
+				},{
+					"id" : "geral15",
+					"pergunta" : "O que é o manifesto ágil?",
+					"alternativaA" : "Documento que explica como migrar sua empresa para os metodologia ágil",
+					"alternativaB" : "Explica os principios abordados em uma metodologia ágil",
+					"anternativaC" : "Aborda um resumo sobre o Scrum e XP",
+					"alternativaD" : "Scrum, Waterfall e DSDM.",
+					"alternativaCorreta" : "b"
+				},{
+					"id" : "geral16",
+					"pergunta" : "Nas metodologias ágeis as histórias dos usuários que descrevem as funcionalidades e:",
+					"alternativaA" : "Servem ao mesmo propósito de casos de uso, mas não são a mesma coisa",
+					"alternativaB" : "Podem ser utilizadas para definir os testes unitários, mas não testes de aceitação",
+					"anternativaC" : "Devem ser implementadas, cada uma, em até 8 semanas",
+					"alternativaD" : "devem ser escritas segundo o ponto de vista do analista de sistemas.",
+					"alternativaCorreta" : "a"
+				},{
+					"id" : "geral17",
+					"pergunta" : "São métodos ágeis?",
+					"alternativaA" : "Concorrente e Orientado a Aspectos.",
+					"alternativaB" : "Espiral e Orientado a Componentes.",
+					"anternativaC" : "Prototipagem e Modelo de Domínio.",
+					"alternativaD" : "Scrum, Waterfall e DSDM.",
+					"alternativaCorreta" : "c"
+				},{
+					"id" : "Processo criado em resposta as fraquesas apresentadas pelo modelo cascata:",
+					"pergunta" : "O que é o manifesto ágil?",
+					"alternativaA" : "Processo de Requisitos.",
+					"alternativaB" : "Iterativo e Incremental.",
+					"anternativaC" : "Processo Unificado. ",
+					"alternativaD" : "Metodologia Ágil. ",
+					"alternativaCorreta" : "b"
+				},{
+					"id" : "geral19",
+					"pergunta" : "O  desenvolvimento ágil de software é norteado por um conjunto de princípios, como a valorização de",
+					"alternativaA" : "Documentação pormenorizada acima da entrega do software operacionall",
+					"alternativaB" : "Colaboração intensa dos clientes em detrimento de negociação contratual",
+					"anternativaC" : "Planejamento detalhado em relação a rápidas respostas a mudanças",
+					"alternativaD" : "Processos e ferramentas sobre a produtividade e competência das equipes",
+					"alternativaCorreta" : "b"
+				},{
+					"id" : "geral20",
+					"pergunta" : "Cartões CRC, reuniões em pé e programação em pares são características do modelo de processo:",
+					"alternativaA" : "DSDM",
+					"alternativaB" : "SCRUM",
+					"anternativaC" : "XP",
+					"alternativaD" : "MVC",
+					"alternativaCorreta" : "c"
+				},
+                
+			
+			],
+			
+			"perguntasXP" : [
+				{
+					"id" : "xp01",
+					"pergunta" : "Num sistema a ser desenvolvido na metodologia XP, as funcionalidades são especificadas por: ",
+					"alternativaA" : "Histórias",
+					"alternativaB" : "Cartões CRC",
+					"anternativaC" : "Sprints",
+					"alternativaD" : "Casos de Uso",
+					"alternativaCorreta" : "a"
+				},{
+					"id" : "xp02",
+					"pergunta" : "Uma das práticas do método ágil XP (eXtreme Programming) é:",
+					"alternativaA" : "Utilização de todos os artefatos do RUP",
+					"alternativaB" : "Ciclos longos de desenvolvimento",
+					"anternativaC" : "Desenvolvimento orientado a testes (TDD)",
+					"alternativaD" : "Metáforas",
+					"alternativaCorreta" : "d"
+				},{
+					"id" : "xp03",
+					"pergunta" : "O XP inclui uma abordagem de teste que: ",
+					"alternativaA" : "Valoriza o desenvolvimento test-last.",
+					"alternativaB" : "Depende da técnica de teste baseada em defeitos.",
+					"anternativaC" : "Desenvolve teste incremental baseado em cenários",
+					"alternativaD" : "Testes em equipe",
+					"alternativaCorreta" : "c"
+				},{
+					"id" : "xp04",
+					"pergunta" : "A atividade metodológica na qual se estabelece um guia de implementação fica na fase de:",
+					"alternativaA" : "Análise",
+					"alternativaB" : "Projeto",
+					"anternativaC" : "Planejamento",
+					"alternativaD" : "Codificação",
+					"alternativaCorreta" : "a"
+				},{
+					"id" : "xp05",
+					"pergunta" : "Uma prática que NÃO é adotada por Extreme Programming (XP) é:",
+					"alternativaA" : "Usar duas pessoas trabalhando juntas em um único computador",
+					"alternativaB" : "Criar os testes antes do código que será testado",
+					"anternativaC" : "Integrar continuamente o código recém-produzido com o código existente no repositório.",
+					"alternativaD" : "Refatorar frequentemente, e ao longo de todo o projeto",
+					"alternativaCorreta" : "b"
+				},{
+					"id" : "xp06",
+					"pergunta" : "O XP tem como característica a programação em par, na qual o(a):",
+					"alternativaA" : "Programador codifica em companhia do analista de requisitos.",
+					"alternativaB" : "Testador realiza os casos de teste em companhia do programador.",
+					"anternativaC" : "Código é escrito em par, reduzindo a inserção de bugs",
+					"alternativaD" : "Programador codifica em companhia do gestor do sistema.",
+					"alternativaCorreta" : "c"
+				},{
+					"id" : "xp07",
+					"pergunta" : "Assinale a alternativa que NÃO apresenta uma prática da Programação Extrema (Extreme Programming)",
+					"alternativaA" : "Planejamento Incremental",
+					"alternativaB" : "Programação em pares",
+					"anternativaC" : "Integração contínua",
+					"alternativaD" : "Cliente no local",
+					"alternativaCorreta" : "d"
+				},{
+					"id" : "xp08",
+					"pergunta" : "No XP, oque sugere o termo Just in Time: ",
+					"alternativaA" : "O programador precisa de um tempo de descanço",
+					"alternativaB" : "O código precisa ser entregue no tempo minimo ",
+					"anternativaC" : "Deve ser desenvolvido apenas oquê foi pedido pelo cliente",
+					"alternativaD" : "O programador precisa pesquisar sobre melhores tecnologias",
+					"alternativaCorreta" : "c"
+				},{
+					"id" : "xp09",
+					"pergunta" : "NÃO é valor do XP:",
+					"alternativaA" : "Comunicação",
+					"alternativaB" : "Organização",
+					"anternativaC" : "Feedback",
+					"alternativaD" : "Simplicidade",
+					"alternativaCorreta" : "b"
+				},{
+					"id" : "xp10",
+					"pergunta" : "Oquê significa a comunicação no XP? ",
+					"alternativaA" : "Ligações e email constantes ao cliente",
+					"alternativaB" : "Contato o mais pessoal possivel , preferindo o face - a - face",
+					"anternativaC" : "Sempre comunicar ao gerente dos problemas",
+					"alternativaD" : "Entregas e atrasos sempre devem ser anunciadas ao cliente",
+					"alternativaCorreta" : "b"
+				},
+                ,{
+					"id" : "xp11",
+					"pergunta" : "São práticas recomendadas pelo processo  Extreme Programming (XP), EXCETO  ",
+					"alternativaA" : "Documentação Abundante e Detalhada",
+					"alternativaB" : "Programação em Pares",
+					"anternativaC" : "Integração Contínua",
+					"alternativaD" : "Refatoração Frequente",
+					"alternativaCorreta" : "a"
+				},
+                ,{
+					"id" : "xp12",
+					"pergunta" : "A definição do valor RESPEITO no XP é? ",
+					"alternativaA" : "Respeitar aos lideres de projeto , pois eles estão sempre certos",
+					"alternativaB" : "Respeitar o cliente, pois o cliente sempre tem razão",
+					"anternativaC" : "Respeito entre a equipe, melhorando o contato entre os mesmos",
+					"alternativaD" : "Respeito próprio , não deixar ninguém discutir com sua opinião",
+					"alternativaCorreta" : "c"
+				},
+                ,{
+					"id" : "xp13",
+					"pergunta" : "No xp oque sugere a refatoração? ",
+					"alternativaA" : "Reaproveitamento do código de colegas",
+					"alternativaB" : "Ao fim da produção do código, verificar e modificar o máximo buscando simplicidade",
+					"anternativaC" : "Uso de códigos já prontos e apenas fazer as modificações",
+					"alternativaD" : "Sempre manter códigos válidos na nuvem para backup",
+					"alternativaCorreta" : "b"
+				},
+                ,{
+					"id" : "xp14",
+					"pergunta" : "A definição do Rodizio de Pessoas é: ",
+					"alternativaA" : "Revezar duplas das equipes,visando espalhar conhecimento",
+					"alternativaB" : "Revezar o gerente de projetos com membros da equipe",
+					"anternativaC" : "Sempre trocar programadores",
+					"alternativaD" : "Usar equipes de outras empresas para facilitar a comunicação",
+					"alternativaCorreta" : "a"
+				},
+                ,{
+					"id" : "xp15",
+					"pergunta" : "Não são práticas do XP: ",
+					"alternativaA" : "Programação em pares e propriedade coletiva",
+					"alternativaB" : "Refatoração e programação em pares",
+					"anternativaC" : "Diagrama de sequência e programação em pares",
+					"alternativaD" : "Refatoração e propriedade coletiva",
+					"alternativaCorreta" : "c"
+				},
+			
+			]
+		}
+	]
+}
