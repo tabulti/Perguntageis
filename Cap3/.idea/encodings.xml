@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final1.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final1.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final2.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final2.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final3.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final3.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final4.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_final4.xml" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

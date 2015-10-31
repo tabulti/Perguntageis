@@ -33,4 +33,8 @@
                  android:indeterminateOnly="true"
         />
 </RelativeLayout>
+<<<<<<< HEAD
+<!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/layout/com_facebook_login_fragment.xml --><!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/layout/com_facebook_login_fragment.xml -->
+=======
 <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/layout/com_facebook_login_fragment.xml --><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/layout/com_facebook_login_fragment.xml -->
+>>>>>>> origin/master

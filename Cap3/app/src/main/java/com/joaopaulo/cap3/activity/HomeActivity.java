@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         actionBar = getSupportActionBar();
-        //actionBar.setHomeAsUpIndicator(TODO: icone do menu);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_dehaze_white_24dp);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 

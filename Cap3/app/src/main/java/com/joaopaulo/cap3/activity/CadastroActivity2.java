@@ -74,12 +74,9 @@ public class CadastroActivity2 extends AppCompatActivity {
                     String usuarioGson = gson.toJson(usuario);
 
 
-
                     perguntageisFireBase.child("usuarios").push().setValue(usuarioGson);
 
                     String msg = perguntageisFireBase.child("usuarios").child(userLogin).getKey();
-
-
 
 
 

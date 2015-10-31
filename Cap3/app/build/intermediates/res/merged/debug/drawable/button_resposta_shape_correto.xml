@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_pressed="true">
-        <shape android:shape="rectangle">
+        <shape>
             <corners
-                android:radius="100dp" />
+                android:radius="60dp" />
             <gradient
                 android:startColor="#0F0"
                 android:endColor="#FFF"/>
@@ -13,9 +13,15 @@
 
     <item>
         <shape>
-            <corners android:radius="100dp"/>
-            <solid android:color="@color/white"/>
+            <stroke android:width="5dp"
+                android:color="#3000"></stroke>
+            <corners android:radius="60dp"/>
+            <solid android:color="@color/colorTextIcons"/>
         </shape>
     </item>
+<<<<<<< HEAD
+</selector><!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/src/main/res/drawable/button_resposta_shape_correto.xml -->
+=======
 
 </selector><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/drawable/button_resposta_shape_correto.xml -->
+>>>>>>> origin/master

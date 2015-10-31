@@ -189,4 +189,8 @@
         app:theme="@style/NavigationViewTheme" />
 
 </android.support.v4.widget.DrawerLayout>
+<<<<<<< HEAD
+<!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/src/main/res/layout/activity_home.xml -->
+=======
 <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_home.xml -->
+>>>>>>> origin/master
