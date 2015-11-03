@@ -80,7 +80,6 @@
                 android:layout_gravity="center"
                 android:background="@drawable/button_cadastro_shape"/>
 
-<<<<<<< HEAD
             <TextView
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
@@ -96,7 +95,4 @@
     </LinearLayout>
 
 
-<!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/src/main/res/layout/activity_main.xml -->
-=======
-<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_main.xml -->
->>>>>>> origin/master
+<!-- From: file:/C:/SourceTree/Cap3/app/src/main/res/layout/activity_main.xml -->

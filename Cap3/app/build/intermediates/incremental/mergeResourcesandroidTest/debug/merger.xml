@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<merger version="3"><dataSet config="main"><source path="C:\GitHub\Perguntageis\Perguntageis\Cap3\app\src\androidTest\res"/><source path="C:\GitHub\Perguntageis\Perguntageis\Cap3\app\build\generated\res\rs\androidTest\debug"/><source path="C:\GitHub\Perguntageis\Perguntageis\Cap3\app\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems/></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\androidTest\res"/><source path="C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\generated\res\rs\androidTest\debug"/><source path="C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems/></merger>
->>>>>>> origin/master
+<merger version="3"><dataSet config="main"><source path="C:\SourceTree\Cap3\app\src\androidTest\res"/><source path="C:\SourceTree\Cap3\app\build\generated\res\rs\androidTest\debug"/><source path="C:\SourceTree\Cap3\app\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems/></merger>

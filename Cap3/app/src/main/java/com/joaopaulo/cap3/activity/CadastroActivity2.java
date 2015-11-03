@@ -78,8 +78,6 @@ public class CadastroActivity2 extends AppCompatActivity {
 
                     String msg = perguntageisFireBase.child("usuarios").child(userLogin).getKey();
 
-
-
                     Log.i("teste", msg);
 
                     Log.i("gson", usuarioGson);

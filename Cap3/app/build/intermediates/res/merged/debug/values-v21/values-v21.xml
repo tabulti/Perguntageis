@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/src/main/res/values-v21/attrs.xml -->
+    <!-- From: file:/C:/SourceTree/Cap3/app/src/main/res/values-v21/attrs.xml -->
     <eat-comment/>
     <bool name="fitsSystemWindows">true</bool>
-    <!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-v21/values-v21.xml -->
+    <!-- From: file:/C:/SourceTree/Cap3/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <dimen name="design_navigation_padding_top_default">24dp</dimen>
-    <!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/src/main/res/values-v21/attrs.xml -->
+    <!-- From: file:/C:/SourceTree/Cap3/app/src/main/res/values-v21/attrs.xml -->
     <eat-comment/>
     <dimen name="navigation_drawer_header_margin">41dp</dimen>
     <dimen name="status_bar_height">0dp</dimen>
-    <!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/src/main/res/values-v21/styles.xml -->
-=======
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values-v21/attrs.xml -->
-    <eat-comment/>
-    <bool name="fitsSystemWindows">true</bool>
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-v21/values-v21.xml -->
-    <eat-comment/>
-    <dimen name="design_navigation_padding_top_default">24dp</dimen>
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values-v21/attrs.xml -->
-    <eat-comment/>
-    <dimen name="navigation_drawer_header_margin">41dp</dimen>
-    <dimen name="status_bar_height">0dp</dimen>
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values-v21/styles.xml -->
->>>>>>> origin/master
+    <!-- From: file:/C:/SourceTree/Cap3/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -34,11 +20,7 @@
         <item name="android:colorControlHighlight">@color/control_highlight</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
-<<<<<<< HEAD
-    <!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v21/values-v21.xml -->
-=======
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v21/values-v21.xml -->
->>>>>>> origin/master
+    <!-- From: file:/C:/SourceTree/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
@@ -254,20 +236,12 @@
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="android:Widget.Material.TextView.SpinnerItem"/>
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation">
     </style>
-<<<<<<< HEAD
-    <!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/src/main/res/values-v21/styles.xml -->
-=======
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values-v21/styles.xml -->
->>>>>>> origin/master
+    <!-- From: file:/C:/SourceTree/Cap3/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="NavigationViewTheme" parent="AppTheme">
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Body2</item>
     </style>
-<<<<<<< HEAD
-    <!-- From: file:/C:/GitHub/Perguntageis/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v21/values-v21.xml -->
-=======
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v21/values-v21.xml -->
->>>>>>> origin/master
+    <!-- From: file:/C:/SourceTree/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme.Material">
         <item name="android:windowNoTitle">true</item>

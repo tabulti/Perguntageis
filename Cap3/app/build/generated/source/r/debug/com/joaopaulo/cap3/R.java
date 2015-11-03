@@ -2778,38 +2778,39 @@ containing a value of this type.
         public static final int com_facebook_activity_layout=0x7f040020;
         public static final int com_facebook_login_fragment=0x7f040021;
         public static final int com_facebook_tooltip_bubble=0x7f040022;
-        public static final int content_roleta=0x7f040023;
-        public static final int design_layout_snackbar=0x7f040024;
-        public static final int design_layout_snackbar_include=0x7f040025;
-        public static final int design_layout_tab_icon=0x7f040026;
-        public static final int design_layout_tab_text=0x7f040027;
-        public static final int design_menu_item_action_area=0x7f040028;
-        public static final int design_navigation_item=0x7f040029;
-        public static final int design_navigation_item_header=0x7f04002a;
-        public static final int design_navigation_item_separator=0x7f04002b;
-        public static final int design_navigation_item_subheader=0x7f04002c;
-        public static final int design_navigation_menu=0x7f04002d;
-        public static final int design_navigation_menu_item=0x7f04002e;
-        public static final int include_toolbar=0x7f04002f;
-        public static final int messenger_button_send_blue_large=0x7f040030;
-        public static final int messenger_button_send_blue_round=0x7f040031;
-        public static final int messenger_button_send_blue_small=0x7f040032;
-        public static final int messenger_button_send_white_large=0x7f040033;
-        public static final int messenger_button_send_white_round=0x7f040034;
-        public static final int messenger_button_send_white_small=0x7f040035;
-        public static final int navigation_drawer_header=0x7f040036;
-        public static final int notification_media_action=0x7f040037;
-        public static final int notification_media_cancel_action=0x7f040038;
-        public static final int notification_template_big_media=0x7f040039;
-        public static final int notification_template_big_media_narrow=0x7f04003a;
-        public static final int notification_template_lines=0x7f04003b;
-        public static final int notification_template_media=0x7f04003c;
-        public static final int notification_template_part_chronometer=0x7f04003d;
-        public static final int notification_template_part_time=0x7f04003e;
-        public static final int select_dialog_item_material=0x7f04003f;
-        public static final int select_dialog_multichoice_material=0x7f040040;
-        public static final int select_dialog_singlechoice_material=0x7f040041;
-        public static final int support_simple_spinner_dropdown_item=0x7f040042;
+        public static final int content_main=0x7f040023;
+        public static final int content_roleta=0x7f040024;
+        public static final int design_layout_snackbar=0x7f040025;
+        public static final int design_layout_snackbar_include=0x7f040026;
+        public static final int design_layout_tab_icon=0x7f040027;
+        public static final int design_layout_tab_text=0x7f040028;
+        public static final int design_menu_item_action_area=0x7f040029;
+        public static final int design_navigation_item=0x7f04002a;
+        public static final int design_navigation_item_header=0x7f04002b;
+        public static final int design_navigation_item_separator=0x7f04002c;
+        public static final int design_navigation_item_subheader=0x7f04002d;
+        public static final int design_navigation_menu=0x7f04002e;
+        public static final int design_navigation_menu_item=0x7f04002f;
+        public static final int include_toolbar=0x7f040030;
+        public static final int messenger_button_send_blue_large=0x7f040031;
+        public static final int messenger_button_send_blue_round=0x7f040032;
+        public static final int messenger_button_send_blue_small=0x7f040033;
+        public static final int messenger_button_send_white_large=0x7f040034;
+        public static final int messenger_button_send_white_round=0x7f040035;
+        public static final int messenger_button_send_white_small=0x7f040036;
+        public static final int navigation_drawer_header=0x7f040037;
+        public static final int notification_media_action=0x7f040038;
+        public static final int notification_media_cancel_action=0x7f040039;
+        public static final int notification_template_big_media=0x7f04003a;
+        public static final int notification_template_big_media_narrow=0x7f04003b;
+        public static final int notification_template_lines=0x7f04003c;
+        public static final int notification_template_media=0x7f04003d;
+        public static final int notification_template_part_chronometer=0x7f04003e;
+        public static final int notification_template_part_time=0x7f04003f;
+        public static final int select_dialog_item_material=0x7f040040;
+        public static final int select_dialog_multichoice_material=0x7f040041;
+        public static final int select_dialog_singlechoice_material=0x7f040042;
+        public static final int support_simple_spinner_dropdown_item=0x7f040043;
     }
     public static final class menu {
         public static final int menu_main=0x7f0e0000;
@@ -2864,20 +2865,12 @@ containing a value of this type.
         public static final int com_facebook_share_button_text=0x7f070021;
         public static final int com_facebook_tooltip_default=0x7f070022;
         public static final int facebook_app_id=0x7f07002a;
-<<<<<<< HEAD
         public static final int hello_blank_fragment=0x7f07002b;
         public static final int login=0x7f07002c;
         public static final int messenger_send_button_text=0x7f070023;
         public static final int senha=0x7f07002d;
         public static final int status_bar_notification_info_overflow=0x7f070024;
         public static final int usuario=0x7f07002e;
-=======
-        public static final int login=0x7f07002b;
-        public static final int messenger_send_button_text=0x7f070023;
-        public static final int senha=0x7f07002c;
-        public static final int status_bar_notification_info_overflow=0x7f070024;
-        public static final int usuario=0x7f07002d;
->>>>>>> origin/master
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a0080;
