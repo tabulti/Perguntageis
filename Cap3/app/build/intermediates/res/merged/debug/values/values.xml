@@ -45,11 +45,16 @@
     <color name="cardview_shadow_start_color">#37000000</color>
     <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="colorAccent">#F44336</color>
-    <color name="colorBtnCadastro">#FFF59D</color>
-    <color name="colorBtnLogin">#FFF176</color>
-    <color name="colorPrimary">#03A9F4</color>
-    <color name="colorPrimaryDark">#01579B</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="colorAccentLight">#FFE082</color>
+    <color name="colorBackGround">#E0E0E0</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorPrimary">#9C27B0</color>
+    <color name="colorPrimaryDark">#7B1FA2</color>
+    <color name="colorPrimaryLight">#E1BEE7</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorTextIcons">#FFFFFF</color>
     <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values/values.xml -->
     <eat-comment/>
     <color name="com_facebook_blue">#3B5998</color>
@@ -121,9 +126,6 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values/colors.xml -->
-    <eat-comment/>
-    <color name="white">#ffffff</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -171,8 +173,6 @@
     <declare-styleable name="com_facebook_like_view"><attr format="color" name="com_facebook_foreground_color"/><attr format="string" name="com_facebook_object_id"/><attr name="com_facebook_object_type"><enum name="unknown" value="0"/><enum name="open_graph" value="1"/><enum name="page" value="2"/></attr><attr name="com_facebook_style"><enum name="standard" value="0"/><enum name="button" value="1"/><enum name="box_count" value="2"/></attr><attr name="com_facebook_auxiliary_view_position"><enum name="bottom" value="0"/><enum name="inline" value="1"/><enum name="top" value="2"/></attr><attr name="com_facebook_horizontal_alignment"><enum name="center" value="0"/><enum name="left" value="1"/><enum name="right" value="2"/></attr></declare-styleable>
     <declare-styleable name="com_facebook_login_view"><attr format="boolean" name="com_facebook_confirm_logout"/><attr format="string" name="com_facebook_login_text"/><attr format="string" name="com_facebook_logout_text"/><attr name="com_facebook_tooltip_mode"><enum name="automatic" value="0"/><enum name="display_always" value="1"/><enum name="never_display" value="2"/></attr></declare-styleable>
     <declare-styleable name="com_facebook_profile_picture_view"><attr name="com_facebook_preset_size"><enum name="small" value="-2"/><enum name="normal" value="-3"/><enum name="large" value="-4"/></attr><attr format="boolean" name="com_facebook_is_cropped"/></declare-styleable>
-    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
-    <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_end_material">0dp</dimen>
@@ -410,7 +410,8 @@
     <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
     <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="facebook_app_id">Bmce+9aHdOoVtE7fS3B07tfj7Bc=</string>
+    <string name="facebook_app_id">131739693850110</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login">Login</string>
     <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values/values.xml -->
     <eat-comment/>

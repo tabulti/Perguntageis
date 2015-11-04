@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners
+                android:radius="40dp" />
+            <gradient
+                android:startColor="#0F0"
+                android:endColor="#FFF"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <stroke android:width="2dp"
+                android:color="#3000"></stroke>
+            <corners android:radius="40dp"/>
+            <solid android:color="@color/colorAccent"/>
+        </shape>
+    </item>
+</selector>
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/drawable/button_login_shape.xml -->

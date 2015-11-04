@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_pressed="true">
-        <shape android:shape="rectangle">
+        <shape>
             <corners
-                android:radius="100dp" />
+                android:radius="60dp" />
             <gradient
                 android:startColor="#F00"
                 android:endColor="#FFF"/>
@@ -13,8 +13,10 @@
 
     <item>
         <shape>
-            <corners android:radius="100dp"/>
-            <solid android:color="@color/white"/>
+            <stroke android:width="5dp"
+                android:color="#3000"></stroke>
+            <corners android:radius="60dp"/>
+            <solid android:color="@color/colorTextIcons"/>
         </shape>
     </item>
 
