@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.firebase.client.Firebase;
 import com.joaopaulo.cap3.R;
 
 public class HomeActivity extends AppCompatActivity {
@@ -23,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     TextView textView;
     String login;
     Button roletaActivity;
+    Firebase ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,8 +114,13 @@ public class HomeActivity extends AppCompatActivity {
                             textView.setText(menuItem.getTitle());
                             Toast.makeText(HomeActivity.this, "Launching " + menuItem.getTitle().toString(), Toast.LENGTH_SHORT).show();
                             drawerLayout.closeDrawer(GravityCompat.START);
-                            /*Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                            startActivity(intent);*/
+                            return true;
+                        case R.id.item_logout:
+                            ref = new Firebase("https://perguntageis.firebaseio.com/");
+                            menuItem.setChecked(true);
+                            textView.setText(menuItem.getTitle());
+                            drawerLayout.closeDrawer(GravityCompat.START);
+                            ref.unauth();
                             return true;
                     }
                     return true;

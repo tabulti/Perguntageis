@@ -1,35 +1,30 @@
 package com.joaopaulo.cap3.activity;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.firebase.client.Firebase;
-
 import com.firebase.client.FirebaseError;
-import com.google.gson.Gson;
 import com.joaopaulo.cap3.R;
 import com.joaopaulo.cap3.adapters.ImageAdaptor;
-import com.joaopaulo.cap3.domain.Usuario;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import java.util.HashMap;
 import java.util.Map;
+
+/**
+ * Activity que finaliza o cadastro de usuário, recuperando dados da
+ * CadastroActivity e adicionando outros.
+ *
+ * TODO: implentar onActivityDestroyed() para impedir que um usuario
+ * volte para esta activity ao finalizar um cadastro
+ */
 
 public class CadastroActivity2 extends AppCompatActivity {
 
@@ -37,20 +32,23 @@ public class CadastroActivity2 extends AppCompatActivity {
     int avatarImgCode;
     Toolbar cadastro2Toolbar;
     GridView grid;
+    Map<String, String> mapUser;
 
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_cadastro2);
 
+        //Conexão com FireBase
         Firebase.setAndroidContext(this);
         final Firebase perguntageisFireBase = new Firebase("https://perguntageis.firebaseio.com/");
 
-
+        //Setando Toolbar
         cadastro2Toolbar = (Toolbar) findViewById(R.id.toolbar);
         cadastro2Toolbar.setTitle("Cadastro");
         setSupportActionBar(cadastro2Toolbar);
 
+        //Recuperando dados de parâmetros
         Bundle args = getIntent().getExtras();
         userLogin = args.getString("userLogin");
         userSenha = args.getString("userSenha");
@@ -58,29 +56,43 @@ public class CadastroActivity2 extends AppCompatActivity {
 
         Button btConfirmarCadastro = (Button) findViewById(R.id.btConfirmaCadastro);
 
+        //Instanciando e inicializando gridView com seu adapter
         grid = (GridView) findViewById(R.id.gridAvatar);
         grid.setOnItemClickListener(onGridViewItemClick());
         grid.setAdapter(new ImageAdaptor(this));
 
-
+        //Evento de clique do botão para confirmar o cadastro
         btConfirmarCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.btConfirmaCadastro) {
-                    Usuario usuario = new Usuario(userLogin, userSenha, userEmail, avatarImgCode);
 
-                    //Parser java object para json
-                    Gson gson = new Gson();
-                    String usuarioGson = gson.toJson(usuario);
+                    //Instanciando um novo usuário
+                    mapUser = new HashMap<>();
+                    mapUser.put("login", userLogin);
+                    mapUser.put("senha", userSenha);
+                    mapUser.put("email", userEmail);
+                    mapUser.put("imageCode", String.valueOf(avatarImgCode));
 
 
-                    perguntageisFireBase.child("usuarios").push().setValue(usuarioGson);
+                    //Handler/Callback para credenciais de usuário
+                    Firebase.ResultHandler handler = new Firebase.ResultHandler() {
+                        @Override
+                        public void onSuccess() {
+                            //Sucesso
+                        }
 
-                    String msg = perguntageisFireBase.child("usuarios").child(userLogin).getKey();
+                        @Override
+                        public void onError(FirebaseError firebaseError) {
+                            //Erro
+                        }
+                    };
+                    //Criando credenciais de acesso do usuário
+                    perguntageisFireBase.createUser(userEmail, userLogin, handler);
 
-                    Log.i("teste", msg);
+                    //Salvando um usuário no firebase
+                    perguntageisFireBase.child("users").push().setValue(mapUser);
 
-                    Log.i("gson", usuarioGson);
                     //Alert Cadastro bem-sucedido
                     AlertDialog.Builder builder = new AlertDialog.Builder(CadastroActivity2.this);
                     builder.setTitle("Tudo Certo!");
@@ -103,7 +115,7 @@ public class CadastroActivity2 extends AppCompatActivity {
         });
     }
 
-    //Evento de click no grid
+    //Evento de click no gridView
     private AdapterView.OnItemClickListener onGridViewItemClick() {
         return new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int posicao, long id) {
@@ -136,7 +148,7 @@ public class CadastroActivity2 extends AppCompatActivity {
             }
         };
     }
-
+    //Método para mostrar um toast
     public void showToast(String msg) {
         Toast.makeText(CadastroActivity2.this, msg, Toast.LENGTH_SHORT).show();
     }

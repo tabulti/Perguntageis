@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity{
         Button btCadastro = (Button) findViewById(R.id.btCadastro);
 
 
+
+
         //Evento do botão login pelo facebook
         loginButtonFacebook.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity{
                     final TextView tLogin = (TextView) findViewById(R.id.tLogin);
                     TextView tSenha = (TextView) findViewById(R.id.tSenha);
 
-                    String login = tLogin.getText().toString();
+                    final String login = tLogin.getText().toString();
                     String senha = tSenha.getText().toString();
 
 
@@ -110,13 +112,25 @@ public class MainActivity extends AppCompatActivity{
                     mAuthProgressDialog.show();
 
                     ref = new Firebase("https://perguntageis.firebaseio.com/");
+
                     //Handler Firebase
                     Firebase.AuthResultHandler authResultHandler = new Firebase.AuthResultHandler() {
                         @Override
                         public void onAuthenticated(AuthData authData) {
+
                             // Authenticated successfully with payload authData
-                            alert("teste Autenticado");
                             mAuthProgressDialog.hide();
+                            alert("teste Autenticado");
+
+                            Intent intent = new Intent(getBaseContext(), HomeActivity.class);
+
+                            intent.putExtra("login", login);
+
+                            startActivity(intent);
+
+                            /**
+                             * TODO: chamar HomeActivity
+                             */
                         }
                         @Override
                         public void onAuthenticationError(FirebaseError firebaseError) {
@@ -127,7 +141,9 @@ public class MainActivity extends AppCompatActivity{
                         }
                     };
 
+
                     ref.authWithPassword(login, senha, authResultHandler);
+
 
                 }
             }
