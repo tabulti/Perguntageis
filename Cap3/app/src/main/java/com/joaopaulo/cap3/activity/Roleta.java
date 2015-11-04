@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class Roleta extends AppCompatActivity {
     private ImageView arrow;
     private MediaPlayer mp;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,7 @@ public class Roleta extends AppCompatActivity {
         roleta_background = (ImageView) findViewById(R.id.roleta);
         arrow = (ImageView) findViewById(R.id.arrow);
         arrow.bringToFront();
+
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -159,6 +162,10 @@ public class Roleta extends AppCompatActivity {
 
     }
 
+    public void popupStatus(View v){
+
+        startActivity(new Intent(Roleta.this,PopupStatus.class));
+    }
 
     public void finalAnimacao(Animation anim, int codigoTema){
 

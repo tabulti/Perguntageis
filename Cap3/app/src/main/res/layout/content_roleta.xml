@@ -40,4 +40,16 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:onClick="popupStatus"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/status"
+        android:shadowColor="@null"
+        android:layout_toStartOf="@+id/girar"
+        android:layout_below="@+id/roleta"
+         />
 </RelativeLayout>

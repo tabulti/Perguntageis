@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:7:5-41:19
+ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:7:5-43:19
 MERGED from [com.android.support:appcompat-v7:23.1.0] C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.0] C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.1.0] C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\AndroidManifest.xml:22:5-20
@@ -101,6 +101,12 @@ ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidMani
 		ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:39:13-72
 	android:name
 		ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:36:19-63
+activity#com.joaopaulo.cap3.activity.PopupStatus
+ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:41:9-42:63
+	android:theme
+		ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:42:13-61
+	android:name
+		ADDED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml:41:19-55
 uses-sdk
 INJECTED from C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.0] C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\AndroidManifest.xml:20:5-43
