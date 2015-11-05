@@ -219,4 +219,68 @@
         android:layout_marginTop="23dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/agileb1" />
-</RelativeLayout><!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/popup_status.xml -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agilea"
+        android:src="@drawable/agile"
+        android:layout_above="@+id/agilea2"
+        android:layout_alignStart="@+id/agilea1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agileb"
+        android:src="@drawable/agile"
+        android:layout_alignBottom="@+id/agilea"
+        android:layout_alignStart="@+id/agileb1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leana"
+        android:src="@drawable/lean"
+        android:layout_above="@+id/leana2"
+        android:layout_alignStart="@+id/leana1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leanb"
+        android:src="@drawable/lean"
+        android:layout_above="@+id/leanb1"
+        android:layout_alignStart="@+id/agileb1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scruma"
+        android:src="@drawable/scrum"
+        android:layout_above="@+id/scruma2"
+        android:layout_alignStart="@+id/scruma1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrumb"
+        android:src="@drawable/scrum"
+        android:layout_alignTop="@+id/scruma"
+        android:layout_alignStart="@+id/scrumb1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xpa"
+        android:src="@drawable/xp"
+        android:layout_above="@+id/xpa2"
+        android:layout_toEndOf="@+id/avatarA" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xpb"
+        android:src="@drawable/xp"
+        android:layout_above="@+id/xpb1"
+        android:layout_alignStart="@+id/xpb1" />
+</RelativeLayout><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/popup_status.xml -->
