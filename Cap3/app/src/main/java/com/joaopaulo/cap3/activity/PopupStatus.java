@@ -49,8 +49,12 @@ public class PopupStatus extends Activity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+
+                apagarCorrects();
                 HashMap<String,String> jogo= (HashMap)dataSnapshot.child("jogos").child("jogoexample").getValue();
+
                 int leana = Integer.parseInt(jogo.get("leanA"));
+
 
                 if(leana == 0){
 
@@ -75,6 +79,181 @@ public class PopupStatus extends Activity {
 
                 }
 
+
+                int leanb = Integer.parseInt(jogo.get("leanB"));
+
+                if(leana == 0){
+
+                }else if(leana == 1){
+                    aux = (ImageView) findViewById(R.id.leanb1);
+                    aux.setVisibility(View.VISIBLE);
+                }else if (leana == 2){
+                    aux = (ImageView) findViewById(R.id.leanb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.leanb2);
+                    aux.setVisibility(View.VISIBLE);
+                }else{
+                    aux = (ImageView) findViewById(R.id.leanb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.leanb2);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.leanb3);
+                    aux.setVisibility(View.VISIBLE);
+
+                }
+
+                int agilea = Integer.parseInt(jogo.get("agileA"));
+
+                if(agilea == 0){
+
+                }else if(agilea == 1){
+                    aux = (ImageView) findViewById(R.id.agilea1);
+                    aux.setVisibility(View.VISIBLE);
+                }else if (agilea == 2){
+                    aux = (ImageView) findViewById(R.id.agilea1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.agilea2);
+                    aux.setVisibility(View.VISIBLE);
+                }else{
+                    aux = (ImageView) findViewById(R.id.agilea1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.agilea2);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.agilea3);
+                    aux.setVisibility(View.VISIBLE);
+
+                }
+
+                int agileb = Integer.parseInt(jogo.get("agileB"));
+
+                if(agileb == 0){
+
+                }else if(agileb == 1){
+                    aux = (ImageView) findViewById(R.id.agileb1);
+                    aux.setVisibility(View.VISIBLE);
+                }else if (agileb == 2){
+                    aux = (ImageView) findViewById(R.id.agileb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.agileb2);
+                    aux.setVisibility(View.VISIBLE);
+                }else{
+                    aux = (ImageView) findViewById(R.id.agileb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.agileb2);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.agileb3);
+                    aux.setVisibility(View.VISIBLE);
+
+                }
+
+                int scruma = Integer.parseInt(jogo.get("scrumA"));
+
+                if(scruma == 0){
+
+                }else if(scruma == 1){
+                    aux = (ImageView) findViewById(R.id.scruma1);
+                    aux.setVisibility(View.VISIBLE);
+                }else if (scruma == 2){
+                    aux = (ImageView) findViewById(R.id.scruma1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.scruma2);
+                    aux.setVisibility(View.VISIBLE);
+                }else{
+                    aux = (ImageView) findViewById(R.id.scruma1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.scruma2);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.scruma3);
+                    aux.setVisibility(View.VISIBLE);
+
+                }
+
+                int scrumb = Integer.parseInt(jogo.get("scrumB"));
+
+                if(scrumb == 0){
+
+                }else if(scrumb == 1){
+                    aux = (ImageView) findViewById(R.id.scrumb1);
+                    aux.setVisibility(View.VISIBLE);
+                }else if (scrumb == 2){
+                    aux = (ImageView) findViewById(R.id.scrumb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.scrumb2);
+                    aux.setVisibility(View.VISIBLE);
+                }else{
+                    aux = (ImageView) findViewById(R.id.scrumb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.scrumb2);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.scrumb3);
+                    aux.setVisibility(View.VISIBLE);
+
+                }
+
+                int xpa = Integer.parseInt(jogo.get("xpA"));
+
+                if(xpa == 0){
+
+                }else if(xpa == 1){
+                    aux = (ImageView) findViewById(R.id.xpa1);
+                    aux.setVisibility(View.VISIBLE);
+                }else if (xpa == 2){
+                    aux = (ImageView) findViewById(R.id.xpa1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.xpa2);
+                    aux.setVisibility(View.VISIBLE);
+                }else{
+                    aux = (ImageView) findViewById(R.id.xpa1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.xpa2);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.xpa3);
+                    aux.setVisibility(View.VISIBLE);
+
+                }
+
+                int xpb = Integer.parseInt(jogo.get("xpB"));
+
+                if(xpb == 0){
+
+                }else if(xpb == 1){
+                    aux = (ImageView) findViewById(R.id.xpb1);
+                    aux.setVisibility(View.VISIBLE);
+                }else if (xpb == 2){
+                    aux = (ImageView) findViewById(R.id.xpb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.xpb2);
+                    aux.setVisibility(View.VISIBLE);
+                }else{
+                    aux = (ImageView) findViewById(R.id.xpb1);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.xpb2);
+                    aux.setVisibility(View.VISIBLE);
+
+                    aux = (ImageView) findViewById(R.id.xpb3);
+                    aux.setVisibility(View.VISIBLE);
+
+                }
             }
 
             @Override
