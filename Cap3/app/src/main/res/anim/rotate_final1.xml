@@ -29,7 +29,7 @@
         android:toDegrees="360"
         />
 
-    <rotate android:duration="1500"
+    <rotate android:duration="1100"
         android:fromDegrees="0"
         android:pivotX="50%"
         android:pivotY="50%"
@@ -40,7 +40,7 @@
         />
 
     <alpha
-        android:duration="6000"/>
+        android:duration="3000"/>
 
 
 </set>

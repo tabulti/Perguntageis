@@ -43,10 +43,17 @@ public class Roleta extends AppCompatActivity {
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    @Override
+    protected void onPause(){
+        super.onPause();
+        roleta_background.setImageResource(R.drawable.roleta_final);
+    }
+
     public void girarRoleta(View view){
 
         Random rand = new Random();
         int aux = rand.nextInt(4);
+
         roleta_background.setImageResource(R.drawable.roleta_final);
         animRotate = AnimationUtils.loadAnimation(this, R.anim.rotate);
         roleta_background.startAnimation(animRotate);
