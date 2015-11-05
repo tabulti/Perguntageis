@@ -41,7 +41,7 @@ public class PopupStatus extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width*.8),(int) (height*.6));
+        getWindow().setLayout((int) (width*.8),(int) (height*.75));
 
         apagarCorrects();
 
@@ -82,12 +82,12 @@ public class PopupStatus extends Activity {
 
                 int leanb = Integer.parseInt(jogo.get("leanB"));
 
-                if(leana == 0){
+                if(leanb == 0){
 
-                }else if(leana == 1){
+                }else if(leanb == 1){
                     aux = (ImageView) findViewById(R.id.leanb1);
                     aux.setVisibility(View.VISIBLE);
-                }else if (leana == 2){
+                }else if (leanb == 2){
                     aux = (ImageView) findViewById(R.id.leanb1);
                     aux.setVisibility(View.VISIBLE);
 
