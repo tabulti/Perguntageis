@@ -2569,6 +2569,18 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d0063;
         public static final int action_mode_bar_stub=0x7f0d0062;
         public static final int action_mode_close_button=0x7f0d0048;
+<<<<<<< HEAD
+        public static final int action_settings=0x7f0d00d5;
+        public static final int activity_chooser_view_content=0x7f0d0049;
+        public static final int agilea=0x7f0d00cd;
+        public static final int agilea1=0x7f0d00b3;
+        public static final int agilea2=0x7f0d00b4;
+        public static final int agilea3=0x7f0d00b5;
+        public static final int agileb=0x7f0d00ce;
+        public static final int agileb1=0x7f0d00bc;
+        public static final int agileb2=0x7f0d00bd;
+        public static final int agileb3=0x7f0d00be;
+=======
         public static final int action_settings=0x7f0d00d6;
         public static final int activity_chooser_view_content=0x7f0d0049;
         public static final int agilea=0x7f0d00ce;
@@ -2579,6 +2591,7 @@ containing a value of this type.
         public static final int agileb1=0x7f0d00bd;
         public static final int agileb2=0x7f0d00be;
         public static final int agileb3=0x7f0d00bf;
+>>>>>>> 9772e7e0ebea780f936ee5633b69845e912575ae
         public static final int alertTitle=0x7f0d0055;
         public static final int always=0x7f0d0032;
         public static final int arrow=0x7f0d009a;
@@ -2656,6 +2669,24 @@ containing a value of this type.
         public static final int imgMoeda=0x7f0d0084;
         public static final int info=0x7f0d00b2;
         public static final int inline=0x7f0d0040;
+<<<<<<< HEAD
+        public static final int item_ajuda=0x7f0d00d9;
+        public static final int item_caixa_de_entrada=0x7f0d00d8;
+        public static final int item_configuracoes=0x7f0d00da;
+        public static final int item_conquistas=0x7f0d00d6;
+        public static final int item_logout=0x7f0d00db;
+        public static final int item_oficina_de_perguntas=0x7f0d00d7;
+        public static final int item_touch_helper_previous_elevation=0x7f0d0005;
+        public static final int large=0x7f0d0044;
+        public static final int leana=0x7f0d00cf;
+        public static final int leana1=0x7f0d00b6;
+        public static final int leana2=0x7f0d00b7;
+        public static final int leana3=0x7f0d00b8;
+        public static final int leanb=0x7f0d00d0;
+        public static final int leanb1=0x7f0d00bf;
+        public static final int leanb2=0x7f0d00c0;
+        public static final int leanb3=0x7f0d00c1;
+=======
         public static final int item_ajuda=0x7f0d00da;
         public static final int item_caixa_de_entrada=0x7f0d00d9;
         public static final int item_configuracoes=0x7f0d00db;
@@ -2672,6 +2703,7 @@ containing a value of this type.
         public static final int leanb1=0x7f0d00c0;
         public static final int leanb2=0x7f0d00c1;
         public static final int leanb3=0x7f0d00c2;
+>>>>>>> 9772e7e0ebea780f936ee5633b69845e912575ae
         public static final int left=0x7f0d0022;
         public static final int line1=0x7f0d00ac;
         public static final int line3=0x7f0d00b0;
@@ -2707,6 +2739,16 @@ containing a value of this type.
         public static final int scrollIndicatorUp=0x7f0d0057;
         public static final int scrollView=0x7f0d0058;
         public static final int scrollable=0x7f0d0038;
+<<<<<<< HEAD
+        public static final int scruma=0x7f0d00d1;
+        public static final int scruma1=0x7f0d00b9;
+        public static final int scruma2=0x7f0d00ba;
+        public static final int scruma3=0x7f0d00bb;
+        public static final int scrumb=0x7f0d00d2;
+        public static final int scrumb1=0x7f0d00c2;
+        public static final int scrumb2=0x7f0d00c3;
+        public static final int scrumb3=0x7f0d00c4;
+=======
         public static final int scruma=0x7f0d00d2;
         public static final int scruma1=0x7f0d00ba;
         public static final int scruma2=0x7f0d00bb;
@@ -2715,6 +2757,7 @@ containing a value of this type.
         public static final int scrumb1=0x7f0d00c3;
         public static final int scrumb2=0x7f0d00c4;
         public static final int scrumb3=0x7f0d00c5;
+>>>>>>> 9772e7e0ebea780f936ee5633b69845e912575ae
         public static final int search_badge=0x7f0d006a;
         public static final int search_bar=0x7f0d0069;
         public static final int search_button=0x7f0d006b;
@@ -2767,6 +2810,16 @@ containing a value of this type.
         public static final int view_offset_helper=0x7f0d000a;
         public static final int withText=0x7f0d0036;
         public static final int wrap_content=0x7f0d0039;
+<<<<<<< HEAD
+        public static final int xpa=0x7f0d00d3;
+        public static final int xpa1=0x7f0d00c5;
+        public static final int xpa2=0x7f0d00c6;
+        public static final int xpa3=0x7f0d00c7;
+        public static final int xpb=0x7f0d00d4;
+        public static final int xpb1=0x7f0d00c8;
+        public static final int xpb2=0x7f0d00c9;
+        public static final int xpb3=0x7f0d00ca;
+=======
         public static final int xpa=0x7f0d00d4;
         public static final int xpa1=0x7f0d00c6;
         public static final int xpa2=0x7f0d00c7;
@@ -2775,6 +2828,7 @@ containing a value of this type.
         public static final int xpb1=0x7f0d00c9;
         public static final int xpb2=0x7f0d00ca;
         public static final int xpb3=0x7f0d00cb;
+>>>>>>> 9772e7e0ebea780f936ee5633b69845e912575ae
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur=0x7f0b0002;
