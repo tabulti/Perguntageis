@@ -46,6 +46,12 @@ public class Roleta extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
+
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
         roleta_background.setImageResource(R.drawable.roleta_final);
     }
 
