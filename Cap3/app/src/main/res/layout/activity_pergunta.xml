@@ -30,6 +30,12 @@
             android:layout_gravity="center"
             />
 
+        <TextView
+            android:layout_width="343dp"
+            android:layout_height="169dp"
+            android:text=""
+            android:id="@+id/pergunta"
+            android:layout_gravity="center" />
 
 
     </FrameLayout>
@@ -46,35 +52,39 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/btn1"
             android:layout_weight="1"
-            android:text="Metodologia ágil"
-            android:background="@drawable/button_resposta_shape_correto"
+            android:background="@drawable/button_resposta_shape"
+            android:onClick="responderA"
             />
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Metodologia de desenvolvimento"
             android:layout_marginTop="16dp"
             android:background="@drawable/button_resposta_shape"
+            android:id="@+id/btn2"
+            android:onClick="responderB"
             />
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Comportamento social"
+            android:id="@+id/btn3"
             android:layout_marginTop="16dp"
-            android:background="@drawable/button_resposta_shape"/>
+            android:background="@drawable/button_resposta_shape"
+            android:onClick="responderC"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Movimento agilista"
+            android:id="@+id/btn4"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:background="@drawable/button_resposta_shape"/>
+            android:background="@drawable/button_resposta_shape"
+            android:onClick="responderD"/>
 
     </LinearLayout>
 
