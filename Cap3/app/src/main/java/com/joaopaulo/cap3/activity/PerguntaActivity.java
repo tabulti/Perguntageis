@@ -197,6 +197,7 @@ public class PerguntaActivity extends AppCompatActivity {
         super.onPause();
         jumpTime = 0;
 
+
     }
 
     public void responderA() {

@@ -720,18 +720,6 @@ int id action_menu_presenter 0x7f0d0003
 int id action_mode_bar 0x7f0d0063
 int id action_mode_bar_stub 0x7f0d0062
 int id action_mode_close_button 0x7f0d0048
-<<<<<<< HEAD
-int id action_settings 0x7f0d00d6
-int id activity_chooser_view_content 0x7f0d0049
-int id agilea 0x7f0d00ce
-int id agilea1 0x7f0d00b4
-int id agilea2 0x7f0d00b5
-int id agilea3 0x7f0d00b6
-int id agileb 0x7f0d00cf
-int id agileb1 0x7f0d00bd
-int id agileb2 0x7f0d00be
-int id agileb3 0x7f0d00bf
-=======
 int id action_settings 0x7f0d00db
 int id activity_chooser_view_content 0x7f0d0049
 int id agilea 0x7f0d00d3
@@ -742,7 +730,6 @@ int id agileb 0x7f0d00d4
 int id agileb1 0x7f0d00c2
 int id agileb2 0x7f0d00c3
 int id agileb3 0x7f0d00c4
->>>>>>> cfa6579d7bf79940eaf962901559a6abcc9353da
 int id alertTitle 0x7f0d0055
 int id always 0x7f0d0032
 int id arrow 0x7f0d009f
@@ -824,24 +811,6 @@ int id imgDiamante 0x7f0d0082
 int id imgMoeda 0x7f0d0084
 int id info 0x7f0d00b7
 int id inline 0x7f0d0040
-<<<<<<< HEAD
-int id item_ajuda 0x7f0d00da
-int id item_caixa_de_entrada 0x7f0d00d9
-int id item_configuracoes 0x7f0d00db
-int id item_conquistas 0x7f0d00d7
-int id item_logout 0x7f0d00dc
-int id item_oficina_de_perguntas 0x7f0d00d8
-int id item_touch_helper_previous_elevation 0x7f0d0005
-int id large 0x7f0d0044
-int id leana 0x7f0d00d0
-int id leana1 0x7f0d00b7
-int id leana2 0x7f0d00b8
-int id leana3 0x7f0d00b9
-int id leanb 0x7f0d00d1
-int id leanb1 0x7f0d00c0
-int id leanb2 0x7f0d00c1
-int id leanb3 0x7f0d00c2
-=======
 int id item_ajuda 0x7f0d00df
 int id item_caixa_de_entrada 0x7f0d00de
 int id item_configuracoes 0x7f0d00e0
@@ -858,7 +827,6 @@ int id leanb 0x7f0d00d6
 int id leanb1 0x7f0d00c5
 int id leanb2 0x7f0d00c6
 int id leanb3 0x7f0d00c7
->>>>>>> cfa6579d7bf79940eaf962901559a6abcc9353da
 int id left 0x7f0d0022
 int id line1 0x7f0d00b1
 int id line3 0x7f0d00b5
@@ -895,16 +863,6 @@ int id scrollIndicatorDown 0x7f0d005a
 int id scrollIndicatorUp 0x7f0d0057
 int id scrollView 0x7f0d0058
 int id scrollable 0x7f0d0038
-<<<<<<< HEAD
-int id scruma 0x7f0d00d2
-int id scruma1 0x7f0d00ba
-int id scruma2 0x7f0d00bb
-int id scruma3 0x7f0d00bc
-int id scrumb 0x7f0d00d3
-int id scrumb1 0x7f0d00c3
-int id scrumb2 0x7f0d00c4
-int id scrumb3 0x7f0d00c5
-=======
 int id scruma 0x7f0d00d7
 int id scruma1 0x7f0d00bf
 int id scruma2 0x7f0d00c0
@@ -913,7 +871,6 @@ int id scrumb 0x7f0d00d8
 int id scrumb1 0x7f0d00c8
 int id scrumb2 0x7f0d00c9
 int id scrumb3 0x7f0d00ca
->>>>>>> cfa6579d7bf79940eaf962901559a6abcc9353da
 int id search_badge 0x7f0d006a
 int id search_bar 0x7f0d0069
 int id search_button 0x7f0d006b
@@ -966,16 +923,6 @@ int id useLogo 0x7f0d0014
 int id view_offset_helper 0x7f0d000a
 int id withText 0x7f0d0036
 int id wrap_content 0x7f0d0039
-<<<<<<< HEAD
-int id xpa 0x7f0d00d4
-int id xpa1 0x7f0d00c6
-int id xpa2 0x7f0d00c7
-int id xpa3 0x7f0d00c8
-int id xpb 0x7f0d00d5
-int id xpb1 0x7f0d00c9
-int id xpb2 0x7f0d00ca
-int id xpb3 0x7f0d00cb
-=======
 int id xpa 0x7f0d00d9
 int id xpa1 0x7f0d00cb
 int id xpa2 0x7f0d00cc
@@ -984,7 +931,6 @@ int id xpb 0x7f0d00da
 int id xpb1 0x7f0d00ce
 int id xpb2 0x7f0d00cf
 int id xpb3 0x7f0d00d0
->>>>>>> cfa6579d7bf79940eaf962901559a6abcc9353da
 int integer abc_config_activityDefaultDur 0x7f0b0002
 int integer abc_config_activityShortDur 0x7f0b0003
 int integer abc_max_action_buttons 0x7f0b0000

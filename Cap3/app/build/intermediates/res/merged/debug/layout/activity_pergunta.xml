@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn1"
             android:layout_weight="1"
-
+            android:background="@drawable/button_resposta_shape"
             android:onClick="responderA"
             />
 
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-
+            android:background="@drawable/button_resposta_shape"
             android:id="@+id/btn2"
             android:onClick="responderB"
             />
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn3"
             android:layout_marginTop="16dp"
-
+            android:background="@drawable/button_resposta_shape"
             android:onClick="responderC"/>
 
         <Button
@@ -83,7 +83,7 @@
             android:id="@+id/btn4"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-
+            android:background="@drawable/button_resposta_shape"
             android:onClick="responderD"/>
 
     </LinearLayout>
