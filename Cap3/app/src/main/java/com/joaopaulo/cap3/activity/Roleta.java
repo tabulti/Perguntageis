@@ -32,6 +32,10 @@ public class Roleta extends AppCompatActivity {
     private Button girar;
     private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     private HashMap<String,String> vezNoTurno;
+    private HashMap<String,String> verificarFim;
+    private String vencedor;
+    private int scrumA,agileA,xpA,leanA,scrumB,agileB,xpB,leanB;
+    private String login;
 
 
     @Override
@@ -50,11 +54,14 @@ public class Roleta extends AppCompatActivity {
         suavez.setVisibility(View.INVISIBLE);
         girar = (Button) findViewById(R.id.girar);
         girar.setClickable(false);
+        Bundle args = getIntent().getExtras();
+        login = args.getString("login");
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 vezNoTurno = (HashMap)dataSnapshot.child("jogos").child("jogoexample").getValue();
+                verificarFim = (HashMap)dataSnapshot.child("jogos").child("jogoexample").getValue();
                 //TODO IMPLEMENTAR CAPTURAR ID DO JOGADOR AUTOMATICAMENTE
                 if(vezNoTurno.get("vezNoTurno").equals("A")){
                     suavez.setVisibility(View.VISIBLE);
@@ -63,6 +70,39 @@ public class Roleta extends AppCompatActivity {
                     suavez.setVisibility(View.INVISIBLE);
                     girar.setClickable(false);
                 }
+
+                //-----------------------------------VERIFICAR FIM DO JOGO ------------------------
+
+                scrumB = Integer.parseInt(verificarFim.get("scrumB"));
+                leanB = Integer.parseInt(verificarFim.get("leanB"));
+                agileB = Integer.parseInt(verificarFim.get("agileB"));
+                xpB = Integer.parseInt(verificarFim.get("xpB"));
+
+                if(scrumB>=3 && leanB>=3 && agileB>=3 && xpB>=3){
+                    //TODO RECUPERAR ID DO JOGADOR B
+                    //TODO
+                    vencedor = "JogadorB";
+                    Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
+                    fimDeJogo.putExtra("login",login);
+                    startActivity(fimDeJogo);
+
+                }
+
+                scrumA = Integer.parseInt(verificarFim.get("scrumA"));
+                leanA = Integer.parseInt(verificarFim.get("leanA"));
+                agileA = Integer.parseInt(verificarFim.get("agileA"));
+                xpA = Integer.parseInt(verificarFim.get("xpA"));
+
+                if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
+                    //TODO RECUPERAR ID DO JOGADOR B
+                    //TODO
+                    vencedor = "JogadorA";
+                    Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
+                    startActivity(fimDeJogo);
+
+                }
+
+                //------------------FIM VERIFICAR FIM DE JOGO ------------------------------------
             }
 
             @Override
@@ -88,9 +128,8 @@ public class Roleta extends AppCompatActivity {
 
     public void girarRoleta(View view){
 
-        Random rand = new Random();
-        int aux = rand.nextInt(4);
 
+        final int aux = gerarCodigoTema();
         roleta_background.setImageResource(R.drawable.roleta_final);
         animRotate = AnimationUtils.loadAnimation(this, R.anim.rotate);
         roleta_background.startAnimation(animRotate);
@@ -109,7 +148,7 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_amarelo);
                     roleta_background.startAnimation(animFinal);
-                    finalAnimacao(animFinal,0);
+                    finalAnimacao(animFinal,aux);
                 }
 
                 @Override
@@ -206,10 +245,10 @@ public class Roleta extends AppCompatActivity {
 
     public void popupStatus(View v){
 
-        startActivity(new Intent(Roleta.this,PopupStatus.class));
+        startActivity(new Intent(Roleta.this, PopupStatus.class));
     }
 
-    public void finalAnimacao(Animation anim, int codigoTema){
+    public void finalAnimacao(Animation anim, final int codigoTema){
 
         anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -220,6 +259,7 @@ public class Roleta extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
+                intent.putExtra("codigotema",codigoTema);
                 startActivity(intent);
             }
 
@@ -229,6 +269,425 @@ public class Roleta extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    public int gerarCodigoTema(){
+        //0 - SCRUM, 1 - XP, 2 - AGILE, 3 - LEAN
+        final int codigoScrum = 0, codigoXp = 1, codigoAgile = 2, codigoLean = 3;
+        Random rand = new Random();
+        int codigoGerado;
+
+        if(login.equals(verificarFim.get("loginJogadorA"))){
+            if(scrumA >= 3){
+                if(leanA >= 3){
+                    if(xpA >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileA >= 3){
+                        codigoGerado = codigoXp;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoXp;
+                        }
+                    }
+                }else if(xpA >=3){
+                    if(leanA >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileA >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+
+                }else if(agileA >=3){
+                    if(leanA >= 3) {
+                        codigoGerado = codigoXp;
+                    }else if (xpA >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoLean;
+                    }else if (i == 1){
+                        codigoGerado = codigoXp;
+                    }else{
+                        codigoGerado = codigoAgile;
+                    }
+                }
+
+
+            }else if(leanA >= 3){
+                if(scrumA >= 3){
+                    if(xpA >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileA >= 3){
+                        codigoGerado = codigoXp;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoXp;
+                        }
+                    }
+                }else if(xpA >=3){
+                    if(scrumA >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileA >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else if(agileA >=3){
+                    if(scrumA >= 3) {
+                        codigoGerado = codigoXp;
+                    }else if (xpA >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoScrum;
+                    }else if (i == 1){
+                        codigoGerado = codigoXp;
+                    }else{
+                        codigoGerado = codigoAgile;
+                    }
+                }
+            }else if(xpA >= 3){
+                if(scrumA >= 3){
+                    if(leanA >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileA >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+                }else if(leanA >=3){
+                    if(scrumA >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileA >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else if(agileA >=3){
+                    if(scrumA >= 3) {
+                        codigoGerado = codigoLean;
+                    }else if (leanA >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoLean;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoScrum;
+                    }else if (i == 1){
+                        codigoGerado = codigoLean;
+                    }else{
+                        codigoGerado = codigoAgile;
+                    }
+                }
+            }else if(agileA >= 3){
+                if(scrumA >= 3){
+                    if(leanA >= 3){
+                        codigoGerado = codigoXp;
+                    }else if(xpA >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+                }else if(leanA >=3){
+                    if(scrumA >= 3){
+                        codigoGerado = codigoXp;
+                    }else if(xpA >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else if(xpA >=3){
+                    if(scrumA >= 3) {
+                        codigoGerado = codigoLean;
+                    }else if (leanA >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoLean;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoScrum;
+                    }else if (i == 1){
+                        codigoGerado = codigoLean;
+                    }else{
+                        codigoGerado = codigoXp;
+                    }
+                }
+            }else{
+                codigoGerado = rand.nextInt(4);
+            }
+
+        }else{
+            if(scrumB >= 3){
+                if(leanB >= 3){
+                    if(xpB >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileB >= 3){
+                        codigoGerado = codigoXp;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoXp;
+                        }
+                    }
+                }else if(xpB >=3){
+                    if(leanB >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileB >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+
+                }else if(agileB >=3){
+                    if(leanB >= 3) {
+                        codigoGerado = codigoXp;
+                    }else if (xpB >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoLean;
+                    }else if (i == 1){
+                        codigoGerado = codigoXp;
+                    }else{
+                        codigoGerado = codigoAgile;
+                    }
+                }
+
+
+            }else if(leanB >= 3){
+                if(scrumB >= 3){
+                    if(xpB >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileB >= 3){
+                        codigoGerado = codigoXp;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoXp;
+                        }
+                    }
+                }else if(xpB >=3){
+                    if(scrumB >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileB >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else if(agileB >=3){
+                    if(scrumB >= 3) {
+                        codigoGerado = codigoXp;
+                    }else if (xpB >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoScrum;
+                    }else if (i == 1){
+                        codigoGerado = codigoXp;
+                    }else{
+                        codigoGerado = codigoAgile;
+                    }
+                }
+            }else if(xpB >= 3){
+                if(scrumB >= 3){
+                    if(leanB >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileB >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+                }else if(leanB >=3){
+                    if(scrumB >= 3){
+                        codigoGerado = codigoAgile;
+                    }else if(agileB >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoAgile;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else if(agileB >=3){
+                    if(scrumB >= 3) {
+                        codigoGerado = codigoLean;
+                    }else if (leanB >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoLean;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoScrum;
+                    }else if (i == 1){
+                        codigoGerado = codigoLean;
+                    }else{
+                        codigoGerado = codigoAgile;
+                    }
+                }
+            }else if(agileB >= 3){
+                if(scrumB >= 3){
+                    if(leanB >= 3){
+                        codigoGerado = codigoXp;
+                    }else if(xpB >= 3){
+                        codigoGerado = codigoLean;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoLean;
+                        }
+                    }
+                }else if(leanB >=3){
+                    if(scrumB >= 3){
+                        codigoGerado = codigoXp;
+                    }else if(xpB >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoXp;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else if(xpB >=3){
+                    if(scrumB >= 3) {
+                        codigoGerado = codigoLean;
+                    }else if (leanB >= 3){
+                        codigoGerado = codigoScrum;
+                    }else{
+                        if(rand.nextInt(2) == 0){
+                            codigoGerado = codigoLean;
+                        }else{
+                            codigoGerado = codigoScrum;
+                        }
+                    }
+
+                }else{
+                    int i = rand.nextInt(3);
+                    if(i == 0){
+                        codigoGerado = codigoScrum;
+                    }else if (i == 1){
+                        codigoGerado = codigoLean;
+                    }else{
+                        codigoGerado = codigoXp;
+                    }
+                }
+            }else{
+                codigoGerado = rand.nextInt(4);
+            }
+        }
+
+
+
+        return codigoGerado;
     }
 
 }

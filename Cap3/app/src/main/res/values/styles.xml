@@ -16,7 +16,7 @@
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Body2</item>
     </style>
 
-    <style name ="AppTheme.PopupstatusTheme">
+    <style name="AppTheme.PopupstatusTheme">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:windowNoTitle">true</item>

@@ -48,6 +48,10 @@
         <activity
             android:name="com.joaopaulo.cap3.activity.PopupStatus"
             android:theme="@style/AppTheme.PopupstatusTheme" />
+        <activity
+            android:name="com.joaopaulo.cap3.activity.FimDeJogoActivity"
+            android:label="@string/title_activity_fim_de_jogo"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

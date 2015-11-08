@@ -22,6 +22,7 @@ import com.firebase.client.ValueEventListener;
 import com.joaopaulo.cap3.R;
 
 import java.util.HashMap;
+import java.util.Random;
 
 
 public class PerguntaActivity extends AppCompatActivity {
@@ -34,6 +35,8 @@ public class PerguntaActivity extends AppCompatActivity {
     private HashMap<String, Object> vezNoTurno;
     private HashMap<String, String> jogoExample;
     volatile boolean pause = false;
+    private String login;
+    private int codigoTema;
 
     private Thread t = new Thread() {
         @Override
@@ -42,7 +45,7 @@ public class PerguntaActivity extends AppCompatActivity {
             jumpTime = 0;
             while (jumpTime < progressTime) {
                 try {
-                    sleep(150);
+                    sleep(400);
                     jumpTime += 1;
                     timer.setProgress(jumpTime);
                 } catch (InterruptedException e) {
@@ -94,10 +97,20 @@ public class PerguntaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pergunta);
         timer = (ProgressBar) findViewById(R.id.progressBar);
+        Bundle args = getIntent().getExtras();
+        login = args.getString("login");
+        codigoTema = args.getInt("codigotema");
 
+        if(codigoTema == 0){
+            categoria = "scrum";
+        }else if(codigoTema == 1){
+            categoria = "xp";
+        }else if(codigoTema == 2){
+            categoria = "agile";
+        }else {
+            categoria = "lean";
+        }
 
-        //TODO receber código da intent anterior, montar if else para setar categoria, modificar estrutura JSON
-        categoria = "scrum";
 
         b1 = (Button) findViewById(R.id.btn1);
         b2 = (Button) findViewById(R.id.btn2);
@@ -150,14 +163,46 @@ public class PerguntaActivity extends AppCompatActivity {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                //TODO Fazer com que os botões sejam preenchidos aleatoriamente a partir de 1 numero random gerado
-                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child("scrum02").getValue();
+                Random rand = new Random();
+
+
+
+                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria+""+5).getValue();
+                switch (rand.nextInt(4)){
+                    case 0:
+                        alternativaCorreta = 'A';
+                        b1.setText(p.get("alternativaCorreta"));
+                        b2.setText(p.get("alternativaA"));
+                        b3.setText(p.get("alternativaB"));
+                        b4.setText(p.get("alternativaC"));
+                        break;
+                    case 1:
+                        alternativaCorreta = 'B';
+                        b1.setText(p.get("alternativaA"));
+                        b2.setText(p.get("alternativaCorreta"));
+                        b3.setText(p.get("alternativaB"));
+                        b4.setText(p.get("alternativaC"));
+                        break;
+                    case 2:
+                        alternativaCorreta = 'C';
+                        b1.setText(p.get("alternativaA"));
+                        b2.setText(p.get("alternativaB"));
+                        b3.setText(p.get("alternativaCorreta"));
+                        b4.setText(p.get("alternativaC"));
+                        break;
+                    case 3:
+                        alternativaCorreta = 'D';
+                        b1.setText(p.get("alternativaA"));
+                        b2.setText(p.get("alternativaB"));
+                        b3.setText(p.get("alternativaC"));
+                        b4.setText(p.get("alternativaCorreta"));
+                        break;
+                    default:
+                        break;
+                }
                 pergunta.setText(p.get("pergunta"));
-                b1.setText(p.get("alternativaA"));
-                b2.setText(p.get("alternativaCorreta"));
-                b3.setText(p.get("alternativaB"));
-                b4.setText(p.get("alternativaC"));
-                alternativaCorreta = 'B';
+
+
 
 
                 jogoExample = (HashMap) snapshot.child("jogos").child("jogoexample").getValue();
@@ -209,30 +254,30 @@ public class PerguntaActivity extends AppCompatActivity {
 
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'A') {
-//            switch (categoria) {
-//                case "scrum":
-//                    aux = Integer.parseInt(jogoExample.get("scrumA"));
-//                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
-//                    jogosRef.updateChildren(updateStatus);
-//                    break;
-//                case "xp":
-//                    aux = Integer.parseInt(jogoExample.get("xpA"));
-//                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
-//                    jogosRef.updateChildren(updateStatus);
-//                    break;
-//                case "agile":
-//                    aux = Integer.parseInt(jogoExample.get("agileA"));
-//                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
-//                    jogosRef.updateChildren(updateStatus);
-//                    break;
-//                case "lean":
-//                    aux = Integer.parseInt(jogoExample.get("leanA"));
-//                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
-//                    jogosRef.updateChildren(updateStatus);
-//                    break;
-//                default:
-//                    break;
-//            }
+            switch (categoria) {
+                case "scrum":
+                    aux = Integer.parseInt(jogoExample.get("scrumA"));
+                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
+                    jogosRef.updateChildren(updateStatus);
+                    break;
+                case "xp":
+                    aux = Integer.parseInt(jogoExample.get("xpA"));
+                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
+                    jogosRef.updateChildren(updateStatus);
+                    break;
+                case "agile":
+                    aux = Integer.parseInt(jogoExample.get("agileA"));
+                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
+                    jogosRef.updateChildren(updateStatus);
+                    break;
+                case "lean":
+                    aux = Integer.parseInt(jogoExample.get("leanA"));
+                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
+                    jogosRef.updateChildren(updateStatus);
+                    break;
+                default:
+                    break;
+            }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle("PARABÉNS!");
