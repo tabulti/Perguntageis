@@ -239,15 +239,12 @@ public class PerguntaActivity extends AppCompatActivity {
         jumpTime = 0;
     }
 
-<<<<<<< HEAD
-
-=======
     @Override
     protected void onResume() {
         super.onResume();
         pause = false;
->>>>>>> c262832408e1205b5756a61a0a2e7323d6cccc8b
     }
+
 
     public void responderA() {
 
