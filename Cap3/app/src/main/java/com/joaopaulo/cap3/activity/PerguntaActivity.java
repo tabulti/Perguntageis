@@ -91,6 +91,8 @@ public class PerguntaActivity extends AppCompatActivity {
     final private Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     final private Firebase jogosRef = ref.child("jogos");
     final Handler mHandler = new Handler();
+    private int btnOrganization;
+    private Random rand = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,7 +112,7 @@ public class PerguntaActivity extends AppCompatActivity {
         }else {
             categoria = "lean";
         }
-
+        btnOrganization = rand.nextInt(4);
 
         b1 = (Button) findViewById(R.id.btn1);
         b2 = (Button) findViewById(R.id.btn2);
@@ -163,12 +165,10 @@ public class PerguntaActivity extends AppCompatActivity {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                Random rand = new Random();
 
+                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria+ "" + (rand.nextInt(6)+1)).getValue();
 
-
-                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria+""+5).getValue();
-                switch (rand.nextInt(4)){
+                switch (btnOrganization) {
                     case 0:
                         alternativaCorreta = 'A';
                         b1.setText(p.get("alternativaCorreta"));
@@ -201,9 +201,6 @@ public class PerguntaActivity extends AppCompatActivity {
                         break;
                 }
                 pergunta.setText(p.get("pergunta"));
-
-
-
 
                 jogoExample = (HashMap) snapshot.child("jogos").child("jogoexample").getValue();
 
@@ -243,6 +240,7 @@ public class PerguntaActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         pause = false;
+        btnOrganization = rand.nextInt(4);
     }
 
     public void responderA() {
