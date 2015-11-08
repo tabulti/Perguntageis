@@ -243,6 +243,7 @@ public class PerguntaActivity extends AppCompatActivity {
         btnOrganization = rand.nextInt(4);
     }
 
+
     public void responderA() {
 
         HashMap<String, Object> updateStatus = new HashMap<String,Object>();
