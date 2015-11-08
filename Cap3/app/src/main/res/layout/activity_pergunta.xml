@@ -55,7 +55,7 @@
             android:id="@+id/btn1"
             android:layout_weight="1"
             android:background="@drawable/button_resposta_shape"
-            android:onClick="responderA"
+
             />
 
         <Button
@@ -65,7 +65,8 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/button_resposta_shape"
             android:id="@+id/btn2"
-            android:onClick="responderB"
+
+
             />
 
         <Button
@@ -75,7 +76,8 @@
             android:id="@+id/btn3"
             android:layout_marginTop="16dp"
             android:background="@drawable/button_resposta_shape"
-            android:onClick="responderC"/>
+
+            />
 
         <Button
             android:layout_width="match_parent"
@@ -84,7 +86,8 @@
             android:layout_marginTop="16dp"
             android:layout_weight="1"
             android:background="@drawable/button_resposta_shape"
-            android:onClick="responderD"/>
+
+            />
 
     </LinearLayout>
 

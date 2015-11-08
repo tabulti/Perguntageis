@@ -12,8 +12,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.joaopaulo.cap3.R;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class Roleta extends AppCompatActivity {
@@ -22,8 +27,11 @@ public class Roleta extends AppCompatActivity {
     private Animation animRotate;
     private Animation animFinal;
     private ImageView roleta_background;
-    private ImageView arrow;
+    private ImageView arrow,suavez;
     private MediaPlayer mp;
+    private Button girar;
+    private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
+    private HashMap<String,String> vezNoTurno;
 
 
     @Override
@@ -38,7 +46,30 @@ public class Roleta extends AppCompatActivity {
         roleta_background = (ImageView) findViewById(R.id.roleta);
         arrow = (ImageView) findViewById(R.id.arrow);
         arrow.bringToFront();
+        suavez = (ImageView) findViewById(R.id.SuaVez);
+        suavez.setVisibility(View.INVISIBLE);
+        girar = (Button) findViewById(R.id.girar);
+        girar.setClickable(false);
 
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                vezNoTurno = (HashMap)dataSnapshot.child("jogos").child("jogoexample").getValue();
+                //TODO IMPLEMENTAR CAPTURAR ID DO JOGADOR AUTOMATICAMENTE
+                if(vezNoTurno.get("vezNoTurno").equals("A")){
+                    suavez.setVisibility(View.VISIBLE);
+                    girar.setClickable(true);
+                }else{
+                    suavez.setVisibility(View.INVISIBLE);
+                    girar.setClickable(false);
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
