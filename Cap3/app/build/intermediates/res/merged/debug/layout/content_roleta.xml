@@ -52,5 +52,13 @@
         android:layout_toStartOf="@+id/girar"
         android:layout_below="@+id/roleta"
          />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SuaVez"
+        android:src="@drawable/sopq"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
-<!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_roleta.xml -->
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_roleta.xml -->

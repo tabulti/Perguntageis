@@ -67,6 +67,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Roleta.class);
+                intent.putExtra("login",login);
                 startActivity(intent);
             }
         });

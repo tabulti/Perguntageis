@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -21,18 +22,71 @@ import com.firebase.client.ValueEventListener;
 import com.joaopaulo.cap3.R;
 
 import java.util.HashMap;
+import java.util.Random;
 
 
 public class PerguntaActivity extends AppCompatActivity {
     private int jumpTime;
-
-    private Button b1,b2,b3,b4;
+    final int progressTime = 100;
+    private Button b1, b2, b3, b4;
     private TextView pergunta;
     private char alternativaCorreta;
     private String categoria;
-    private HashMap<String,Object> vezNoTurno;
-    private HashMap<String,String> jogoExample;
+    private HashMap<String, Object> vezNoTurno;
+    private HashMap<String, String> jogoExample;
+    volatile boolean pause = false;
+    private String login;
+    private int codigoTema;
 
+    private Thread t = new Thread() {
+        @Override
+        public void run() {
+
+            jumpTime = 0;
+            while (jumpTime < progressTime) {
+                try {
+                    sleep(400);
+                    jumpTime += 1;
+                    timer.setProgress(jumpTime);
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+
+            if (pause == false) {
+                //TODO criar dependencia de qual usuários está logado atualmente
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "B");
+                jogosRef.updateChildren(vezNoTurno);
+
+
+                mHandler.post(new Runnable() {
+                    public void run() {
+                        if (jumpTime == 100) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
+                            builder.setTitle("Alerta!");
+                            builder.setMessage("Você excedeu o tempo limite para responder a pergunta e perdeu sua vez!");
+                            builder.setIcon(R.drawable.feelsbad);
+                            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    onBackPressed();
+                                }
+                            });
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+                        } else {
+
+                        }
+                    }
+                });
+            } else {
+
+            }
+
+        }
+
+    };
     private ProgressBar timer;
     final private Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     final private Firebase jogosRef = ref.child("jogos");
@@ -43,11 +97,20 @@ public class PerguntaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pergunta);
         timer = (ProgressBar) findViewById(R.id.progressBar);
+        Bundle args = getIntent().getExtras();
+        login = args.getString("login");
+        codigoTema = args.getInt("codigotema");
 
-        final int progressTime = 100;
+        if(codigoTema == 0){
+            categoria = "scrum";
+        }else if(codigoTema == 1){
+            categoria = "xp";
+        }else if(codigoTema == 2){
+            categoria = "agile";
+        }else {
+            categoria = "lean";
+        }
 
-        //TODO receber código da intent anterior, montar if else para setar categoria, modificar estrutura JSON
-        categoria = "scrum";
 
         b1 = (Button) findViewById(R.id.btn1);
         b2 = (Button) findViewById(R.id.btn2);
@@ -55,18 +118,91 @@ public class PerguntaActivity extends AppCompatActivity {
         b4 = (Button) findViewById(R.id.btn4);
         pergunta = (TextView) findViewById(R.id.pergunta);
 
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getId() == R.id.btn1) {
+                    pause = true;
+
+                    responderA();
+                }
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getId() == R.id.btn2) {
+                    pause = true;
+                    responderB();
+                }
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getId() == R.id.btn3) {
+                    pause = true;
+                    responderC();
+                }
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getId() == R.id.btn4) {
+                    pause = true;
+                    responderD();
+                }
+            }
+        });
+
         //-----------------------------------------RECUPERAR PERGUNTAS-----------------------------
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                //TODO Fazer com que os botões sejam preenchidos aleatoriamente a partir de 1 numero random gerado
-                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child("scrum02").getValue();
+                Random rand = new Random();
+
+
+
+                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria+""+5).getValue();
+                switch (rand.nextInt(4)){
+                    case 0:
+                        alternativaCorreta = 'A';
+                        b1.setText(p.get("alternativaCorreta"));
+                        b2.setText(p.get("alternativaA"));
+                        b3.setText(p.get("alternativaB"));
+                        b4.setText(p.get("alternativaC"));
+                        break;
+                    case 1:
+                        alternativaCorreta = 'B';
+                        b1.setText(p.get("alternativaA"));
+                        b2.setText(p.get("alternativaCorreta"));
+                        b3.setText(p.get("alternativaB"));
+                        b4.setText(p.get("alternativaC"));
+                        break;
+                    case 2:
+                        alternativaCorreta = 'C';
+                        b1.setText(p.get("alternativaA"));
+                        b2.setText(p.get("alternativaB"));
+                        b3.setText(p.get("alternativaCorreta"));
+                        b4.setText(p.get("alternativaC"));
+                        break;
+                    case 3:
+                        alternativaCorreta = 'D';
+                        b1.setText(p.get("alternativaA"));
+                        b2.setText(p.get("alternativaB"));
+                        b3.setText(p.get("alternativaC"));
+                        b4.setText(p.get("alternativaCorreta"));
+                        break;
+                    default:
+                        break;
+                }
                 pergunta.setText(p.get("pergunta"));
-                b1.setText(p.get("alternativaA"));
-                //b2.setText(p.get("alternativaCorreta"));
-                b3.setText(p.get("alternativaB"));
-                b4.setText(p.get("alternativaC"));
-                alternativaCorreta = 'B';
+
+
 
 
                 jogoExample = (HashMap) snapshot.child("jogos").child("jogoexample").getValue();
@@ -79,52 +215,6 @@ public class PerguntaActivity extends AppCompatActivity {
             }
         });
 
-        /*
-        switch(alternativaCorreta) {
-            case 'A':
-                b1.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape_correto));
-                b2.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b3.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b4.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-
-                break;
-            case 'B':
-                b1.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b2.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape_correto));
-                b3.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b4.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-
-
-
-                break;
-            case 'C':
-
-                b1.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b2.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b3.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape_correto));
-                b4.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-
-
-
-
-                break;
-            case 'D':
-                b1.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b2.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b3.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b4.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape_correto));
-
-
-
-                break;
-            default:
-                b1.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b2.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b3.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                b4.setBackground(getResources().getDrawable(R.drawable.button_resposta_shape));
-                break;
-
-        }
 
         /*
 
@@ -132,56 +222,7 @@ public class PerguntaActivity extends AppCompatActivity {
 
          */
 
-        final Thread t = new Thread(){
 
-            @Override
-            public void run(){
-
-
-                jumpTime = 0;
-                while(jumpTime < progressTime){
-                    try {
-                        sleep(150);
-                        jumpTime += 1;
-                        timer.setProgress(jumpTime);
-                    } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-
-                }
-
-
-                //TODO criar dependencia de qual usuários está logado atualmente
-                vezNoTurno = new HashMap<String,Object>();
-                vezNoTurno.put("jogoexample/vezNoTurno", "B");
-                jogosRef.updateChildren(vezNoTurno);
-
-
-                mHandler.post(new Runnable() {
-                    public void run() {
-
-                        AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
-                        builder.setTitle("Alerta!");
-                        builder.setMessage("Você excedeu o tempo limite para responder a pergunta e perdeu sua vez!");
-                        builder.setIcon(R.drawable.feelsbad);
-                        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                onBackPressed();
-
-                            }
-                        });
-
-                        AlertDialog dialog = builder.create();
-                        dialog.show();
-
-
-                    }
-                });
-
-            }
-
-        };
         t.start();
 
 /*
@@ -193,42 +234,49 @@ public class PerguntaActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         jumpTime = 0;
+    }
 
+<<<<<<< HEAD
 
+=======
+    @Override
+    protected void onResume() {
+        super.onResume();
+        pause = false;
+>>>>>>> c262832408e1205b5756a61a0a2e7323d6cccc8b
     }
 
     public void responderA() {
-        HashMap<String,Object> updateStatus = new HashMap<>();
+
+        HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
         //TODO criar dependencia do usuário que está LOGADO no momento
         //TODO
 
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'A') {
-
-
-            switch (categoria){
+            switch (categoria) {
                 case "scrum":
                     aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA",""+(aux+1));
+                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
                     aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA",""+(aux+1));
+                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
                     aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA",""+(aux+1));
+                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
                     aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA",""+(aux+1));
+                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -250,7 +298,9 @@ public class PerguntaActivity extends AppCompatActivity {
 
 
             //----------------------------------RESPONDEU ERRADO-----------------------------------
-        }else{
+        } else {
+
+            vezNoTurno = new HashMap<String, Object>();
             vezNoTurno.put("jogoexample/vezNoTurno", "B");
             jogosRef.updateChildren(vezNoTurno);
 
@@ -274,7 +324,7 @@ public class PerguntaActivity extends AppCompatActivity {
 
 
     public void responderB() {
-        HashMap<String,Object> updateStatus = new HashMap<>();
+        HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
         //TODO criar dependencia do usuário que está LOGADO no momento
         //TODO
@@ -282,25 +332,25 @@ public class PerguntaActivity extends AppCompatActivity {
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'B') {
 
-            switch (categoria){
+            switch (categoria) {
                 case "scrum":
                     aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA",""+(aux+1));
+                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
                     aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA",""+(aux+1));
+                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
                     aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA",""+(aux+1));
+                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
                     aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA",""+(aux+1));
+                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -308,44 +358,45 @@ public class PerguntaActivity extends AppCompatActivity {
             }
 
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
-                    builder.setTitle("PARABÉNS!");
-                    builder.setMessage("Você respondeu corretamente!!!");
-                    builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            onBackPressed();
+            AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
+            builder.setTitle("PARABÉNS!");
+            builder.setMessage("Você respondeu corretamente!!!");
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    onBackPressed();
 
-                        }
-                    });
+                }
+            });
 
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
             //----------------------------------RESPONDEU ERRADO-----------------------------------
-        }else{
+        } else {
+            vezNoTurno = new HashMap<String, Object>();
             vezNoTurno.put("jogoexample/vezNoTurno", "B");
             jogosRef.updateChildren(vezNoTurno);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
-                    builder.setTitle(":(");
-                    builder.setIcon(R.drawable.feelsbad);
-                    builder.setMessage("Você respondeu errado!!!");
-                    builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            onBackPressed();
+            builder.setTitle(":(");
+            builder.setIcon(R.drawable.feelsbad);
+            builder.setMessage("Você respondeu errado!!!");
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    onBackPressed();
 
-                        }
-                    });
+                }
+            });
 
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
         }
 
     }
 
     public void responderC() {
-        HashMap<String,Object> updateStatus = new HashMap<>();
+        HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
         //TODO criar dependencia do usuário que está LOGADO no momento
         //TODO
@@ -354,25 +405,25 @@ public class PerguntaActivity extends AppCompatActivity {
         if (alternativaCorreta == 'C') {
 
 
-            switch (categoria){
+            switch (categoria) {
                 case "scrum":
                     aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA",""+(aux+1));
+                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
                     aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA",""+(aux+1));
+                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
                     aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA",""+(aux+1));
+                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
                     aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA",""+(aux+1));
+                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -394,7 +445,8 @@ public class PerguntaActivity extends AppCompatActivity {
 
 
             //----------------------------------RESPONDEU ERRADO-----------------------------------
-        }else{
+        } else {
+            vezNoTurno = new HashMap<String, Object>();
             vezNoTurno.put("jogoexample/vezNoTurno", "B");
             jogosRef.updateChildren(vezNoTurno);
 
@@ -417,7 +469,7 @@ public class PerguntaActivity extends AppCompatActivity {
     }
 
     public void responderD() {
-        HashMap<String,Object> updateStatus = new HashMap<>();
+        HashMap<String, Object> updateStatus = new HashMap<String, Object>();
         int aux;
         //TODO criar dependencia do usuário que está LOGADO no momento
         //TODO
@@ -426,25 +478,25 @@ public class PerguntaActivity extends AppCompatActivity {
         if (alternativaCorreta == 'D') {
 
 
-            switch (categoria){
+            switch (categoria) {
                 case "scrum":
                     aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA",""+(aux+1));
+                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
                     aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA",""+(aux+1));
+                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
                     aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA",""+(aux+1));
+                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
                     aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA",""+(aux+1));
+                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -466,7 +518,8 @@ public class PerguntaActivity extends AppCompatActivity {
 
 
             //----------------------------------RESPONDEU ERRADO-----------------------------------
-        }else{
+        } else {
+            vezNoTurno = new HashMap<String, Object>();
             vezNoTurno.put("jogoexample/vezNoTurno", "B");
             jogosRef.updateChildren(vezNoTurno);
 
