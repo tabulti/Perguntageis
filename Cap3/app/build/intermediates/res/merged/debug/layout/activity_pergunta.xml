@@ -55,11 +55,7 @@
             android:id="@+id/btn1"
             android:layout_weight="1"
             android:background="@drawable/button_resposta_shape"
-<<<<<<< HEAD
-            android:onClick="responderA"
-=======
 
->>>>>>> c262832408e1205b5756a61a0a2e7323d6cccc8b
             />
 
         <Button
@@ -80,12 +76,8 @@
             android:id="@+id/btn3"
             android:layout_marginTop="16dp"
             android:background="@drawable/button_resposta_shape"
-<<<<<<< HEAD
-            android:onClick="responderC"/>
-=======
 
             />
->>>>>>> c262832408e1205b5756a61a0a2e7323d6cccc8b
 
         <Button
             android:layout_width="match_parent"
@@ -94,18 +86,10 @@
             android:layout_marginTop="16dp"
             android:layout_weight="1"
             android:background="@drawable/button_resposta_shape"
-<<<<<<< HEAD
-            android:onClick="responderD"/>
-=======
 
             />
->>>>>>> c262832408e1205b5756a61a0a2e7323d6cccc8b
 
     </LinearLayout>
 
 </LinearLayout>
-<<<<<<< HEAD
 <!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_pergunta.xml -->
-=======
-<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_pergunta.xml -->
->>>>>>> c262832408e1205b5756a61a0a2e7323d6cccc8b
