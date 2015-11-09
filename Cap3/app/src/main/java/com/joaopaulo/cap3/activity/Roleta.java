@@ -62,10 +62,24 @@ public class Roleta extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 vezNoTurno = (HashMap)dataSnapshot.child("jogos").child("jogoexample").getValue();
                 verificarFim = (HashMap)dataSnapshot.child("jogos").child("jogoexample").getValue();
-                //TODO IMPLEMENTAR CAPTURAR ID DO JOGADOR AUTOMATICAMENTE
+
                 if(vezNoTurno.get("vezNoTurno").equals("A")){
-                    suavez.setVisibility(View.VISIBLE);
-                    girar.setClickable(true);
+                    if(vezNoTurno.get("loginJogadorA").equals(login)){
+                        suavez.setVisibility(View.VISIBLE);
+                        girar.setClickable(true);
+                    }else{
+                        suavez.setVisibility(View.INVISIBLE);
+                        girar.setClickable(false);
+                    }
+
+                }else if(vezNoTurno.get("vezNoTurno").equals("B")){
+                    if(vezNoTurno.get("loginJogadorB").equals(login)){
+                        suavez.setVisibility(View.VISIBLE);
+                        girar.setClickable(true);
+                    }else{
+                        suavez.setVisibility(View.INVISIBLE);
+                        girar.setClickable(false);
+                    }
                 }else{
                     suavez.setVisibility(View.INVISIBLE);
                     girar.setClickable(false);

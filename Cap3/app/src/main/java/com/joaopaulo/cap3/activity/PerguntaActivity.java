@@ -37,6 +37,7 @@ public class PerguntaActivity extends AppCompatActivity {
     volatile boolean pause = false;
     private String login;
     private int codigoTema;
+    private HashMap<String,String> loginFb;
 
     private Thread t = new Thread() {
         @Override
@@ -166,6 +167,7 @@ public class PerguntaActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
 
+                loginFb = (HashMap) snapshot.child("jogos").child("jogoexample").getValue();
                 HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria+ "" + (rand.nextInt(6)+1)).getValue();
 
                 switch (btnOrganization) {
@@ -248,30 +250,34 @@ public class PerguntaActivity extends AppCompatActivity {
 
         HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
-        //TODO criar dependencia do usuário que está LOGADO no momento
-        //TODO
+        String complemento;
 
+        if(loginFb.get("loginJogadorA").equals(login)){
+            complemento = "A";
+        }else{
+            complemento = "B";
+        }
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'A') {
             switch (categoria) {
                 case "scrum":
-                    aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("scrum"+complemento));
+                    updateStatus.put("jogoexample/scrum"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
-                    aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("xp"+complemento));
+                    updateStatus.put("jogoexample/xp"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
-                    aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("agile"+complemento));
+                    updateStatus.put("jogoexample/agile"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
-                    aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("lean"+complemento));
+                    updateStatus.put("jogoexample/lean"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -295,9 +301,16 @@ public class PerguntaActivity extends AppCompatActivity {
             //----------------------------------RESPONDEU ERRADO-----------------------------------
         } else {
 
-            vezNoTurno = new HashMap<String, Object>();
-            vezNoTurno.put("jogoexample/vezNoTurno", "B");
-            jogosRef.updateChildren(vezNoTurno);
+            if(loginFb.get("loginJogadorA").equals(login)){
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "B");
+                jogosRef.updateChildren(vezNoTurno);
+            }else{
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "A");
+                jogosRef.updateChildren(vezNoTurno);
+            }
+
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
@@ -321,31 +334,35 @@ public class PerguntaActivity extends AppCompatActivity {
     public void responderB() {
         HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
-        //TODO criar dependencia do usuário que está LOGADO no momento
-        //TODO
+        String complemento;
 
+        if(loginFb.get("loginJogadorA").equals(login)){
+            complemento = "A";
+        }else{
+            complemento = "B";
+        }
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'B') {
 
             switch (categoria) {
                 case "scrum":
-                    aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("scrum"+complemento));
+                    updateStatus.put("jogoexample/scrum"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
-                    aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("xp"+complemento));
+                    updateStatus.put("jogoexample/xp"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
-                    aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("agile"+complemento));
+                    updateStatus.put("jogoexample/agile"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
-                    aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("lean"+complemento));
+                    updateStatus.put("jogoexample/lean"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -368,9 +385,15 @@ public class PerguntaActivity extends AppCompatActivity {
 
             //----------------------------------RESPONDEU ERRADO-----------------------------------
         } else {
-            vezNoTurno = new HashMap<String, Object>();
-            vezNoTurno.put("jogoexample/vezNoTurno", "B");
-            jogosRef.updateChildren(vezNoTurno);
+            if(loginFb.get("loginJogadorA").equals(login)){
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "B");
+                jogosRef.updateChildren(vezNoTurno);
+            }else{
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "A");
+                jogosRef.updateChildren(vezNoTurno);
+            }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
@@ -393,32 +416,36 @@ public class PerguntaActivity extends AppCompatActivity {
     public void responderC() {
         HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
-        //TODO criar dependencia do usuário que está LOGADO no momento
-        //TODO
+        String complemento;
 
+        if(loginFb.get("loginJogadorA").equals(login)){
+            complemento = "A";
+        }else{
+            complemento = "B";
+        }
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'C') {
 
 
             switch (categoria) {
                 case "scrum":
-                    aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("scrum"+complemento));
+                    updateStatus.put("jogoexample/scrum"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
-                    aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("xp"+complemento));
+                    updateStatus.put("jogoexample/xp"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
-                    aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("agile"+complemento));
+                    updateStatus.put("jogoexample/agile"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
-                    aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("lean"+complemento));
+                    updateStatus.put("jogoexample/lean"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -441,9 +468,15 @@ public class PerguntaActivity extends AppCompatActivity {
 
             //----------------------------------RESPONDEU ERRADO-----------------------------------
         } else {
-            vezNoTurno = new HashMap<String, Object>();
-            vezNoTurno.put("jogoexample/vezNoTurno", "B");
-            jogosRef.updateChildren(vezNoTurno);
+            if(loginFb.get("loginJogadorA").equals(login)){
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "B");
+                jogosRef.updateChildren(vezNoTurno);
+            }else{
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "A");
+                jogosRef.updateChildren(vezNoTurno);
+            }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
@@ -466,32 +499,36 @@ public class PerguntaActivity extends AppCompatActivity {
     public void responderD() {
         HashMap<String, Object> updateStatus = new HashMap<String, Object>();
         int aux;
-        //TODO criar dependencia do usuário que está LOGADO no momento
-        //TODO
+        String complemento;
+
+        if(loginFb.get("loginJogadorA").equals(login)){
+            complemento = "A";
+        }else{
+            complemento = "B";
+        }
 
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'D') {
 
-
             switch (categoria) {
                 case "scrum":
-                    aux = Integer.parseInt(jogoExample.get("scrumA"));
-                    updateStatus.put("jogoexample/scrumA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("scrum"+complemento));
+                    updateStatus.put("jogoexample/scrum"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "xp":
-                    aux = Integer.parseInt(jogoExample.get("xpA"));
-                    updateStatus.put("jogoexample/xpA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("xp"+complemento));
+                    updateStatus.put("jogoexample/xp"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "agile":
-                    aux = Integer.parseInt(jogoExample.get("agileA"));
-                    updateStatus.put("jogoexample/agileA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("agile"+complemento));
+                    updateStatus.put("jogoexample/agile"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 case "lean":
-                    aux = Integer.parseInt(jogoExample.get("leanA"));
-                    updateStatus.put("jogoexample/leanA", "" + (aux + 1));
+                    aux = Integer.parseInt(jogoExample.get("lean"+complemento));
+                    updateStatus.put("jogoexample/lean"+complemento, "" + (aux + 1));
                     jogosRef.updateChildren(updateStatus);
                     break;
                 default:
@@ -514,9 +551,16 @@ public class PerguntaActivity extends AppCompatActivity {
 
             //----------------------------------RESPONDEU ERRADO-----------------------------------
         } else {
-            vezNoTurno = new HashMap<String, Object>();
-            vezNoTurno.put("jogoexample/vezNoTurno", "B");
-            jogosRef.updateChildren(vezNoTurno);
+
+            if(loginFb.get("loginJogadorA").equals(login)){
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "B");
+                jogosRef.updateChildren(vezNoTurno);
+            }else{
+                vezNoTurno = new HashMap<String, Object>();
+                vezNoTurno.put("jogoexample/vezNoTurno", "A");
+                jogosRef.updateChildren(vezNoTurno);
+            }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
