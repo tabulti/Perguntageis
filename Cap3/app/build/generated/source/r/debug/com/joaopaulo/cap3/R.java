@@ -2542,17 +2542,18 @@ containing a value of this type.
         public static final int messenger_button_white_bg_selector=0x7f020085;
         public static final int mira=0x7f020086;
         public static final int moeda=0x7f020087;
-        public static final int notification_template_icon_bg=0x7f020092;
+        public static final int notification_template_icon_bg=0x7f020093;
         public static final int popupbg=0x7f020088;
-        public static final int roleta_final=0x7f020089;
-        public static final int roleta_final_amarelo=0x7f02008a;
-        public static final int roleta_final_azul=0x7f02008b;
-        public static final int roleta_final_verde=0x7f02008c;
-        public static final int roleta_final_vermelho=0x7f02008d;
-        public static final int scrum=0x7f02008e;
-        public static final int sopq=0x7f02008f;
-        public static final int status=0x7f020090;
-        public static final int xp=0x7f020091;
+        public static final int rankvintecinco=0x7f020089;
+        public static final int roleta_final=0x7f02008a;
+        public static final int roleta_final_amarelo=0x7f02008b;
+        public static final int roleta_final_azul=0x7f02008c;
+        public static final int roleta_final_verde=0x7f02008d;
+        public static final int roleta_final_vermelho=0x7f02008e;
+        public static final int scrum=0x7f02008f;
+        public static final int sopq=0x7f020090;
+        public static final int status=0x7f020091;
+        public static final int xp=0x7f020092;
     }
     public static final class id {
         public static final int SuaVez=0x7f0d00a3;
