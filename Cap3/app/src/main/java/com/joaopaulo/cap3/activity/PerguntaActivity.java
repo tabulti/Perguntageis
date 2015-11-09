@@ -34,7 +34,7 @@ public class PerguntaActivity extends AppCompatActivity {
     private String categoria;
     private HashMap<String, Object> vezNoTurno;
     private HashMap<String, String> jogoExample;
-    volatile boolean pause = false;
+    volatile boolean pause = false; 
     private String login;
     private int codigoTema;
     private HashMap<String,String> loginFb;
