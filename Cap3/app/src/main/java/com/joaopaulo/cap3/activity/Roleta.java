@@ -33,7 +33,6 @@ public class Roleta extends AppCompatActivity {
     private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     private HashMap<String,String> vezNoTurno;
     private HashMap<String,String> verificarFim;
-    private String vencedor;
     private int scrumA,agileA,xpA,leanA,scrumB,agileB,xpB,leanB;
     private String login;
 
@@ -94,11 +93,10 @@ public class Roleta extends AppCompatActivity {
                 xpB = Integer.parseInt(verificarFim.get("xpB"));
 
                 if(scrumB>=3 && leanB>=3 && agileB>=3 && xpB>=3){
-                    //TODO RECUPERAR ID DO JOGADOR B
-                    //TODO
-                    vencedor = "JogadorB";
+
                     Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
                     fimDeJogo.putExtra("login",login);
+                    fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorB"));
                     startActivity(fimDeJogo);
 
                 }
@@ -109,10 +107,10 @@ public class Roleta extends AppCompatActivity {
                 xpA = Integer.parseInt(verificarFim.get("xpA"));
 
                 if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
-                    //TODO RECUPERAR ID DO JOGADOR B
-                    //TODO
-                    vencedor = "JogadorA";
+
                     Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
+                    fimDeJogo.putExtra("login",login);
+                    fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorA"));
                     startActivity(fimDeJogo);
 
                 }

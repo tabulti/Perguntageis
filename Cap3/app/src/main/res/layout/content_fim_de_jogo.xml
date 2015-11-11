@@ -12,4 +12,12 @@
     tools:context="com.joaopaulo.cap3.activity.FimDeJogoActivity"
     tools:showIn="@layout/activity_fim_de_jogo">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultado"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/vitoria"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="137dp" />
 </RelativeLayout>
