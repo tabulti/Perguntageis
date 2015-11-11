@@ -142,6 +142,7 @@ public class Roleta extends AppCompatActivity {
 
     public void girarRoleta(View view){
 
+        
 
         final int aux = gerarCodigoTema();
         roleta_background.setImageResource(R.drawable.roleta_final);
@@ -274,6 +275,7 @@ public class Roleta extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
                 intent.putExtra("codigotema",codigoTema);
+                intent.putExtra("login",login);
                 startActivity(intent);
             }
 
