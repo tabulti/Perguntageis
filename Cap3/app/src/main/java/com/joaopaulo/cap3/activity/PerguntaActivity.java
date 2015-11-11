@@ -92,8 +92,9 @@ public class PerguntaActivity extends AppCompatActivity {
     final private Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     final private Firebase jogosRef = ref.child("jogos");
     final Handler mHandler = new Handler();
-    private int btnOrganization;
+    private int btnOrganization, randomPergunta;
     private Random rand = new Random();
+    private String complemento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +103,9 @@ public class PerguntaActivity extends AppCompatActivity {
         timer = (ProgressBar) findViewById(R.id.progressBar);
         Bundle args = getIntent().getExtras();
         login = args.getString("login");
+
+
+
         codigoTema = args.getInt("codigotema");
 
         if(codigoTema == 0){
@@ -114,6 +118,7 @@ public class PerguntaActivity extends AppCompatActivity {
             categoria = "lean";
         }
         btnOrganization = rand.nextInt(4);
+        randomPergunta = rand.nextInt(6)+1;
 
         b1 = (Button) findViewById(R.id.btn1);
         b2 = (Button) findViewById(R.id.btn2);
@@ -168,7 +173,8 @@ public class PerguntaActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot snapshot) {
 
                 loginFb = (HashMap) snapshot.child("jogos").child("jogoexample").getValue();
-                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria+ "" + (rand.nextInt(6)+1)).getValue();
+                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria + "" + randomPergunta).getValue();
+
 
                 switch (btnOrganization) {
                     case 0:
@@ -236,6 +242,7 @@ public class PerguntaActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         jumpTime = 0;
+        pause = true;
     }
 
     @Override
@@ -243,6 +250,7 @@ public class PerguntaActivity extends AppCompatActivity {
         super.onResume();
         pause = false;
         btnOrganization = rand.nextInt(4);
+        randomPergunta = rand.nextInt(6)+1;
     }
 
 
@@ -250,13 +258,13 @@ public class PerguntaActivity extends AppCompatActivity {
 
         HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
-        String complemento;
 
         if(loginFb.get("loginJogadorA").equals(login)){
             complemento = "A";
         }else{
             complemento = "B";
         }
+
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'A') {
             switch (categoria) {
@@ -334,8 +342,6 @@ public class PerguntaActivity extends AppCompatActivity {
     public void responderB() {
         HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
-        String complemento;
-
         if(loginFb.get("loginJogadorA").equals(login)){
             complemento = "A";
         }else{
@@ -416,8 +422,6 @@ public class PerguntaActivity extends AppCompatActivity {
     public void responderC() {
         HashMap<String, Object> updateStatus = new HashMap<String,Object>();
         int aux;
-        String complemento;
-
         if(loginFb.get("loginJogadorA").equals(login)){
             complemento = "A";
         }else{
@@ -499,14 +503,12 @@ public class PerguntaActivity extends AppCompatActivity {
     public void responderD() {
         HashMap<String, Object> updateStatus = new HashMap<String, Object>();
         int aux;
-        String complemento;
 
         if(loginFb.get("loginJogadorA").equals(login)){
             complemento = "A";
         }else{
             complemento = "B";
         }
-
         //------------------------RESPONDEU CORRETAMENTE-----------------------------
         if (alternativaCorreta == 'D') {
 
