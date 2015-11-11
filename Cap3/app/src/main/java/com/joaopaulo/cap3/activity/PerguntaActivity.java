@@ -236,6 +236,7 @@ public class PerguntaActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         jumpTime = 0;
+        pause = true;
     }
 
     @Override
