@@ -29,11 +29,10 @@ public class Roleta extends AppCompatActivity {
     private ImageView roleta_background;
     private ImageView arrow,suavez;
     private MediaPlayer mp;
-    private Button girar;
+    private Button girar,status;
     private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     private HashMap<String,String> vezNoTurno;
     private HashMap<String,String> verificarFim;
-    private String vencedor;
     private int scrumA,agileA,xpA,leanA,scrumB,agileB,xpB,leanB;
     private String login;
 
@@ -51,11 +50,12 @@ public class Roleta extends AppCompatActivity {
         arrow = (ImageView) findViewById(R.id.arrow);
         arrow.bringToFront();
         suavez = (ImageView) findViewById(R.id.SuaVez);
-        suavez.setVisibility(View.INVISIBLE);
+        suavez.setImageResource(R.drawable.aguarde);
         girar = (Button) findViewById(R.id.girar);
         girar.setClickable(false);
         Bundle args = getIntent().getExtras();
         login = args.getString("login");
+        status = (Button) findViewById(R.id.status);
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -65,23 +65,23 @@ public class Roleta extends AppCompatActivity {
 
                 if(vezNoTurno.get("vezNoTurno").equals("A")){
                     if(vezNoTurno.get("loginJogadorA").equals(login)){
-                        suavez.setVisibility(View.VISIBLE);
+                        suavez.setImageResource(R.drawable.sopq);
                         girar.setClickable(true);
                     }else{
-                        suavez.setVisibility(View.INVISIBLE);
+                        suavez.setImageResource(R.drawable.aguarde);
                         girar.setClickable(false);
                     }
 
                 }else if(vezNoTurno.get("vezNoTurno").equals("B")){
                     if(vezNoTurno.get("loginJogadorB").equals(login)){
-                        suavez.setVisibility(View.VISIBLE);
+                        suavez.setImageResource(R.drawable.sopq);
                         girar.setClickable(true);
                     }else{
-                        suavez.setVisibility(View.INVISIBLE);
+                        suavez.setImageResource(R.drawable.aguarde);
                         girar.setClickable(false);
                     }
                 }else{
-                    suavez.setVisibility(View.INVISIBLE);
+                    suavez.setImageResource(R.drawable.aguarde);
                     girar.setClickable(false);
                 }
 
@@ -93,11 +93,10 @@ public class Roleta extends AppCompatActivity {
                 xpB = Integer.parseInt(verificarFim.get("xpB"));
 
                 if(scrumB>=3 && leanB>=3 && agileB>=3 && xpB>=3){
-                    //TODO RECUPERAR ID DO JOGADOR B
-                    //TODO
-                    vencedor = "JogadorB";
+
                     Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
                     fimDeJogo.putExtra("login",login);
+                    fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorB"));
                     startActivity(fimDeJogo);
 
                 }
@@ -108,10 +107,10 @@ public class Roleta extends AppCompatActivity {
                 xpA = Integer.parseInt(verificarFim.get("xpA"));
 
                 if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
-                    //TODO RECUPERAR ID DO JOGADOR B
-                    //TODO
-                    vencedor = "JogadorA";
+
                     Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
+                    fimDeJogo.putExtra("login",login);
+                    fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorA"));
                     startActivity(fimDeJogo);
 
                 }
@@ -138,11 +137,14 @@ public class Roleta extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
         roleta_background.setImageResource(R.drawable.roleta_final);
+        status.setClickable(true);
+
     }
 
     public void girarRoleta(View view){
 
-        
+        status.setClickable(false);
+        girar.setClickable(false);
 
         final int aux = gerarCodigoTema();
         roleta_background.setImageResource(R.drawable.roleta_final);
@@ -163,7 +165,7 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_amarelo);
                     roleta_background.startAnimation(animFinal);
-                    finalAnimacao(animFinal,aux);
+                    finalAnimacao(animFinal, aux);
                 }
 
                 @Override
@@ -171,7 +173,7 @@ public class Roleta extends AppCompatActivity {
                 }
             });
 
-            Toast.makeText(Roleta.this,"0 - Amarelo ",Toast.LENGTH_SHORT).show();
+
 
 
         }else if(aux == 1){
@@ -188,7 +190,7 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_azul);
                     roleta_background.startAnimation(animFinal);
-                    finalAnimacao(animFinal,1);
+                    finalAnimacao(animFinal, 1);
                 }
 
                 @Override
@@ -197,7 +199,7 @@ public class Roleta extends AppCompatActivity {
                 }
             });
 
-            Toast.makeText(Roleta.this,"1 - Azul ",Toast.LENGTH_SHORT).show();
+
 
 
         }else if(aux == 2){
@@ -214,7 +216,7 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_vermelho);
                     roleta_background.startAnimation(animFinal);
-                    finalAnimacao(animFinal,2);
+                    finalAnimacao(animFinal, 2);
 
 
                 }
@@ -225,7 +227,7 @@ public class Roleta extends AppCompatActivity {
                 }
             });
 
-            Toast.makeText(Roleta.this,"2 - Vermelho ",Toast.LENGTH_SHORT).show();
+
 
 
         }else{
@@ -242,7 +244,7 @@ public class Roleta extends AppCompatActivity {
                 public void onAnimationEnd(Animation animation) {
                     roleta_background.setImageResource(R.drawable.roleta_final_verde);
                     roleta_background.startAnimation(animFinal);
-                    finalAnimacao(animFinal,3);
+                    finalAnimacao(animFinal, 3);
 
                 }
 
@@ -252,7 +254,7 @@ public class Roleta extends AppCompatActivity {
                 }
             });
 
-            Toast.makeText(Roleta.this,"3 - Verde ",Toast.LENGTH_SHORT).show();
+
 
         }
 

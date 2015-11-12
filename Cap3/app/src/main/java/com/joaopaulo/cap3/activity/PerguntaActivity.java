@@ -118,7 +118,7 @@ public class PerguntaActivity extends AppCompatActivity {
             categoria = "lean";
         }
         btnOrganization = rand.nextInt(4);
-        randomPergunta = rand.nextInt(6)+1;
+        randomPergunta = rand.nextInt(10)+1;
 
         b1 = (Button) findViewById(R.id.btn1);
         b2 = (Button) findViewById(R.id.btn2);
@@ -250,7 +250,7 @@ public class PerguntaActivity extends AppCompatActivity {
         super.onResume();
         pause = false;
         btnOrganization = rand.nextInt(4);
-        randomPergunta = rand.nextInt(6)+1;
+        randomPergunta = rand.nextInt(10)+1;
     }
 
 
