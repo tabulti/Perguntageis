@@ -27,6 +27,6 @@
         android:id="@+id/rank"
         android:layout_below="@+id/resultado"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/rankvintecinco"
+        android:src="@drawable/rankvintequatro"
         android:layout_marginTop="25dp"/>
 </RelativeLayout>

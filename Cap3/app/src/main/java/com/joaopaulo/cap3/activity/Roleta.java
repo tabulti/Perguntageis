@@ -85,37 +85,7 @@ public class Roleta extends AppCompatActivity {
                     girar.setClickable(false);
                 }
 
-                //-----------------------------------VERIFICAR FIM DO JOGO ------------------------
 
-                scrumB = Integer.parseInt(verificarFim.get("scrumB"));
-                leanB = Integer.parseInt(verificarFim.get("leanB"));
-                agileB = Integer.parseInt(verificarFim.get("agileB"));
-                xpB = Integer.parseInt(verificarFim.get("xpB"));
-
-                if(scrumB>=3 && leanB>=3 && agileB>=3 && xpB>=3){
-
-                    Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
-                    fimDeJogo.putExtra("login",login);
-                    fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorB"));
-                    startActivity(fimDeJogo);
-
-                }
-
-                scrumA = Integer.parseInt(verificarFim.get("scrumA"));
-                leanA = Integer.parseInt(verificarFim.get("leanA"));
-                agileA = Integer.parseInt(verificarFim.get("agileA"));
-                xpA = Integer.parseInt(verificarFim.get("xpA"));
-
-                if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
-
-                    Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
-                    fimDeJogo.putExtra("login",login);
-                    fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorA"));
-                    startActivity(fimDeJogo);
-
-                }
-
-                //------------------FIM VERIFICAR FIM DE JOGO ------------------------------------
             }
 
             @Override
@@ -123,6 +93,7 @@ public class Roleta extends AppCompatActivity {
 
             }
         });
+        verificarFimDeJogo();
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -138,6 +109,8 @@ public class Roleta extends AppCompatActivity {
         super.onResume();
         roleta_background.setImageResource(R.drawable.roleta_final);
         status.setClickable(true);
+
+        verificarFimDeJogo();
 
     }
 
@@ -276,8 +249,8 @@ public class Roleta extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 Intent intent = new Intent(Roleta.this, PerguntaActivity.class);
-                intent.putExtra("codigotema",codigoTema);
-                intent.putExtra("login",login);
+                intent.putExtra("codigotema", codigoTema);
+                intent.putExtra("login", login);
                 startActivity(intent);
             }
 
@@ -289,6 +262,39 @@ public class Roleta extends AppCompatActivity {
 
     }
 
+    public void verificarFimDeJogo(){
+        //-----------------------------------VERIFICAR FIM DO JOGO ------------------------
+
+        scrumB = Integer.parseInt(verificarFim.get("scrumB"));
+        leanB = Integer.parseInt(verificarFim.get("leanB"));
+        agileB = Integer.parseInt(verificarFim.get("agileB"));
+        xpB = Integer.parseInt(verificarFim.get("xpB"));
+
+        if(scrumB>=3 && leanB>=3 && agileB>=3 && xpB>=3){
+
+            Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
+            fimDeJogo.putExtra("login",login);
+            fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorB"));
+            startActivity(fimDeJogo);
+
+        }
+
+        scrumA = Integer.parseInt(verificarFim.get("scrumA"));
+        leanA = Integer.parseInt(verificarFim.get("leanA"));
+        agileA = Integer.parseInt(verificarFim.get("agileA"));
+        xpA = Integer.parseInt(verificarFim.get("xpA"));
+
+        if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
+
+            Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
+            fimDeJogo.putExtra("login",login);
+            fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorA"));
+            startActivity(fimDeJogo);
+
+        }
+
+        //------------------FIM VERIFICAR FIM DE JOGO ------------------------------------
+    }
 
     public int gerarCodigoTema(){
         //0 - SCRUM, 1 - XP, 2 - AGILE, 3 - LEAN
