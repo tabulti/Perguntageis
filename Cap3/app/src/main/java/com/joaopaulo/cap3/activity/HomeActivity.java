@@ -1,6 +1,7 @@
 package com.joaopaulo.cap3.activity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,21 +12,25 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+import com.firebase.client.Query;
 import com.joaopaulo.cap3.R;
 
 public class HomeActivity extends AppCompatActivity {
 
-    DrawerLayout drawerLayout;
-    Toolbar toolbar;
-    ActionBar actionBar;
-    TextView textView;
-    String login;
-    Button roletaActivity;
-    Firebase ref;
+    private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
+    private ActionBar actionBar;
+    private TextView textView;
+    private String login;
+    private Button roletaActivity;
+    private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
+    private ImageView avatar;
+    Query usuarioQuery = ref.child("usuarios").equalTo("teste@teste.com");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +43,9 @@ public class HomeActivity extends AppCompatActivity {
         //Define toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        avatar = (ImageView) findViewById(R.id.imgCardPerfil);
+
 
 
         actionBar = getSupportActionBar();
@@ -117,7 +125,7 @@ public class HomeActivity extends AppCompatActivity {
                             drawerLayout.closeDrawer(GravityCompat.START);
                             return true;
                         case R.id.item_logout:
-                            ref = new Firebase("https://perguntageis.firebaseio.com/");
+
                             menuItem.setChecked(true);
                             textView.setText(menuItem.getTitle());
                             drawerLayout.closeDrawer(GravityCompat.START);
