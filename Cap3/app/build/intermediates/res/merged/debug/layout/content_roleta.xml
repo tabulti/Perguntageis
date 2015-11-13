@@ -66,10 +66,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/usarDiamante"
         android:background="@drawable/diamante2"
+        android:onClick="consumirDiamante"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         style="?android:attr/borderlessButtonStyle"
         android:layout_marginTop="10sp"
         />
 </RelativeLayout>
+<<<<<<< HEAD
 <!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_roleta.xml -->
+=======
+<<<<<<< HEAD
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_roleta.xml -->
+=======
+<!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_roleta.xml -->
+>>>>>>> e5d9145643c5b455b686b126e6d8ade484549f1c
+>>>>>>> cfd4b3260eeb1a00d08204f9564bb83c62b1e10d

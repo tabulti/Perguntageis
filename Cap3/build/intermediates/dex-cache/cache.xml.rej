@@ -1,0 +1,15 @@
+diff a/Cap3/build/intermediates/dex-cache/cache.xml b/Cap3/build/intermediates/dex-cache/cache.xml	(rejected hunks)
+@@ -122,13 +122,6 @@
+         <dex dex="C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\intermediates\pre-dexed\debug\classes-eb9bc20f8f3f12bdeb43ae2c8c73227b4d38da3a.jar" />
+     </item>
+     <item
+-        jar="C:\Users\Gustavo\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.4.0\f00bc767918ad9c89e5c13e25706d033a58e13c2\firebase-client-android-2.4.0.jar"
+-        jumboMode="false"
+-        revision="23.0.1"
+-        sha1="f00bc767918ad9c89e5c13e25706d033a58e13c2">
+-        <dex dex="C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\intermediates\pre-dexed\debug\firebase-client-android-2.4.0-7b8d663c6825b05b36b286d9d2bc9cfca044f718.jar" />
+-    </item>
+-    <item
+         jar="C:\Users\Gustavo\Documents\Perguntageis\Cap3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+         jumboMode="false"
+         revision="23.0.1"

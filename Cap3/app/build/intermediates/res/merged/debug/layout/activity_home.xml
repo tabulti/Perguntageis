@@ -334,4 +334,12 @@
         app:theme="@style/NavigationViewTheme" />
 
 </android.support.v4.widget.DrawerLayout>
+<<<<<<< HEAD
 <!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_home.xml -->
+=======
+<<<<<<< HEAD
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_home.xml -->
+=======
+<!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_home.xml -->
+>>>>>>> e5d9145643c5b455b686b126e6d8ade484549f1c
+>>>>>>> cfd4b3260eeb1a00d08204f9564bb83c62b1e10d
