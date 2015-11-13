@@ -5,9 +5,7 @@
         <shape>
             <corners
                 android:radius="60dp" />
-            <gradient
-                android:startColor="#F00"
-                android:endColor="#FFF"/>
+            <solid android:color="#FB8C00"/>
         </shape>
     </item>
 
@@ -16,7 +14,7 @@
             <stroke android:width="5dp"
                 android:color="#3000"></stroke>
             <corners android:radius="60dp"/>
-            <solid android:color="@color/colorTextIcons"/>
+            <solid android:color="#FF9800"/>
         </shape>
     </item>
 

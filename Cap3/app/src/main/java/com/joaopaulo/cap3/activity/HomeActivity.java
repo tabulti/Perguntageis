@@ -66,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //Welcome msg
         TextView msgBoasVindas = (TextView) findViewById(R.id.tvCardPerfil);
-        msgBoasVindas.setText("Bem vindo " + login + "!");
+        msgBoasVindas.setText(login);
 
         //BUTTON ROLETA
         btnJogar = (Button) findViewById(R.id.btnJogar);
