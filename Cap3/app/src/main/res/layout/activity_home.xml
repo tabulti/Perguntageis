@@ -48,6 +48,10 @@
                             android:layout_gravity="center"
                             android:padding="15dp">
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></LinearLayout>
+
                             <!--Coração-->
                             <ImageView
                                 android:id="@+id/imgCoracao"
@@ -113,26 +117,59 @@
 
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_gravity="center"
                             android:padding="15dp">
 
-                            <ImageView
-                                android:id="@+id/imgCardPerfil"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/escudo"/>
-
-                            <TextView
-                                android:id="@+id/tvCardPerfil"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="20dp"
-                                android:layout_gravity="center"
-                                android:textSize="20dp"/>
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imgCardPerfil"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="left"
+                                    android:background="@drawable/escudo"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="20dp">
+
+                                    <TextView
+                                        android:id="@+id/tvCardPerfil"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TESTE"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold"/>
+
+                                    <TextView
+                                        android:id="@+id/rankingHome"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="RANKING: 25"
+                                        android:textStyle="bold|italic"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="right"
+                                android:id="@+id/btnJogar"
+                                android:padding="10dp"
+                                android:textColor="#FFFFFF"
+                                android:text="Jogar Agora"
+                                android:background="@drawable/button_jogar_agora_shape"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
 
                         </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -152,22 +189,130 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:padding="20dp">
+                        android:padding="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="Card Turnos"
+                            android:text="Partidas em andamento"
                             android:textSize="20dp"
                             android:layout_marginBottom="10dp"/>
 
-                        <Button
-                            android:id="@+id/btnRoletaActivity"
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:text="Girar Roleta"
-                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorDivider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="left"
+                                android:background="@drawable/escudo"
+                                android:layout_alignParentStart="true"
+                                android:id="@+id/imgPt1" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/versus"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentEnd="false"
+                                android:layout_centerHorizontal="true" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+
+                                android:background="@drawable/marvel"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/imgPt2" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorDivider"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="left"
+                                android:background="@drawable/dangerous"
+                                android:layout_alignParentStart="true"
+                                android:id="@+id/imgPt3" />
+
+                            <!--<LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentTop="false"
+                                android:layout_alignParentBottom="false"
+                                android:layout_alignParentRight="false"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignWithParentIfMissing="false">
+                                <TextView
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lean: 5"
+                                    android:textStyle="italic"/>
+                                <TextView
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="XP: 5"
+                                    android:textStyle="italic"/>
+                                <TextView
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Agile: 5"
+                                    android:textStyle="italic"/>
+                                <TextView
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Agile: 5"
+                                    android:textStyle="italic"/>
+                            </LinearLayout>-->
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/versus"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentEnd="false"
+                                android:layout_centerHorizontal="true" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+
+                                android:background="@drawable/escudo"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/imgPt4" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorDivider"/>
 
                     </LinearLayout>
 

@@ -2,8 +2,95 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceb31f64-578c-4526-9242-fc21d728ba93" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\deell\Documents\Perguntageis\perguntas.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/merged/debug/drawable/aguarde.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cap3/app/src/main/res/drawable/aguarde.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cap3/app/src/main/res/drawable/derrota.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cap3/app/src/main/res/drawable/vitoria.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml.rej" />
+      <change type="DELETED" beforePath="C:\Users\deell\Documents\Perguntageis\Cap3\.idea\libraries\firebase_client_android_2_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\deell\Documents\Perguntageis\Cap3\.idea\libraries\firebase_client_jvm_2_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\deell\Documents\Perguntageis\Cap3\.idea\libraries\jackson_annotations_2_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\deell\Documents\Perguntageis\Cap3\.idea\libraries\jackson_core_2_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\deell\Documents\Perguntageis\Cap3\.idea\libraries\jackson_databind_2_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\deell\Documents\Perguntageis\Cap3\.idea\libraries\tubesock_0_0_12.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/FimDeJogoActivity.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/FimDeJogoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/HomeActivity$2.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/HomeActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/HomeActivity.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/HomeActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/adapters/ImageAdaptor.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/adapters/ImageAdaptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PerguntaActivity$1$1.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PerguntaActivity$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PerguntaActivity.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PerguntaActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PopupStatus$1.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PopupStatus$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PopupStatus.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/PopupStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/facebook/R$drawable.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/facebook/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$drawable.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/facebook/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$id.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$integer.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$layout.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$menu.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$mipmap.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$mipmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$raw.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$string.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$style.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$styleable.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$1.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$2.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$3.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$4.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$5.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$6.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta.class" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/classes/debug/com/joaopaulo/cap3/activity/Roleta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Cap3/app/build/outputs/apk/app-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/Cap3/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-c3a561242763c2e92f6cc27db782ddad8a7fac71.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-c3a561242763c2e92f6cc27db782ddad8a7fac71.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-24efa699af8364c50db73123b0ee86d89e20038d.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-24efa699af8364c50db73123b0ee86d89e20038d.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-65552340215d078af96e74c61feb4e734beca79a.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-65552340215d078af96e74c61feb4e734beca79a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-6ff2fd2d5aa144dd0e9e4af64fe018152824088a.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-6ff2fd2d5aa144dd0e9e4af64fe018152824088a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-ac021fff3c0a7c5c5db9208e603d531317a679a2.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-ac021fff3c0a7c5c5db9208e603d531317a679a2.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-cb4ad857a5e31ad8f9e2bb7cc1517c76d19ffa35.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-cb4ad857a5e31ad8f9e2bb7cc1517c76d19ffa35.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-e1a0ef2d0146a86fc2032da7107309ae12bd6284.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/classes-e1a0ef2d0146a86fc2032da7107309ae12bd6284.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.4.0-f74668e17863b54f62355e7dc56ac4f28ad43359.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.4.0-f74668e17863b54f62355e7dc56ac4f28ad43359.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.4.0-b253e2abd1f3d2d84f4280728d2817ff4084314c.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.4.0-b253e2abd1f3d2d84f4280728d2817ff4084314c.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/gson-2.3.1-4b0c3b05014e636c88e0a2f441106cda724e894a.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/gson-2.3.1-4b0c3b05014e636c88e0a2f441106cda724e894a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-f294186e536158ce04eda4b36331f00c8d3893af.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-f294186e536158ce04eda4b36331f00c8d3893af.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-d0d0d58678ab6afdefdabd19e337d8d06561a725.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-d0d0d58678ab6afdefdabd19e337d8d06561a725.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-d5a0d831eccf046c33ac58f2fe9288e6f227e033.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-d5a0d831eccf046c33ac58f2fe9288e6f227e033.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-912543ec9adcde2b9685c189f6b93bb671284cda.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-912543ec9adcde2b9685c189f6b93bb671284cda.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-e16fbdab6c70d4f887f4207333e562e14678be0b.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-e16fbdab6c70d4f887f4207333e562e14678be0b.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/Cap3/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/tubesock-0.0.12-d74517c49019689bac061286333259095af90466.jar" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/pre-dexed/debug/tubesock-0.0.12-d74517c49019689bac061286333259095af90466.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/src/main/java/com/joaopaulo/cap3/activity/FimDeJogoActivity.java" afterPath="$PROJECT_DIR$/Cap3/app/src/main/java/com/joaopaulo/cap3/activity/FimDeJogoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/src/main/java/com/joaopaulo/cap3/activity/PerguntaActivity.java" afterPath="$PROJECT_DIR$/Cap3/app/src/main/java/com/joaopaulo/cap3/activity/PerguntaActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/android/support/design/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/com/facebook/R.java" afterPath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/com/facebook/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/com/joaopaulo/cap3/R.java" afterPath="$PROJECT_DIR$/Cap3/app/build/generated/source/r/debug/com/joaopaulo/cap3/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/src/main/java/com/joaopaulo/cap3/activity/Roleta.java" afterPath="$PROJECT_DIR$/Cap3/app/src/main/java/com/joaopaulo/cap3/activity/Roleta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/merged/debug/layout/activity_pergunta.xml" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/merged/debug/layout/activity_pergunta.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/src/main/res/layout/activity_pergunta.xml" afterPath="$PROJECT_DIR$/Cap3/app/src/main/res/layout/activity_pergunta.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/app.iml" afterPath="$PROJECT_DIR$/Cap3/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.idea/libraries/bolts_android_1_2_0.xml" afterPath="$PROJECT_DIR$/Cap3/.idea/libraries/bolts_android_1_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/Cap3/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/merged/debug/layout/content_fim_de_jogo.xml" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/res/merged/debug/layout/content_fim_de_jogo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/src/main/res/layout/content_fim_de_jogo.xml" afterPath="$PROJECT_DIR$/Cap3/app/src/main/res/layout/content_fim_de_jogo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.idea/gradle.xml" afterPath="$PROJECT_DIR$/Cap3/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.idea/libraries/gson_2_3_1.xml" afterPath="$PROJECT_DIR$/Cap3/.idea/libraries/gson_2_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/local.properties" afterPath="$PROJECT_DIR$/Cap3/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/Cap3/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.idea/misc.xml" afterPath="$PROJECT_DIR$/Cap3/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cap3/.idea/libraries/support_annotations_23_1_0.xml" afterPath="$PROJECT_DIR$/Cap3/.idea/libraries/support_annotations_23_1_0.xml" />
     </list>
     <ignored path="Perguntageis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,6 +149,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -76,6 +165,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,12 +275,13 @@
               <option name="myItemId" value="joaopaulo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cap3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
