@@ -283,4 +283,4 @@
         android:src="@drawable/xp"
         android:layout_above="@+id/xpb1"
         android:layout_alignStart="@+id/xpb1" />
-</RelativeLayout><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/popup_status.xml -->
+</RelativeLayout><!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/popup_status.xml -->

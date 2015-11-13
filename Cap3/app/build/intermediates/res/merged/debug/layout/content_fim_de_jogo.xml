@@ -19,9 +19,6 @@
         android:layout_alignParentTop="true"
         android:src="@drawable/vitoria"
         android:layout_centerHorizontal="true"
-<<<<<<< HEAD
-        android:layout_marginTop="137dp" />
-=======
         android:layout_marginTop="80dp" />
 
     <ImageView
@@ -30,8 +27,7 @@
         android:id="@+id/rank"
         android:layout_below="@+id/resultado"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/rankvintecinco"
+        android:src="@drawable/rankvintequatro"
         android:layout_marginTop="25dp"/>
->>>>>>> 06da8ff46d12037ef0151b706f94d1b4ec00072e
 </RelativeLayout>
-<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_fim_de_jogo.xml -->
+<!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/content_fim_de_jogo.xml -->
