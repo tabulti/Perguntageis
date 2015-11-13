@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:state_pressed="true">
+        <shape>
+            <corners
+                android:radius="60dp" />
+            <gradient
+                android:startColor="#F00"/>
+        </shape>
+    </item>-->
+
+    <item>
+        <shape>
+            <corners android:radius="10dp"/>
+            <solid android:color="#4CAF50"/>
+        </shape>
+    </item>
+
+</selector><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/drawable/button_jogar_agora_shape.xml -->
