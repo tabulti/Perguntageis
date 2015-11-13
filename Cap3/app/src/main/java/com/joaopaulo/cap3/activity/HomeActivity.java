@@ -1,7 +1,6 @@
 package com.joaopaulo.cap3.activity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -27,7 +26,7 @@ public class HomeActivity extends AppCompatActivity {
     private ActionBar actionBar;
     private TextView textView;
     private String login;
-    private Button roletaActivity;
+    private Button btnJogar;
     private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     private ImageView avatar;
     Query usuarioQuery = ref.child("usuarios").equalTo("teste@teste.com");
@@ -70,12 +69,12 @@ public class HomeActivity extends AppCompatActivity {
         msgBoasVindas.setText("Bem vindo " + login + "!");
 
         //BUTTON ROLETA
-        roletaActivity = (Button) findViewById(R.id.btnRoletaActivity);
-        roletaActivity.setOnClickListener(new View.OnClickListener() {
+        btnJogar = (Button) findViewById(R.id.btnJogar);
+        btnJogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Roleta.class);
-                intent.putExtra("login",login);
+                intent.putExtra("login", login);
                 startActivity(intent);
             }
         });
