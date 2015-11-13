@@ -29,7 +29,7 @@ public class Roleta extends AppCompatActivity {
     private ImageView roleta_background;
     private ImageView arrow,suavez;
     private MediaPlayer mp;
-    private Button girar,status;
+    private Button girar,status,diamante;
     private final Firebase ref = new Firebase("https://perguntageis.firebaseio.com/");
     private HashMap<String,String> vezNoTurno;
     private HashMap<String,String> verificarFim;
@@ -60,6 +60,8 @@ public class Roleta extends AppCompatActivity {
         Bundle args = getIntent().getExtras();
         login = args.getString("login");
         status = (Button) findViewById(R.id.status);
+        diamante = (Button) findViewById(R.id.usarDiamante);
+        diamante.setVisibility(View.INVISIBLE);
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -92,6 +94,11 @@ public class Roleta extends AppCompatActivity {
                 }
                 verificarFimDeJogo();
 
+                if(login.equals(usuario1.get("email"))){
+                    if(Integer.parseInt(usuario1.get("diamantes"))>0){
+                        diamante.setVisibility(View.VISIBLE);
+                    }
+                }
 
             }
 
@@ -285,56 +292,53 @@ public class Roleta extends AppCompatActivity {
 
         if(scrumB>=3 && leanB>=3 && agileB>=3 && xpB>=3){
 
-            updateStatus.put("agileA",""+0);
-            updateStatus.put("agileB",""+0);
-            updateStatus.put("idJogo",""+1);
-            updateStatus.put("leanA",""+0);
-            updateStatus.put("leanB",""+0);
-            updateStatus.put("loginJogadorA","teste@teste.com");
-            updateStatus.put("loginJogadorB","teste2@gmail.com");
-            updateStatus.put("scrumA",""+0);
-            updateStatus.put("scrumB",""+0);
-            updateStatus.put("vezNoTurno","A");
-            updateStatus.put("xpA",""+0);
-            updateStatus.put("xpB",""+0);
-
-            jogoRef.updateChildren(updateStatus);
+            updateStatus.put("jogos/jogoexample/agileA",""+0);
+            updateStatus.put("jogos/jogoexample/agileB",""+0);
+            updateStatus.put("jogos/jogoexample/idJogo",""+1);
+            updateStatus.put("jogos/jogoexample/leanA",""+0);
+            updateStatus.put("jogos/jogoexample/leanB",""+0);
+            updateStatus.put("jogos/jogoexample/loginJogadorA","teste@teste.com");
+            updateStatus.put("jogos/jogoexample/loginJogadorB","teste2@gmail.com");
+            updateStatus.put("jogos/jogoexample/scrumA",""+0);
+            updateStatus.put("jogos/jogoexample/scrumB",""+0);
+            updateStatus.put("jogos/jogoexample/vezNoTurno","A");
+            updateStatus.put("jogos/jogoexample/xpA",""+0);
+            updateStatus.put("jogos/jogoexample/xpB", "" + 0);
 
             if(login.equals(usuario1.get("email"))){
 
                 aux = Integer.parseInt(usuario1.get("perguntasLean"));
-                updateDadosUsuario1.put("u1/perguntasLean",""+(aux+leanA));
+                updateStatus.put("usuarios/u1/perguntasLean",""+(aux+leanA));
                 aux = Integer.parseInt(usuario1.get("perguntasAgile"));
-                updateDadosUsuario1.put("u1/perguntasAgile",""+(aux+agileA));
+                updateStatus.put("usuarios/u1/perguntasAgile",""+(aux+agileA));
                 aux = Integer.parseInt(usuario1.get("perguntasXP"));
-                updateDadosUsuario1.put("u1/perguntasXP",""+(aux+xpA));
+                updateStatus.put("usuarios/u1/perguntasXP",""+(aux+xpA));
                 aux = Integer.parseInt(usuario1.get("perguntasSCRUM"));
-                updateDadosUsuario1.put("u1/perguntasSCRUM",""+(aux+scrumA));
-                aux = Integer.parseInt(usuario1.get("vitorias"));
-                updateDadosUsuario1.put("u1/vitorias", "" + (aux + 1));
-                usuarioRef.updateChildren(updateDadosUsuario1);
+                updateStatus.put("usuarios/u1/perguntasSCRUM",""+(aux+scrumA));
+
+
 
 
             }else if(login.equals(usuario2.get("email"))){
 
 
                 aux = Integer.parseInt(usuario2.get("perguntasLean"));
-                updateDadosUsuario1.put("u2/perguntasLean",""+(aux+leanB));
+                updateStatus.put("usuarios/u2/perguntasLean",""+(aux+leanB));
                 aux = Integer.parseInt(usuario2.get("perguntasAgile"));
-                updateDadosUsuario1.put("u2/perguntasAgile",""+(aux+agileB));
+                updateStatus.put("usuarios/u2/perguntasAgile",""+(aux+agileB));
                 aux = Integer.parseInt(usuario2.get("perguntasXP"));
-                updateDadosUsuario1.put("u2/perguntasXP",""+(aux+xpB));
+                updateStatus.put("usuarios/u2/perguntasXP",""+(aux+xpB));
                 aux = Integer.parseInt(usuario2.get("perguntasSCRUM"));
-                updateDadosUsuario1.put("u2/perguntasSCRUM",""+(aux+scrumB));
+                updateStatus.put("usuarios/u2/perguntasSCRUM",""+(aux+scrumB));
                 aux = Integer.parseInt(usuario2.get("vitorias"));
-                updateDadosUsuario1.put("u2/vitorias",""+(aux+1));
+                updateStatus.put("usuarios/u2/vitorias",""+(aux+1));
                 usuarioRef.updateChildren(updateDadosUsuario2);
 
             }else{
 
             }
 
-
+            ref.updateChildren(updateStatus);
             Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
             fimDeJogo.putExtra("login",login);
             fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorB"));
@@ -349,53 +353,52 @@ public class Roleta extends AppCompatActivity {
 
         if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
 
-            updateStatus.put("agileA",""+0);
-            updateStatus.put("agileB",""+0);
-            updateStatus.put("idJogo",""+1);
-            updateStatus.put("leanA",""+0);
-            updateStatus.put("leanB",""+0);
-            updateStatus.put("loginJogadorA","teste@teste.com");
-            updateStatus.put("loginJogadorB","teste2@gmail.com");
-            updateStatus.put("scrumA",""+0);
-            updateStatus.put("scrumB",""+0);
-            updateStatus.put("vezNoTurno","A");
-            updateStatus.put("xpA",""+0);
-            updateStatus.put("xpB",""+0);
+            updateStatus.put("jogos/jogoexample/agileA",""+0);
+            updateStatus.put("jogos/jogoexample/agileB",""+0);
+            updateStatus.put("jogos/jogoexample/idJogo",""+1);
+            updateStatus.put("jogos/jogoexample/leanA",""+0);
+            updateStatus.put("jogos/jogoexample/leanB",""+0);
+            updateStatus.put("jogos/jogoexample/loginJogadorA","teste@teste.com");
+            updateStatus.put("jogos/jogoexample/loginJogadorB","teste2@gmail.com");
+            updateStatus.put("jogos/jogoexample/scrumA",""+0);
+            updateStatus.put("jogos/jogoexample/scrumB",""+0);
+            updateStatus.put("jogos/jogoexample/vezNoTurno","A");
+            updateStatus.put("jogos/jogoexample/xpA", "" + 0);
+            updateStatus.put("jogos/jogoexample/xpB", "" + 0);
 
-            jogoRef.updateChildren(updateStatus);
+
 
             if(login.equals(usuario1.get("email"))){
 
                 aux = Integer.parseInt(usuario1.get("perguntasLean"));
-                updateDadosUsuario1.put("u1/perguntasLean",""+(aux+leanA));
+                updateStatus.put("usuarios/u1/perguntasLean",""+(aux+leanA));
                 aux = Integer.parseInt(usuario1.get("perguntasAgile"));
-                updateDadosUsuario1.put("u1/perguntasAgile",""+(aux+agileA));
+                updateStatus.put("usuarios/u1/perguntasAgile",""+(aux+agileA));
                 aux = Integer.parseInt(usuario1.get("perguntasXP"));
-                updateDadosUsuario1.put("u1/perguntasXP",""+(aux+xpA));
+                updateStatus.put("usuarios/u1/perguntasXP",""+(aux+xpA));
                 aux = Integer.parseInt(usuario1.get("perguntasSCRUM"));
-                updateDadosUsuario1.put("u1/perguntasSCRUM",""+(aux+scrumA));
+                updateStatus.put("usuarios/u1/perguntasSCRUM",""+(aux+scrumA));
                 aux = Integer.parseInt(usuario1.get("vitorias"));
-                updateDadosUsuario1.put("u1/vitorias",""+(aux+1));
+                updateStatus.put("usuarios/u1/vitorias",""+(aux+1));
                 usuarioRef.updateChildren(updateDadosUsuario1);
 
             }else if(login.equals(usuario2.get("email"))){
 
                 aux = Integer.parseInt(usuario2.get("perguntasLean"));
-                updateDadosUsuario1.put("u2/perguntasLean",""+(aux+leanB));
+                updateStatus.put("usuarios/u2/perguntasLean",""+(aux+leanB));
                 aux = Integer.parseInt(usuario2.get("perguntasAgile"));
-                updateDadosUsuario1.put("u2/perguntasAgile",""+(aux+agileB));
+                updateStatus.put("usuarios/u2/perguntasAgile",""+(aux+agileB));
                 aux = Integer.parseInt(usuario2.get("perguntasXP"));
-                updateDadosUsuario1.put("u2/perguntasXP",""+(aux+xpB));
+                updateStatus.put("usuarios/u2/perguntasXP",""+(aux+xpB));
                 aux = Integer.parseInt(usuario2.get("perguntasSCRUM"));
-                updateDadosUsuario1.put("u2/perguntasSCRUM",""+(aux+scrumB));
-                aux = Integer.parseInt(usuario2.get("vitorias"));
-                updateDadosUsuario1.put("u2/vitorias",""+(aux+1));
-                usuarioRef.updateChildren(updateDadosUsuario2);
+                updateStatus.put("usuarios/u2/perguntasSCRUM",""+(aux+scrumB));
+
 
             }else{
 
             }
 
+            ref.updateChildren(updateStatus);
             Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
             fimDeJogo.putExtra("login",login);
             fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorA"));
@@ -822,6 +825,10 @@ public class Roleta extends AppCompatActivity {
 
 
         return codigoGerado;
+    }
+
+    public void consumirDiamante(){
+        
     }
 
 }
