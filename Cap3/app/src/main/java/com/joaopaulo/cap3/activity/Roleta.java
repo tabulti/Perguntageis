@@ -1,5 +1,7 @@
 package com.joaopaulo.cap3.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -97,6 +99,8 @@ public class Roleta extends AppCompatActivity {
                 if(login.equals(usuario1.get("email"))){
                     if(Integer.parseInt(usuario1.get("diamantes"))>0){
                         diamante.setVisibility(View.VISIBLE);
+                    }else{
+                        diamante.setVisibility(View.INVISIBLE);
                     }
                 }
 
@@ -827,8 +831,79 @@ public class Roleta extends AppCompatActivity {
         return codigoGerado;
     }
 
-    public void consumirDiamante(){
-        
+    public void consumirDiamante(View v){
+        HashMap<String,Object> updateDiamantes = new HashMap<>();
+        int qtDiamantes = 0;
+        Random rand = new Random();
+
+        if(login.equals(usuario1.get("email"))){
+
+            if(rand.nextInt(2)==0){
+                updateDiamantes.put("jogos/jogoexample/vezNoTurno", "A");
+                AlertDialog.Builder builder = new AlertDialog.Builder(Roleta.this);
+                builder.setTitle("Opa!");
+                builder.setIcon(R.drawable.feelsgoodman);
+                builder.setMessage("Você roubou a vez do seu oponente!");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(Roleta.this);
+                builder.setTitle("Que Pena!");
+                builder.setIcon(R.drawable.feelsbadman);
+                builder.setMessage("Não foi dessa vez!");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+
+            qtDiamantes = Integer.parseInt(usuario1.get("diamantes"));
+            updateDiamantes.put("usuarios/u1/diamantes",""+(qtDiamantes-1));
+            ref.updateChildren(updateDiamantes);
+        }else if(login.equals(usuario2.get("email"))){
+
+            if(rand.nextInt(2)==0){
+                updateDiamantes.put("jogos/jogoexample/vezNoTurno", "B");
+                AlertDialog.Builder builder = new AlertDialog.Builder(Roleta.this);
+                builder.setTitle("Opa!");
+                builder.setIcon(R.drawable.feelsgoodman);
+                builder.setMessage("Você roubou a vez do seu oponente!");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+            }else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(Roleta.this);
+                builder.setTitle("Que Pena!");
+                builder.setIcon(R.drawable.feelsbadman);
+                builder.setMessage("Não foi dessa vez!");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+
+            qtDiamantes = Integer.parseInt(usuario2.get("diamantes"));
+            updateDiamantes.put("usuarios/u2/diamantes",""+(qtDiamantes-1));
+            ref.updateChildren(updateDiamantes);
+        }else{
+
+        }
     }
 
 }

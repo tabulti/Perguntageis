@@ -27,17 +27,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/layout_pergunt"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center">
+
+        </ImageView>
+
 
         <TextView
             android:layout_width="343dp"
             android:layout_height="169dp"
             android:text=""
             android:id="@+id/pergunta"
-            android:textSize="14sp"
-            android:layout_gravity="center" />
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
 
+
+       <!-- <TextView
+            android:layout_width="343dp"
+            android:layout_height="169dp"
+            android:text=""
+            android:id="@+id/pergunta"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            />
+-->
 
     </FrameLayout>
 
@@ -55,7 +69,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn1"
             android:layout_weight="1"
-            android:textSize="10sp"
+            android:textSize="12dp"
             android:background="@drawable/button_resposta_shape"
 
             />
@@ -65,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="10sp"
+            android:textSize="12dp"
             android:background="@drawable/button_resposta_shape"
             android:id="@+id/btn2"
 
@@ -78,7 +92,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn3"
             android:layout_marginTop="16dp"
-            android:textSize="10sp"
+            android:textSize="12dp"
             android:background="@drawable/button_resposta_shape"
 
             />
@@ -89,7 +103,7 @@
             android:id="@+id/btn4"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:textSize="10sp"
+            android:textSize="12dp"
             android:background="@drawable/button_resposta_shape"
 
             />
