@@ -8,4 +8,8 @@
             <solid android:color="@color/colorAccentLight" />
         </shape>
     </item>
+<<<<<<< HEAD
 </ripple><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/drawable-v21/button_cadastro_shape.xml -->
+=======
+</ripple><!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/drawable-v21/button_cadastro_shape.xml -->
+>>>>>>> e5d9145643c5b455b686b126e6d8ade484549f1c

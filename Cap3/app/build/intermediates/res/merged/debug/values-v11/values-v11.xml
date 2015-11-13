@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v11/values-v11.xml -->
+=======
+    <!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-v11/values-v11.xml -->
+>>>>>>> e5d9145643c5b455b686b126e6d8ade484549f1c
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat.Inverse">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
