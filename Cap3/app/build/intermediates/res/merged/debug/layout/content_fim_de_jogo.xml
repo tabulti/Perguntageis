@@ -27,7 +27,7 @@
         android:id="@+id/rank"
         android:layout_below="@+id/resultado"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/rankvintecinco"
+        android:src="@drawable/rankvintequatro"
         android:layout_marginTop="25dp"/>
 </RelativeLayout>
 <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_fim_de_jogo.xml -->

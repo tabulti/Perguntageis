@@ -35,7 +35,7 @@
             android:layout_height="169dp"
             android:text=""
             android:id="@+id/pergunta"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:layout_gravity="center" />
 
 

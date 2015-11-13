@@ -89,7 +89,7 @@ public class PerguntaActivity extends AppCompatActivity {
 
     };
     private ProgressBar timer;
-    final private Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
+    final private Firebase ref = new Firebase("https://perguntageis.firebaseio.com/");
     final private Firebase jogosRef = ref.child("jogos");
     final Handler mHandler = new Handler();
     private int btnOrganization, randomPergunta;

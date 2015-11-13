@@ -18,10 +18,10 @@ import java.util.HashMap;
 
 public class FimDeJogoActivity extends AppCompatActivity {
 
-    private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
+    private final Firebase ref = new Firebase("https://perguntageis.firebaseio.com/");
     private Firebase jogoRef = ref.child("jogos").child("jogoexample");
     private HashMap<String,String> dadosJogo;
-    private HashMap<String,Object> updateStatus = new HashMap<>();
+
     private String vencedor;
     private String login;
     private ImageView resultado;
@@ -57,20 +57,7 @@ public class FimDeJogoActivity extends AppCompatActivity {
             resultado.setImageResource(R.drawable.derrota);
         }
 
-        updateStatus.put("agileA",""+0);
-        updateStatus.put("agileB",""+0);
-        updateStatus.put("idJogo",""+1);
-        updateStatus.put("leanA",""+0);
-        updateStatus.put("leanB",""+0);
-        updateStatus.put("loginJogadorA","teste@teste.com");
-        updateStatus.put("loginJogadorB","teste2@gmail.com");
-        updateStatus.put("scrumA",""+0);
-        updateStatus.put("scrumB",""+0);
-        updateStatus.put("vezNoTurno","A");
-        updateStatus.put("xpA",""+0);
-        updateStatus.put("xpB",""+0);
 
-        jogoRef.updateChildren(updateStatus);
 
 
 
