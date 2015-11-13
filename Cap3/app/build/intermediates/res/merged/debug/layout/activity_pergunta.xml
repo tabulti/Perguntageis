@@ -39,7 +39,7 @@
             android:id="@+id/pergunta"
             android:textSize="20dp"
             android:layout_margin="10dp"
-            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_gravity="center"
             />
 
 
@@ -111,8 +111,4 @@
     </LinearLayout>
 
 </LinearLayout>
-<<<<<<< HEAD
 <!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_pergunta.xml -->
-=======
-<!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/activity_pergunta.xml -->
->>>>>>> 6f3cd7db66ad573540e373e29a8c195a10bcd27a

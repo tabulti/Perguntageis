@@ -30,8 +30,4 @@
         android:src="@drawable/rankvintequatro"
         android:layout_marginTop="25dp"/>
 </RelativeLayout>
-<<<<<<< HEAD
 <!-- From: file:/C:/Users/deell/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_fim_de_jogo.xml -->
-=======
-<!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/content_fim_de_jogo.xml -->
->>>>>>> 6f3cd7db66ad573540e373e29a8c195a10bcd27a
