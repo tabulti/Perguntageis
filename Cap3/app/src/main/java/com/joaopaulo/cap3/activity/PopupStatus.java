@@ -26,7 +26,7 @@ public class PopupStatus extends Activity {
 
     private ImageView aux;
 
-    final private Firebase fbstatus = new Firebase("https://resplendent-heat-382.firebaseio.com/");
+    final private Firebase fbstatus = new Firebase("https://perguntageis.firebaseio.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

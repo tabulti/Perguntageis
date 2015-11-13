@@ -44,41 +44,10 @@ public class MainActivity extends AppCompatActivity{
 
         setContentView(R.layout.activity_main);
 
-        loginButtonFacebook = (LoginButton)findViewById(R.id.login_button);
-
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         Button btLogin = (Button) findViewById(R.id.btLogin);
         Button btCadastro = (Button) findViewById(R.id.btCadastro);
 
 
-
-
-        //Evento do botão login pelo facebook
-        loginButtonFacebook.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                alert(
-                        "User ID: "
-                                + loginResult.getAccessToken().getUserId()
-                                + "\n" +
-                                "Auth Token: "
-                                + loginResult.getAccessToken().getToken()
-                );
-            }
-
-            @Override
-            public void onCancel() {
-                alert("Login attempt canceled.");
-            }
-
-            @Override
-            public void onError(FacebookException e) {
-                alert("Login attempt failed.");
-            }
-        });
 
 
         //Evento do botão cadastro
