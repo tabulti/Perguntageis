@@ -15,21 +15,27 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
 import com.firebase.client.Query;
+import com.firebase.client.ValueEventListener;
 import com.joaopaulo.cap3.R;
+
+import java.util.HashMap;
 
 public class HomeActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private ActionBar actionBar;
-    private TextView textView;
+    private TextView textView,qtdCoracoes,qtdDiamantes,qtdGold;
     private String login;
     private Button btnJogar;
     private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     private ImageView avatar;
-    Query usuarioQuery = ref.child("usuarios").equalTo("teste@teste.com");
+    private HashMap<String,String> usuario1,usuario2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +50,85 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         avatar = (ImageView) findViewById(R.id.imgCardPerfil);
+        qtdCoracoes = (TextView) findViewById(R.id.tvCoracao);
+        qtdDiamantes = (TextView) findViewById(R.id.tvDiamante);
+        qtdGold = (TextView) findViewById(R.id.tvMoeda);
 
 
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                usuario1 = (HashMap) dataSnapshot.child("usuarios").child("u1").getValue();
+                usuario2 = (HashMap) dataSnapshot.child("usuarios").child("u2").getValue();
+
+                if(login.equals(usuario1.get("email"))){
+                    qtdDiamantes.setText("x" + usuario1.get("diamantes"));
+                    qtdCoracoes.setText("x" + usuario1.get("coracoes"));
+                    qtdGold.setText("x" + usuario1.get("gold"));
+                    switch (Integer.parseInt(usuario1.get("imgcode"))){
+                        case 1:
+                            avatar.setImageResource(R.drawable.escudo);
+
+                            break;
+                        case 2:
+                            avatar.setImageResource(R.drawable.ironman);
+
+                            break;
+                        case 3:
+                            avatar.setImageResource(R.drawable.dangerous);
+                            break;
+                        case 4:
+                            avatar.setImageResource(R.drawable.marvel);
+                            break;
+                        case 5:
+                            avatar.setImageResource(R.drawable.martelo);
+                            break;
+                        case 6:
+                            avatar.setImageResource(R.drawable.lanterna);
+                            break;
+                        default:
+                            break;
+                    }
+
+                }else if(login.equals(usuario2.get("email"))){
+                    qtdDiamantes.setText("x" + usuario2.get("diamantes"));
+                    qtdCoracoes.setText("x" + usuario2.get("coracoes"));
+                    qtdGold.setText("x"+usuario2.get("gold"));
+                    switch (Integer.parseInt(usuario2.get("imgcode"))){
+                        case 1:
+                            avatar.setImageResource(R.drawable.escudo);
+
+                            break;
+                        case 2:
+                            avatar.setImageResource(R.drawable.ironman);
+
+                            break;
+                        case 3:
+                            avatar.setImageResource(R.drawable.dangerous);
+                            break;
+                        case 4:
+                            avatar.setImageResource(R.drawable.marvel);
+                            break;
+                        case 5:
+                            avatar.setImageResource(R.drawable.martelo);
+                            break;
+                        case 6:
+                            avatar.setImageResource(R.drawable.lanterna);
+                            break;
+                        default:
+                            break;
+                    }
+                }else{
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
 
         actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.ic_dehaze_white_24dp);

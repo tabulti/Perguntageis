@@ -2512,6 +2512,7 @@ containing a value of this type.
         public static final int diamante2=0x7f020067;
         public static final int escudo=0x7f020068;
         public static final int feelsbad=0x7f020069;
+<<<<<<< HEAD
         public static final int girar=0x7f02006a;
         public static final int girar2=0x7f02006b;
         public static final int header=0x7f02006c;
@@ -2566,6 +2567,63 @@ containing a value of this type.
         public static final int versus=0x7f02009c;
         public static final int vitoria=0x7f02009d;
         public static final int xp=0x7f02009e;
+=======
+        public static final int feelsbadman=0x7f02006a;
+        public static final int feelsgoodman=0x7f02006b;
+        public static final int girar=0x7f02006c;
+        public static final int girar2=0x7f02006d;
+        public static final int header=0x7f02006e;
+        public static final int ic_announcement_black_24dp=0x7f02006f;
+        public static final int ic_dehaze_white_24dp=0x7f020070;
+        public static final int ic_done_black_24dp=0x7f020071;
+        public static final int ic_done_white_24dp=0x7f020072;
+        public static final int ic_forward_white_24dp=0x7f020073;
+        public static final int ic_help_outline_black_24dp=0x7f020074;
+        public static final int ic_lock_outline_black_24dp=0x7f020075;
+        public static final int ic_mail_black_24dp=0x7f020076;
+        public static final int ic_person_black_24dp=0x7f020077;
+        public static final int ic_power_settings_new_black_24dp=0x7f020078;
+        public static final int ic_settings_black_24dp=0x7f020079;
+        public static final int ic_speaker_notes_black_24dp=0x7f02007a;
+        public static final int ic_stars_black_24dp=0x7f02007b;
+        public static final int ironman=0x7f02007c;
+        public static final int lanterna=0x7f02007d;
+        public static final int layout_pergunt=0x7f02007e;
+        public static final int lean=0x7f02007f;
+        public static final int logo1=0x7f020080;
+        public static final int martelo=0x7f020081;
+        public static final int marvel=0x7f020082;
+        public static final int messenger_bubble_large_blue=0x7f020083;
+        public static final int messenger_bubble_large_white=0x7f020084;
+        public static final int messenger_bubble_small_blue=0x7f020085;
+        public static final int messenger_bubble_small_white=0x7f020086;
+        public static final int messenger_button_blue_bg_round=0x7f020087;
+        public static final int messenger_button_blue_bg_selector=0x7f020088;
+        public static final int messenger_button_send_round_shadow=0x7f020089;
+        public static final int messenger_button_white_bg_round=0x7f02008a;
+        public static final int messenger_button_white_bg_selector=0x7f02008b;
+        public static final int mira=0x7f02008c;
+        public static final int moeda=0x7f02008d;
+        public static final int notification_template_icon_bg=0x7f0200a0;
+        public static final int novojogo=0x7f02008e;
+        public static final int popupbg=0x7f02008f;
+        public static final int rankvintecinco=0x7f020090;
+        public static final int rankvintedois=0x7f020091;
+        public static final int rankvintequatro=0x7f020092;
+        public static final int rankvintetres=0x7f020093;
+        public static final int rankvinteum=0x7f020094;
+        public static final int roleta_final=0x7f020095;
+        public static final int roleta_final_amarelo=0x7f020096;
+        public static final int roleta_final_azul=0x7f020097;
+        public static final int roleta_final_verde=0x7f020098;
+        public static final int roleta_final_vermelho=0x7f020099;
+        public static final int scrum=0x7f02009a;
+        public static final int sopq=0x7f02009b;
+        public static final int status=0x7f02009c;
+        public static final int versus=0x7f02009d;
+        public static final int vitoria=0x7f02009e;
+        public static final int xp=0x7f02009f;
+>>>>>>> 69be414dfc046dfe76fe2c433f52bc6646765a8b
     }
     public static final class id {
         public static final int SuaVez=0x7f0d00aa;

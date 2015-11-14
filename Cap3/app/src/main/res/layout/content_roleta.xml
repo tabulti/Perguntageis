@@ -66,6 +66,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/usarDiamante"
         android:background="@drawable/diamante2"
+        android:onClick="consumirDiamante"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         style="?android:attr/borderlessButtonStyle"
