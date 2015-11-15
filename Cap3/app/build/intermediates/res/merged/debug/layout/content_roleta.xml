@@ -71,6 +71,7 @@
         android:layout_alignParentEnd="true"
         style="?android:attr/borderlessButtonStyle"
         android:layout_marginTop="10sp"
+
         />
 </RelativeLayout>
 <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/content_roleta.xml -->

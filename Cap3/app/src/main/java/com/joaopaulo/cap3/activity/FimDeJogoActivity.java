@@ -67,4 +67,11 @@ public class FimDeJogoActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed(){
+        FimDeJogoActivity.this.finish();
+        super.onBackPressed();
+
+    }
+
 }

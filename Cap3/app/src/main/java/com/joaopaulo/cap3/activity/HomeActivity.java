@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private ActionBar actionBar;
-    private TextView textView,qtdCoracoes,qtdDiamantes,qtdGold;
+    private TextView textView,qtdCoracoes,qtdDiamantes,qtdGold,rank;
     private String login;
     private Button btnJogar;
     private final Firebase ref = new Firebase("https://perguntageis.firebaseio.com/");
@@ -53,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         qtdCoracoes = (TextView) findViewById(R.id.tvCoracao);
         qtdDiamantes = (TextView) findViewById(R.id.tvDiamante);
         qtdGold = (TextView) findViewById(R.id.tvMoeda);
+        rank = (TextView) findViewById(R.id.rankingHome);
 
 
         ref.addValueEventListener(new ValueEventListener() {
@@ -65,6 +66,7 @@ public class HomeActivity extends AppCompatActivity {
                     qtdDiamantes.setText("x" + usuario1.get("diamantes"));
                     qtdCoracoes.setText("x" + usuario1.get("coracoes"));
                     qtdGold.setText("x" + usuario1.get("gold"));
+                    rank.setText("RANKING: "+usuario1.get("rank"));
                     switch (Integer.parseInt(usuario1.get("imgcode"))){
                         case 1:
                             avatar.setImageResource(R.drawable.escudo);
@@ -94,6 +96,7 @@ public class HomeActivity extends AppCompatActivity {
                     qtdDiamantes.setText("x" + usuario2.get("diamantes"));
                     qtdCoracoes.setText("x" + usuario2.get("coracoes"));
                     qtdGold.setText("x"+usuario2.get("gold"));
+                    rank.setText("RANKING: "+usuario2.get("rank"));
                     switch (Integer.parseInt(usuario2.get("imgcode"))){
                         case 1:
                             avatar.setImageResource(R.drawable.escudo);

@@ -40,6 +40,8 @@ public class Roleta extends AppCompatActivity {
     private HashMap<String,String> usuario1,usuario2,usuario3,usuario4;
     private HashMap<String,Object> updateStatus = new HashMap<>();
     private Firebase jogoRef = ref.child("jogos").child("jogoexample");
+    private String complemento;
+    private boolean fimDeJogo;
 
 
 
@@ -64,6 +66,7 @@ public class Roleta extends AppCompatActivity {
         status = (Button) findViewById(R.id.status);
         diamante = (Button) findViewById(R.id.usarDiamante);
         diamante.setVisibility(View.INVISIBLE);
+        fimDeJogo = true;
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -73,6 +76,15 @@ public class Roleta extends AppCompatActivity {
                 usuario1 = (HashMap) dataSnapshot.child("usuarios").child("u1").getValue();
                 usuario2 = (HashMap) dataSnapshot.child("usuarios").child("u2").getValue();
 
+                //SABER SE O JOGADOR A OU B ESTÁ LOGADO NO MOMENTO
+                if(vezNoTurno.get("loginJogadorA").equals(login)){
+                    complemento = "A";
+                }else if(vezNoTurno.get("loginJogadorB").equals(login)){
+                    complemento = "B";
+                }else{
+                    complemento = "";
+                }
+                //ATUALIZANDO SUA VEZ E AGUARDE
                 if (vezNoTurno.get("vezNoTurno").equals("A")) {
                     if (vezNoTurno.get("loginJogadorA").equals(login)) {
                         suavez.setImageResource(R.drawable.sopq);
@@ -94,14 +106,53 @@ public class Roleta extends AppCompatActivity {
                     suavez.setImageResource(R.drawable.aguarde);
                     girar.setClickable(false);
                 }
+
+                //VERIFICAR FIM DE JOGO
+                scrumB = Integer.parseInt(verificarFim.get("scrumB"));
+                leanB = Integer.parseInt(verificarFim.get("leanB"));
+                agileB = Integer.parseInt(verificarFim.get("agileB"));
+                xpB = Integer.parseInt(verificarFim.get("xpB"));
+
+                scrumA = Integer.parseInt(verificarFim.get("scrumA"));
+                leanA = Integer.parseInt(verificarFim.get("leanA"));
+                agileA = Integer.parseInt(verificarFim.get("agileA"));
+                xpA = Integer.parseInt(verificarFim.get("xpA"));
+
+                /*
+                if(fimDeJogo == false){
+                    fimDeJogo = true;
+                    verificarFimDeJogo();
+                }else{
+
+                }
+                */
                 verificarFimDeJogo();
 
+                //VISIBILIDADE DO BOTAO CONSUMIR DIAMANTES
                 if(login.equals(usuario1.get("email"))){
                     if(Integer.parseInt(usuario1.get("diamantes"))>0){
-                        diamante.setVisibility(View.VISIBLE);
+                        if(complemento.equals(vezNoTurno.get("vezNoTurno"))){
+                            diamante.setVisibility(View.INVISIBLE);
+                        }else{
+                            diamante.setVisibility(View.VISIBLE);
+                        }
+
                     }else{
                         diamante.setVisibility(View.INVISIBLE);
                     }
+                } else if (login.equals(usuario2.get("email"))){
+                    if(Integer.parseInt(usuario2.get("diamantes"))>0){
+                        if(complemento.equals(vezNoTurno.get("vezNoTurno"))){
+                            diamante.setVisibility(View.INVISIBLE);
+                        }else{
+                            diamante.setVisibility(View.VISIBLE);
+                        }
+
+                    }else{
+                        diamante.setVisibility(View.INVISIBLE);
+                    }
+                }else{
+
                 }
 
             }
@@ -121,6 +172,7 @@ public class Roleta extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
 
+
     }
 
     @Override
@@ -128,7 +180,7 @@ public class Roleta extends AppCompatActivity {
         super.onResume();
         roleta_background.setImageResource(R.drawable.roleta_final);
         status.setClickable(true);
-
+        fimDeJogo = true;
 
 
     }
@@ -289,10 +341,7 @@ public class Roleta extends AppCompatActivity {
         Firebase usuarioRef = ref.child("usuarios");
         int aux = 0;
 
-        scrumB = Integer.parseInt(verificarFim.get("scrumB"));
-        leanB = Integer.parseInt(verificarFim.get("leanB"));
-        agileB = Integer.parseInt(verificarFim.get("agileB"));
-        xpB = Integer.parseInt(verificarFim.get("xpB"));
+
 
         if(scrumB>=3 && leanB>=3 && agileB>=3 && xpB>=3){
 
@@ -346,16 +395,10 @@ public class Roleta extends AppCompatActivity {
             Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
             fimDeJogo.putExtra("login",login);
             fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorB"));
+            Roleta.this.finish();
             startActivity(fimDeJogo);
 
-        }
-
-        scrumA = Integer.parseInt(verificarFim.get("scrumA"));
-        leanA = Integer.parseInt(verificarFim.get("leanA"));
-        agileA = Integer.parseInt(verificarFim.get("agileA"));
-        xpA = Integer.parseInt(verificarFim.get("xpA"));
-
-        if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
+        }else if(scrumA>=3 && leanA>=3 && agileA>=3 && xpA>=3){
 
             updateStatus.put("jogos/jogoexample/agileA",""+0);
             updateStatus.put("jogos/jogoexample/agileB",""+0);
@@ -406,7 +449,10 @@ public class Roleta extends AppCompatActivity {
             Intent fimDeJogo = new Intent(Roleta.this,FimDeJogoActivity.class);
             fimDeJogo.putExtra("login",login);
             fimDeJogo.putExtra("vencedor",vezNoTurno.get("loginJogadorA"));
+            Roleta.this.finish();
             startActivity(fimDeJogo);
+
+        }else{
 
         }
 
