@@ -47,11 +47,26 @@
         android:id="@+id/status"
         android:onClick="popupStatus"
         style="?android:attr/borderlessButtonStyle"
-        android:background="@drawable/status"
+        android:textColor="#FFFFFF"
+        android:text="Status"
+        android:background="@drawable/button_jogar_agora_shape"
         android:shadowColor="@null"
         android:layout_toStartOf="@+id/girar"
         android:layout_below="@+id/roleta"
          />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/voltar"
+        android:onClick="goBack"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="#FFFFFF"
+        android:text="Status"
+        android:background="@drawable/button_jogar_agora_shape"
+        android:shadowColor="@null"
+        android:layout_below="@+id/roleta"
+        android:layout_toEndOf="@+id/girar" />
 
     <ImageView
         android:layout_width="wrap_content"

@@ -459,6 +459,10 @@ public class Roleta extends AppCompatActivity {
         //------------------FIM VERIFICAR FIM DE JOGO ------------------------------------
     }
 
+    public void goBack(View view){
+        onBackPressed();
+    }
+
     public int gerarCodigoTema(){
         //0 - SCRUM, 1 - XP, 2 - AGILE, 3 - LEAN
         final int codigoScrum = 0, codigoXp = 1, codigoAgile = 2, codigoLean = 3;
