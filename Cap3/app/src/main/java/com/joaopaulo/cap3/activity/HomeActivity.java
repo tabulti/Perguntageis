@@ -22,6 +22,7 @@ import com.firebase.client.Query;
 import com.firebase.client.ValueEventListener;
 import com.joaopaulo.cap3.R;
 
+import java.io.ObjectStreamException;
 import java.util.HashMap;
 
 public class HomeActivity extends AppCompatActivity {
@@ -31,10 +32,11 @@ public class HomeActivity extends AppCompatActivity {
     private ActionBar actionBar;
     private TextView textView,qtdCoracoes,qtdDiamantes,qtdGold,rank;
     private String login;
-    private Button btnJogar;
+    private Button btnJogar,imgDiamante;
     private final Firebase ref = new Firebase("https://perguntageis.firebaseio.com/");
     private ImageView avatar;
     private HashMap<String,String> usuario1,usuario2;
+    private HashMap<String,Object> atualizarUsuarios = new HashMap<>();
 
 
     @Override
@@ -54,6 +56,9 @@ public class HomeActivity extends AppCompatActivity {
         qtdDiamantes = (TextView) findViewById(R.id.tvDiamante);
         qtdGold = (TextView) findViewById(R.id.tvMoeda);
         rank = (TextView) findViewById(R.id.rankingHome);
+        imgDiamante = (Button) findViewById(R.id.imgDiamante);
+
+
 
 
         ref.addValueEventListener(new ValueEventListener() {
@@ -221,5 +226,28 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         );
+    }
+
+    public void comprarDiamante(View view){
+        if(usuario1.get("email").equals(login)){
+            if(Integer.parseInt(usuario1.get("gold"))>=30){
+                atualizarUsuarios.put("usuarios/u1/gold",""+(Integer.parseInt(usuario1.get("gold"))-30));
+                atualizarUsuarios.put("usuarios/u1/diamantes",""+(Integer.parseInt(usuario1.get("diamantes"))+1));
+                ref.updateChildren(atualizarUsuarios);
+            }else{
+
+            }
+
+        }else if(usuario2.get("email").equals(login)){
+            if(Integer.parseInt(usuario2.get("gold"))>=30){
+                atualizarUsuarios.put("usuarios/u2/gold",""+(Integer.parseInt(usuario2.get("gold"))-30));
+                atualizarUsuarios.put("usuarios/u2/diamantes",""+(Integer.parseInt(usuario2.get("diamantes"))+1));
+                ref.updateChildren(atualizarUsuarios);
+            }else{
+
+            }
+        }else{
+
+        }
     }
 }
