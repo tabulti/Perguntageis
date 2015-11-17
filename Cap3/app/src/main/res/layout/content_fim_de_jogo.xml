@@ -29,4 +29,16 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/rankvintequatro"
         android:layout_marginTop="25dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Voltar"
+        android:background="@drawable/button_jogar_agora_shape"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:id="@+id/back"
+        android:layout_below="@+id/rank"
+        android:layout_alignStart="@+id/rank"
+        android:onClick="voltarHome"/>
 </RelativeLayout>

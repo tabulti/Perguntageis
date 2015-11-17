@@ -15,4 +15,8 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+<<<<<<< HEAD
 </android.support.design.widget.AppBarLayout><!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/include_toolbar.xml -->
+=======
+</android.support.design.widget.AppBarLayout><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/include_toolbar.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531

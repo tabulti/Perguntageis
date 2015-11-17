@@ -51,4 +51,8 @@
     </android.support.v7.internal.widget.ActionBarContainer>
 
 </android.support.v7.internal.widget.ActionBarOverlayLayout>
+<<<<<<< HEAD
 <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_screen_toolbar.xml --><!-- From: file:/C:/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_screen_toolbar.xml -->
+=======
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_screen_toolbar.xml --><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_screen_toolbar.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531

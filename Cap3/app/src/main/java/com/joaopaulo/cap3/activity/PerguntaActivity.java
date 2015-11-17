@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -38,6 +39,7 @@ public class PerguntaActivity extends AppCompatActivity {
     private String login;
     private int codigoTema;
     private HashMap<String,String> loginFb;
+    private HashMap<String, String> p;
 
     private Thread t = new Thread() {
         @Override
@@ -173,7 +175,7 @@ public class PerguntaActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot snapshot) {
 
                 loginFb = (HashMap) snapshot.child("jogos").child("jogoexample").getValue();
-                HashMap<String, String> p = (HashMap) snapshot.child("perguntas").child(categoria + "" + randomPergunta).getValue();
+                p = (HashMap) snapshot.child("perguntas").child(categoria + "" + randomPergunta).getValue();
 
 
                 switch (btnOrganization) {
@@ -253,6 +255,13 @@ public class PerguntaActivity extends AppCompatActivity {
         randomPergunta = rand.nextInt(10)+1;
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     public void responderA() {
 
@@ -323,7 +332,7 @@ public class PerguntaActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
             builder.setIcon(R.drawable.feelsbad);
-            builder.setMessage("Você respondeu errado!!!");
+            builder.setMessage("Você respondeu errado!!!\n" +"Alternativa Correta: " +p.get("alternativaCorreta"));
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     onBackPressed();
@@ -404,7 +413,7 @@ public class PerguntaActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
             builder.setIcon(R.drawable.feelsbad);
-            builder.setMessage("Você respondeu errado!!!");
+            builder.setMessage("Você respondeu errado!!!\n" +"Alternativa Correta: " +p.get("alternativaCorreta"));
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     onBackPressed();
@@ -485,7 +494,7 @@ public class PerguntaActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
             builder.setIcon(R.drawable.feelsbad);
-            builder.setMessage("Você respondeu errado!!!");
+            builder.setMessage("Você respondeu errado!!!\n" +"Alternativa Correta: " +p.get("alternativaCorreta"));
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     onBackPressed();
@@ -567,7 +576,7 @@ public class PerguntaActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(PerguntaActivity.this);
             builder.setTitle(":(");
             builder.setIcon(R.drawable.feelsbad);
-            builder.setMessage("Você respondeu errado!!!");
+            builder.setMessage("Você respondeu errado!!!\n" +"Alternativa Correta: " +p.get("alternativaCorreta"));
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     onBackPressed();

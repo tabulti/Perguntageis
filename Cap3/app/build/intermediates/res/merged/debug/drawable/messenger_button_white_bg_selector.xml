@@ -34,4 +34,8 @@
     </shape>
   </item>
 </selector>
+<<<<<<< HEAD
 <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/drawable/messenger_button_white_bg_selector.xml --><!-- From: file:/C:/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/drawable/messenger_button_white_bg_selector.xml -->
+=======
+<!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/drawable/messenger_button_white_bg_selector.xml --><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/drawable/messenger_button_white_bg_selector.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531

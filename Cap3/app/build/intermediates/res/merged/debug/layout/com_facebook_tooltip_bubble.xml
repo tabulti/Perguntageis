@@ -72,4 +72,8 @@
       android:src="@drawable/com_facebook_tooltip_blue_bottomnub"
       />
 </RelativeLayout>
+<<<<<<< HEAD
 <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/layout/com_facebook_tooltip_bubble.xml --><!-- From: file:/C:/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/layout/com_facebook_tooltip_bubble.xml -->
+=======
+<!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/layout/com_facebook_tooltip_bubble.xml --><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/layout/com_facebook_tooltip_bubble.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531

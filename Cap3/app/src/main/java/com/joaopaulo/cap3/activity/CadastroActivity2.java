@@ -105,7 +105,7 @@ public class CadastroActivity2 extends AppCompatActivity {
                             params.putString("login", userLogin);
                             intent.putExtras(params);
                             startActivity(intent);
-                            return;
+
                         }
                     });
 

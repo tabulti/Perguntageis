@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/C:/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-h720dp/values-h720dp.xml -->
+=======
+    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-h720dp/values-h720dp.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531
     <eat-comment/>
     <dimen name="abc_alert_dialog_button_bar_height">54dip</dimen>
 </resources>

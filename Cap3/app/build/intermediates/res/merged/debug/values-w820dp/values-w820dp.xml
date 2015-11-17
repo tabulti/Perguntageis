@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/values-w820dp/dimens.xml -->
+=======
+    <!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/values-w820dp/dimens.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531
     <eat-comment/>
     <dimen name="activity_horizontal_margin">64dp</dimen>
 </resources>

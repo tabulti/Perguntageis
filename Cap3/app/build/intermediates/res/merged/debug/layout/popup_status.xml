@@ -206,19 +206,38 @@
         android:layout_toEndOf="@+id/scrumb2" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/avatarA"
         android:layout_marginTop="23dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/agilea1" />
-    <ImageView
+    <TextView
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/avatarA"
+        android:layout_alignStart="@id/avatarA"
+        android:id="@+id/tvAvatarA"
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/avatarB"
         android:layout_marginTop="23dp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/agileb1" />
+        android:layout_alignStart="@+id/agileb2" />
+
+    <TextView
+        android:text=""
+        android:layout_below="@id/avatarB"
+        android:layout_alignStart="@id/avatarB"
+        android:id="@+id/tvAvatarB"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -274,7 +293,7 @@
         android:id="@+id/xpa"
         android:src="@drawable/xp"
         android:layout_above="@+id/xpa2"
-        android:layout_toEndOf="@+id/avatarA" />
+        android:layout_alignStart="@+id/agilea" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -283,4 +302,8 @@
         android:src="@drawable/xp"
         android:layout_above="@+id/xpb1"
         android:layout_alignStart="@+id/xpb1" />
+<<<<<<< HEAD
 </RelativeLayout><!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/popup_status.xml -->
+=======
+</RelativeLayout><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/popup_status.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531

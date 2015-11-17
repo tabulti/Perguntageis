@@ -9,4 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/activity_cadastro2adapter.xml -->
+=======
+</LinearLayout><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_cadastro2adapter.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531

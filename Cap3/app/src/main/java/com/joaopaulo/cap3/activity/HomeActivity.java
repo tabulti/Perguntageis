@@ -22,6 +22,7 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 import com.joaopaulo.cap3.R;
 
+import java.io.ObjectStreamException;
 import java.util.HashMap;
 
 public class HomeActivity extends AppCompatActivity {
@@ -29,12 +30,13 @@ public class HomeActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private ActionBar actionBar;
-    private TextView textView,qtdCoracoes,qtdDiamantes,qtdGold;
+    private TextView textView,qtdCoracoes,qtdDiamantes,qtdGold,rank;
     private String login;
-    private Button btnJogar;
-    private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
+    private Button btnJogar,imgDiamante;
+    private final Firebase ref = new Firebase("https://perguntageis.firebaseio.com/");
     private ImageView avatar;
     private HashMap<String,String> usuario1,usuario2;
+    private HashMap<String,Object> atualizarUsuarios = new HashMap<>();
 
     private int total = 0;
 
@@ -61,6 +63,10 @@ public class HomeActivity extends AppCompatActivity {
         qtdCoracoes = (TextView) findViewById(R.id.tvCoracao);
         qtdDiamantes = (TextView) findViewById(R.id.tvDiamante);
         qtdGold = (TextView) findViewById(R.id.tvMoeda);
+        rank = (TextView) findViewById(R.id.rankingHome);
+        imgDiamante = (Button) findViewById(R.id.imgDiamante);
+
+
 
 
 
@@ -75,6 +81,7 @@ public class HomeActivity extends AppCompatActivity {
                     qtdDiamantes.setText("x" + usuario1.get("diamantes"));
                     qtdCoracoes.setText("x" + usuario1.get("coracoes"));
                     qtdGold.setText("x" + usuario1.get("gold"));
+                    rank.setText("RANKING: "+usuario1.get("rank"));
                     switch (Integer.parseInt(usuario1.get("imgcode"))){
                         case 1:
                             avatar.setImageResource(R.drawable.escudo);
@@ -123,6 +130,7 @@ public class HomeActivity extends AppCompatActivity {
                     qtdDiamantes.setText("x" + usuario2.get("diamantes"));
                     qtdCoracoes.setText("x" + usuario2.get("coracoes"));
                     qtdGold.setText("x"+usuario2.get("gold"));
+                    rank.setText("RANKING: "+usuario2.get("rank"));
                     switch (Integer.parseInt(usuario2.get("imgcode"))){
                         case 1:
                             avatar.setImageResource(R.drawable.escudo);
@@ -294,5 +302,28 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         );
+    }
+
+    public void comprarDiamante(View view){
+        if(usuario1.get("email").equals(login)){
+            if(Integer.parseInt(usuario1.get("gold"))>=30){
+                atualizarUsuarios.put("usuarios/u1/gold",""+(Integer.parseInt(usuario1.get("gold"))-30));
+                atualizarUsuarios.put("usuarios/u1/diamantes",""+(Integer.parseInt(usuario1.get("diamantes"))+1));
+                ref.updateChildren(atualizarUsuarios);
+            }else{
+
+            }
+
+        }else if(usuario2.get("email").equals(login)){
+            if(Integer.parseInt(usuario2.get("gold"))>=30){
+                atualizarUsuarios.put("usuarios/u2/gold",""+(Integer.parseInt(usuario2.get("gold"))-30));
+                atualizarUsuarios.put("usuarios/u2/diamantes",""+(Integer.parseInt(usuario2.get("diamantes"))+1));
+                ref.updateChildren(atualizarUsuarios);
+            }else{
+
+            }
+        }else{
+
+        }
     }
 }

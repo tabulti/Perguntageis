@@ -69,12 +69,14 @@
 
 
                             <!--Diamante-->
-                            <ImageView
+                            <Button
                                 android:id="@+id/imgDiamante"
                                 android:layout_width="40dp"
                                 android:layout_height="35dp"
                                 android:background="@drawable/diamante"
-                                android:layout_gravity=""/>
+                                android:layout_gravity=""
+                                android:onClick="comprarDiamante"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless"/>
                             <TextView
                                 android:id="@+id/tvDiamante"
                                 android:layout_width="wrap_content"
@@ -346,4 +348,8 @@
         app:theme="@style/NavigationViewTheme" />
 
 </android.support.v4.widget.DrawerLayout>
+<<<<<<< HEAD
 <!-- From: file:/C:/Perguntageis/Cap3/app/src/main/res/layout/activity_home.xml -->
+=======
+<!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/src/main/res/layout/activity_home.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531

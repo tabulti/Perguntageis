@@ -26,4 +26,8 @@
   android:layout_height="59dp"
   android:background="@drawable/messenger_button_blue_bg_round"
   />
+<<<<<<< HEAD
 <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/layout/messenger_button_send_blue_round.xml --><!-- From: file:/C:/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/layout/messenger_button_send_blue_round.xml -->
+=======
+<!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/layout/messenger_button_send_blue_round.xml --><!-- From: file:/C:/Users/Gustavo/Documents/Perguntageis/Cap3/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/layout/messenger_button_send_blue_round.xml -->
+>>>>>>> 13dd5060a6e944cd7efdf9e5ee4fb32e0b474531
