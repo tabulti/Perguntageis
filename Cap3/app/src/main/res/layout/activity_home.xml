@@ -144,9 +144,21 @@
                                         android:id="@+id/tvCardPerfil"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="TESTE"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Próximo Ranking"
                                         android:textSize="20dp"
                                         android:textStyle="bold"/>
+
+                                    <ProgressBar
+                                        android:id="@+id/lvlProgressBar"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="30dp"
+                                        android:clickable="true"
+                                        android:paddingTop="12dp"
+                                        android:progressDrawable="@drawable/progress_bar_pers"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:elevation="5dp" />
 
                                     <TextView
                                         android:id="@+id/rankingHome"

@@ -22,7 +22,9 @@
 
         <activity
             android:name="com.joaopaulo.cap3.activity.MainActivity"
+            android:configChanges="orientation"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:uiOptions="splitActionBarWhenNarrow" >
             <meta-data
@@ -35,11 +37,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.joaopaulo.cap3.activity.HomeActivity" />
-        <activity android:name="com.joaopaulo.cap3.activity.CadastroActivity" />
-        <activity android:name="com.joaopaulo.cap3.activity.CadastroActivity2" />
-        <activity android:name="com.joaopaulo.cap3.activity.Roleta" />
-        <activity android:name="com.joaopaulo.cap3.activity.PerguntaActivity" />
+        <activity
+            android:name="com.joaopaulo.cap3.activity.HomeActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joaopaulo.cap3.activity.CadastroActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joaopaulo.cap3.activity.CadastroActivity2"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joaopaulo.cap3.activity.Roleta"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joaopaulo.cap3.activity.PerguntaActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -47,11 +64,21 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.joaopaulo.cap3.activity.PopupStatus"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.PopupstatusTheme" />
         <activity
             android:name="com.joaopaulo.cap3.activity.FimDeJogoActivity"
+            android:configChanges="orientation"
             android:label="@string/title_activity_fim_de_jogo"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+        <activity android:name="com.joaopaulo.cap3.activity.NivelActivity" >
+        </activity>
+        <activity android:name="com.joaopaulo.cap3.activity.OficinaActivity" >
+        </activity>
+        <activity android:name="com.joaopaulo.cap3.activity.ConquistasActivity" >
+        </activity>
     </application>
 
 </manifest>

@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,11 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -24,12 +19,10 @@ import com.joaopaulo.cap3.R;
 
 public class MainActivity extends AppCompatActivity{
 
-    private LoginButton loginButtonFacebook;
     private CallbackManager callbackManager;
     Firebase ref;
     ProgressDialog mAuthProgressDialog;
     private Firebase.AuthStateListener mAuthStateListener;
-
 
 
     @Override
@@ -46,8 +39,6 @@ public class MainActivity extends AppCompatActivity{
 
         Button btLogin = (Button) findViewById(R.id.btLogin);
         Button btCadastro = (Button) findViewById(R.id.btCadastro);
-
-
 
 
         //Evento do botão cadastro
@@ -76,8 +67,8 @@ public class MainActivity extends AppCompatActivity{
 
 
                     mAuthProgressDialog = new ProgressDialog(MainActivity.this);
-                    mAuthProgressDialog.setTitle("Loading");
-                    mAuthProgressDialog.setMessage("Authenticating with Firebase...");
+                    mAuthProgressDialog.setTitle("Carregando");
+                    mAuthProgressDialog.setMessage("Autenticando via Firebase...");
                     mAuthProgressDialog.setCancelable(false);
                     mAuthProgressDialog.show();
 
@@ -90,7 +81,6 @@ public class MainActivity extends AppCompatActivity{
 
                             // Authenticated successfully with payload authData
                             mAuthProgressDialog.hide();
-                            alert("teste Autenticado");
 
                             Intent intent = new Intent(getBaseContext(), HomeActivity.class);
 
@@ -98,23 +88,17 @@ public class MainActivity extends AppCompatActivity{
 
                             startActivity(intent);
 
-                            /**
-                             * TODO: chamar HomeActivity
-                             */
                         }
                         @Override
                         public void onAuthenticationError(FirebaseError firebaseError) {
                             // Authenticated failed with error firebaseError
-                            alert("teste não-autenticado");
+                            alert("Não foi possivel realizar a autenticação");
                             Log.i("TESTE", firebaseError.getMessage());
                             mAuthProgressDialog.hide();
                         }
                     };
 
-
                     ref.authWithPassword(login, senha, authResultHandler);
-
-
                 }
             }
         });

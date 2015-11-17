@@ -73,6 +73,7 @@ public class CadastroActivity2 extends AppCompatActivity {
                     mapUser.put("senha", userSenha);
                     mapUser.put("email", userEmail);
                     mapUser.put("imageCode", String.valueOf(avatarImgCode));
+                    //mapUser.put("imageLvlCode", String.valueOf(25));
 
 
                     //Handler/Callback para credenciais de usuário

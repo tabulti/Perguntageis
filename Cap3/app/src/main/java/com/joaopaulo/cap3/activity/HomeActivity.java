@@ -1,24 +1,24 @@
 package com.joaopaulo.cap3.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.firebase.client.Query;
 import com.firebase.client.ValueEventListener;
 import com.joaopaulo.cap3.R;
 
@@ -35,6 +35,14 @@ public class HomeActivity extends AppCompatActivity {
     private final Firebase ref = new Firebase("https://resplendent-heat-382.firebaseio.com/");
     private ImageView avatar;
     private HashMap<String,String> usuario1,usuario2;
+
+    private int total = 0;
+
+    private ProgressBar progressoUsuario;
+    private TextView progressoUsu;
+
+    private int currentCodeImage = 25;
+
 
 
     @Override
@@ -55,6 +63,8 @@ public class HomeActivity extends AppCompatActivity {
         qtdGold = (TextView) findViewById(R.id.tvMoeda);
 
 
+
+
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -68,23 +78,42 @@ public class HomeActivity extends AppCompatActivity {
                     switch (Integer.parseInt(usuario1.get("imgcode"))){
                         case 1:
                             avatar.setImageResource(R.drawable.escudo);
-
                             break;
                         case 2:
                             avatar.setImageResource(R.drawable.ironman);
-
                             break;
                         case 3:
-                            avatar.setImageResource(R.drawable.dangerous);
+                            avatar.setImageResource(R.drawable.lanterna);
                             break;
                         case 4:
-                            avatar.setImageResource(R.drawable.marvel);
-                            break;
-                        case 5:
                             avatar.setImageResource(R.drawable.martelo);
                             break;
+                        case 5:
+                            avatar.setImageResource(R.drawable.marvel);
+                            break;
                         case 6:
-                            avatar.setImageResource(R.drawable.lanterna);
+                            avatar.setImageResource(R.drawable.mira);
+                            break;
+                        default:
+                            break;
+                    }
+
+                    //Pinguins
+                    switch(Integer.parseInt(usuario1.get("rank"))){
+                        case 25:
+                            avatar.setImageResource(R.drawable.rankvintecinco);
+                            break;
+                        case 24:
+                            avatar.setImageResource(R.drawable.rankvintequatro);
+                            break;
+                        case 23:
+                            avatar.setImageResource(R.drawable.rankvintetres);
+                            break;
+                        case 22:
+                            avatar.setImageResource(R.drawable.rankvintedois);
+                            break;
+                        case 21:
+                            avatar.setImageResource(R.drawable.rankvinteum);
                             break;
                         default:
                             break;
@@ -118,12 +147,31 @@ public class HomeActivity extends AppCompatActivity {
                         default:
                             break;
                     }
+
+                    switch(Integer.parseInt(usuario2.get("rank"))){
+                        case 25:
+                            avatar.setImageResource(R.drawable.rankvintecinco);
+                            break;
+                        case 24:
+                            avatar.setImageResource(R.drawable.rankvintequatro);
+                            break;
+                        case 23:
+                            avatar.setImageResource(R.drawable.rankvintetres);
+                            break;
+                        case 22:
+                            avatar.setImageResource(R.drawable.rankvintedois);
+                            break;
+                        case 21:
+                            avatar.setImageResource(R.drawable.rankvinteum);
+                            break;
+                        default:
+                            break;
+                    }
+
                 }else{
 
                 }
-
             }
-
             @Override
             public void onCancelled(FirebaseError firebaseError) {
 
@@ -148,8 +196,8 @@ public class HomeActivity extends AppCompatActivity {
 
 
         //Welcome msg
-        TextView msgBoasVindas = (TextView) findViewById(R.id.tvCardPerfil);
-        msgBoasVindas.setText(login);
+       /* TextView msgBoasVindas = (TextView) findViewById(R.id.tvCardPerfil);
+        msgBoasVindas.setText(login);*/
 
         //BUTTON ROLETA
         btnJogar = (Button) findViewById(R.id.btnJogar);
@@ -161,6 +209,35 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        progressoUsuario = (ProgressBar) findViewById(R.id.lvlProgressBar);
+        /*progressoUsu = (TextView) findViewById(R.id.progressoTexto);
+        progressoUsu.setText("0%");*/
+
+        progressoUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                total = 10 + total;
+                progressoUsuario.setProgress(total);
+                //progressoUsu.setText(total + "%");
+                if (total == 100) {
+                    total = 0;
+                    currentCodeImage--;
+                    if(currentCodeImage == 25){
+                        avatar.setImageResource(R.drawable.rankvintecinco);
+                    }else if(currentCodeImage ==24){
+                        avatar.setImageResource(R.drawable.rankvintequatro);
+                    }else if(currentCodeImage == 23){
+                        avatar.setImageResource(R.drawable.rankvintetres);
+                    }else if(currentCodeImage == 22){
+                        avatar.setImageResource(R.drawable.rankvintedois);
+                    }else if(currentCodeImage ==21){
+                        avatar.setImageResource(R.drawable.rankvinteum);
+                    }
+
+                }
+            }
+        });
     }
 
     @Override
@@ -168,7 +245,6 @@ public class HomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
-                Toast.makeText(this, "TESTE", Toast.LENGTH_SHORT).show();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -179,41 +255,41 @@ public class HomeActivity extends AppCompatActivity {
             new NavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(MenuItem menuItem) {
+                    Intent intent;
                     switch (menuItem.getItemId()) {
                         case R.id.item_conquistas:
                             menuItem.setChecked(true);
-                            textView.setText(menuItem.getTitle());
-                            drawerLayout.closeDrawer(GravityCompat.START);
-                            return true;
+                            intent = new Intent(HomeActivity.this, ConquistasActivity.class);
+                            startActivity(intent);
+                            break;
+
                         case R.id.item_oficina_de_perguntas:
                             menuItem.setChecked(true);
-                            textView.setText(menuItem.getTitle());
-                            drawerLayout.closeDrawer(GravityCompat.START);
-                            return true;
-                        case R.id.item_caixa_de_entrada:
-                            menuItem.setChecked(true);
-                            textView.setText(menuItem.getTitle());
-                            drawerLayout.closeDrawer(GravityCompat.START);
-                            return true;
-                        case R.id.item_ajuda:
-                            menuItem.setChecked(true);
-                            textView.setText(menuItem.getTitle());
-                            drawerLayout.closeDrawer(GravityCompat.START);
-                            return true;
-                        case R.id.item_configuracoes:
-                            menuItem.setChecked(true);
-                            textView.setText(menuItem.getTitle());
-                            Toast.makeText(HomeActivity.this, "Launching " + menuItem.getTitle().toString(), Toast.LENGTH_SHORT).show();
-                            drawerLayout.closeDrawer(GravityCompat.START);
-                            return true;
-                        case R.id.item_logout:
+                            intent = new Intent(HomeActivity.this, OficinaActivity.class);
+                            startActivity(intent);
 
-                            menuItem.setChecked(true);
-                            textView.setText(menuItem.getTitle());
-                            drawerLayout.closeDrawer(GravityCompat.START);
+                            break;
+
+                        case R.id.item_caixa_de_entrada:
+                            //menuItem.setChecked(true);
+                            Toast.makeText(getApplicationContext(), "Funcionalidade não diponível", Toast.LENGTH_LONG).show();
+
+                            break;
+                        case R.id.item_ajuda:
+                            //menuItem.setChecked(true);
+                            Toast.makeText(getApplicationContext(), "Funcionalidade não diponível", Toast.LENGTH_LONG).show();
+
+                            break;
+                        case R.id.item_configuracoes:
+                            //Toast.makeText(HomeActivity.this, "Launching " + menuItem.getTitle().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Funcionalidade não diponível", Toast.LENGTH_LONG).show();
+                            break;
+                        case R.id.item_logout:
                             ref.unauth();
-                            return true;
+                            break;
                     }
+                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                    drawer.closeDrawer(GravityCompat.START);
                     return true;
                 }
             }
