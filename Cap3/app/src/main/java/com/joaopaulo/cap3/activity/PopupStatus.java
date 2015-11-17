@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -25,8 +26,13 @@ public class PopupStatus extends Activity {
 
 
     private ImageView aux;
+    private ImageView avatarA,avatarB;
+    private String login;
+    private TextView tvAvatarA,tvAvatarB;
+
 
     final private Firebase fbstatus = new Firebase("https://perguntageis.firebaseio.com/");
+    //private
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +47,15 @@ public class PopupStatus extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width*.8),(int) (height*.75));
+        getWindow().setLayout((int) (width * .8), (int) (height * .75));
 
         apagarCorrects();
-
+        avatarA = (ImageView) findViewById(R.id.avatarA);
+        avatarB = (ImageView) findViewById(R.id.avatarB);
+        Bundle args = getIntent().getExtras();
+        login = args.getString("login");
+        tvAvatarA = (TextView) findViewById(R.id.tvAvatarA);
+        tvAvatarB = (TextView) findViewById(R.id.tvAvatarB);
         fbstatus.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -52,6 +63,242 @@ public class PopupStatus extends Activity {
 
                 apagarCorrects();
                 HashMap<String,String> jogo= (HashMap)dataSnapshot.child("jogos").child("jogoexample").getValue();
+                HashMap<String,String> usuario1= (HashMap)dataSnapshot.child("usuarios").child("u1").getValue();
+                HashMap<String,String> usuario2= (HashMap)dataSnapshot.child("usuarios").child("u2").getValue();
+
+                if(login.equals(jogo.get("loginJogadorA"))){
+                    if(login.equals(usuario1.get("email"))){
+                        switch (Integer.parseInt(usuario1.get("imgcode"))){
+                            case 1:
+                                avatarA.setImageResource(R.drawable.escudo);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 2:
+                                avatarA.setImageResource(R.drawable.ironman);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 3:
+                                avatarA.setImageResource(R.drawable.dangerous);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 4:
+                                avatarA.setImageResource(R.drawable.marvel);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 5:
+                                avatarA.setImageResource(R.drawable.martelo);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 6:
+                                avatarA.setImageResource(R.drawable.lanterna);
+                                tvAvatarA.setText("Você");
+                                break;
+                            default:
+                                break;
+                        }
+                        switch (Integer.parseInt(usuario2.get("imgcode"))){
+                            case 1:
+                                avatarB.setImageResource(R.drawable.escudo);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 2:
+                                avatarB.setImageResource(R.drawable.ironman);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 3:
+                                avatarB.setImageResource(R.drawable.dangerous);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 4:
+                                avatarB.setImageResource(R.drawable.marvel);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 5:
+                                avatarB.setImageResource(R.drawable.martelo);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 6:
+                                avatarB.setImageResource(R.drawable.lanterna);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            default:
+                                break;
+                        }
+                    }else if(login.equals(usuario2.get("email"))){
+                        switch (Integer.parseInt(usuario2.get("imgcode"))){
+                            case 1:
+                                avatarA.setImageResource(R.drawable.escudo);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 2:
+                                avatarA.setImageResource(R.drawable.ironman);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 3:
+                                avatarA.setImageResource(R.drawable.dangerous);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 4:
+                                avatarA.setImageResource(R.drawable.marvel);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 5:
+                                avatarA.setImageResource(R.drawable.martelo);
+                                tvAvatarA.setText("Você");
+                                break;
+                            case 6:
+                                avatarA.setImageResource(R.drawable.lanterna);
+                                tvAvatarA.setText("Você");
+                                break;
+                            default:
+                                break;
+                        }
+                        switch (Integer.parseInt(usuario1.get("imgcode"))){
+                            case 1:
+                                avatarB.setImageResource(R.drawable.escudo);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 2:
+                                avatarB.setImageResource(R.drawable.ironman);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 3:
+                                avatarB.setImageResource(R.drawable.dangerous);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 4:
+                                avatarB.setImageResource(R.drawable.marvel);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 5:
+                                avatarB.setImageResource(R.drawable.martelo);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            case 6:
+                                avatarB.setImageResource(R.drawable.lanterna);
+                                tvAvatarB.setText("Oponente");
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }else if(login.equals(jogo.get("loginJogadorB"))){
+                    if(login.equals(usuario1.get("email"))){
+                        switch (Integer.parseInt(usuario1.get("imgcode"))){
+                            case 1:
+                                avatarB.setImageResource(R.drawable.escudo);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 2:
+                                avatarB.setImageResource(R.drawable.ironman);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 3:
+                                avatarB.setImageResource(R.drawable.dangerous);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 4:
+                                avatarB.setImageResource(R.drawable.marvel);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 5:
+                                avatarB.setImageResource(R.drawable.martelo);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 6:
+                                avatarB.setImageResource(R.drawable.lanterna);
+                                tvAvatarB.setText("Você");
+                                break;
+                            default:
+                                break;
+                        }
+                        switch (Integer.parseInt(usuario2.get("imgcode"))){
+                            case 1:
+                                avatarA.setImageResource(R.drawable.escudo);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 2:
+                                avatarA.setImageResource(R.drawable.ironman);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 3:
+                                avatarA.setImageResource(R.drawable.dangerous);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 4:
+                                avatarA.setImageResource(R.drawable.marvel);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 5:
+                                avatarA.setImageResource(R.drawable.martelo);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 6:
+                                avatarA.setImageResource(R.drawable.lanterna);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            default:
+                                break;
+                        }
+                    }else if(login.equals(usuario2.get("email"))){
+                        switch (Integer.parseInt(usuario2.get("imgcode"))){
+                            case 1:
+                                avatarB.setImageResource(R.drawable.escudo);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 2:
+                                avatarB.setImageResource(R.drawable.ironman);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 3:
+                                avatarB.setImageResource(R.drawable.dangerous);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 4:
+                                avatarB.setImageResource(R.drawable.marvel);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 5:
+                                avatarB.setImageResource(R.drawable.martelo);
+                                tvAvatarB.setText("Você");
+                                break;
+                            case 6:
+                                avatarB.setImageResource(R.drawable.lanterna);
+                                tvAvatarB.setText("Você");
+                                break;
+                            default:
+                                break;
+                        }
+                        switch (Integer.parseInt(usuario1.get("imgcode"))){
+                            case 1:
+                                avatarA.setImageResource(R.drawable.escudo);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 2:
+                                avatarA.setImageResource(R.drawable.ironman);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 3:
+                                avatarA.setImageResource(R.drawable.dangerous);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 4:
+                                avatarA.setImageResource(R.drawable.marvel);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 5:
+                                avatarA.setImageResource(R.drawable.martelo);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            case 6:
+                                avatarA.setImageResource(R.drawable.lanterna);
+                                tvAvatarA.setText("Oponente");
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
 
                 int leana = Integer.parseInt(jogo.get("leanA"));
 

@@ -53,6 +53,8 @@ public class Roleta extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         mp = MediaPlayer.create(getApplicationContext(), R.raw.tic2);
         roleta_background = (ImageView) findViewById(R.id.roleta);
         arrow = (ImageView) findViewById(R.id.arrow);
@@ -306,7 +308,9 @@ public class Roleta extends AppCompatActivity {
 
     public void popupStatus(View v){
 
-        startActivity(new Intent(Roleta.this, PopupStatus.class));
+        Intent intentPopup = new Intent(Roleta.this, PopupStatus.class);
+        intentPopup.putExtra("login",login);
+        startActivity(intentPopup);
     }
 
     public void finalAnimacao(Animation anim, final int codigoTema){
